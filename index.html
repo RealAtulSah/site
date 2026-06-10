@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Sah | Home - CS Educator, Author & Developer</title>
+    <meta name="description" content="Official portfolio of Atul Sah, Computer Science Faculty at B.N. College, author of 7+ technical books, and Full Stack Developer.">
+    <meta name="keywords" content="Atul Sah, Computer Teacher, Full Stack Developer, Author, AI Books, Java Programming, B.N. College LMS">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Books</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-wrapper">
+                <div class="hero-text fade-in-section visible">
+                    <p class="mono">// welcome to my workspace</p>
+                    <h1 class="hero-title-main">
+                        Hi, I'm <span class="accent-text">Atul Sah</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span>I am a </span>
+                        <span id="typingText" class="mono"></span>
+                        <span class="typing-cursor"></span>
+                    </div>
+                    <p class="hero-description">
+                        I am a Computer Science Educator, Author of 7+ technical books, and Full-Stack Developer. I specialize in making complex systems simple, practical, and highly accessible—whether in the classroom or through modern software solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn">Explore Projects</a>
+                        <a href="contact.html" class="btn btn-secondary">Let's Connect</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <div class="stat-num">7+</div>
+                            <div class="stat-label">Books Published</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">16+</div>
+                            <div class="stat-label">Skills Mastered</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">3+</div>
+                            <div class="stat-label">Years of Impact</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-section visible">
+                    <div class="image-frame">
+                        <div class="frame-corner corner-tr"></div>
+                        <div class="frame-corner corner-bl"></div>
+                        <img src="avatar.jpg" alt="Atul Sah - Professional Portrait">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section class="featured-lms-section fade-in-section">
+            <p class="mono">// primary deployment</p>
+            <div class="page-title" style="margin-bottom: 2rem;">
+                <h1>Featured <span class="yellow-accent">Project</span></h1>
+            </div>
+            
+            <div class="lms-card">
+                <div class="lms-visual">
+                    <div class="lms-badge badge badge-yellow">Production Ready</div>
+                    <div class="lms-mockup-graphics">
+                        <div class="lms-graphic-item active">
+                            <div class="lms-graphic-title">LMS Student Portal</div>
+                            <div class="lms-graphic-desc">Complete onboarding for all computer application students.</div>
+                        </div>
+                        <div class="lms-graphic-item">
+                            <div class="lms-graphic-title">MCQ Engine</div>
+                            <div class="lms-graphic-desc">Live assignments & automated assessment modules.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lms-content">
+                    <span class="mono">Featured Web Application</span>
+                    <h2>Personalized <span>College LMS</span></h2>
+                    <p class="lms-college">B. N. College (Department of Computer Application)</p>
+                    <p class="lms-desc">
+                        A customized, all-in-one Learning Management System developed specifically for the Department of Computer Application at B.N. College. It serves as an academic hub onboarding all students, keeping records, managing class notes, scheduling assignments, and hosting interactive MCQ-based tests.
+                    </p>
+                    <div class="lms-features-list">
+                        <div class="lms-feature">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Complete Student Onboarding & Profiles</span>
+                        </div>
+                        <div class="lms-feature">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Academic Notes & Syllabus Repository</span>
+                        </div>
+                        <div class="lms-feature">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Homework Assignments Module</span>
+                        </div>
+                        <div class="lms-feature">
+                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Interactive MCQ Test Engine</span>
+                        </div>
+                    </div>
+                    <div class="lms-tech-stack">
+                        <div class="lms-tech-title">Technologies Used:</div>
+                        <span class="badge badge-yellow">React.js</span>
+                        <span class="badge badge-yellow">Node.js</span>
+                        <span class="badge badge-yellow">Express</span>
+                        <span class="badge badge-yellow">MongoDB</span>
+                        <span class="badge badge-yellow">Tailwind CSS</span>
+                    </div>
+                    <div>
+                        <a href="projects.html" class="btn">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Books Teaser -->
+        <section class="featured-lms-section fade-in-section">
+            <p class="mono">// published materials</p>
+            <div class="page-title" style="margin-bottom: 2rem;">
+                <h1>Featured <span class="yellow-accent">Publications</span></h1>
+            </div>
+            
+            <div class="books-grid" style="margin-top: 1.5rem;">
+                <!-- Book 1 -->
+                <div class="cyber-card book-card">
+                    <div class="book-cover-mock">
+                        <img src="https://images-na.ssl-images-amazon.com/images/P/B0GHXRBLZD.01.LZZZZZZZ.jpg" alt="Introduction to Java Programming Cover">
+                    </div>
+                    <h3 class="book-title">Introduction to Java Programming</h3>
+                    <p class="book-desc">A clear and practical guide to core Java concepts, designed specifically for beginners and computer applications curricula.</p>
+                    <a href="https://www.amazon.in/Introduction-Java-Programming-Practical-Concepts-ebook/dp/B0GHXRBLZD/ref=sr_1_1?crid=3PH4KR2891H14&keywords=atul+sah&qid=1781060086" target="_blank" rel="noopener" class="btn book-btn">Buy on Amazon</a>
+                </div>
+                
+                <!-- Book 2 -->
+                <div class="cyber-card book-card">
+                    <div class="book-cover-mock">
+                        <img src="https://images-na.ssl-images-amazon.com/images/P/B0GL26R2XR.01.LZZZZZZZ.jpg" alt="Generative AI: An Introduction Cover">
+                    </div>
+                    <h3 class="book-title">Generative AI: An Introduction</h3>
+                    <p class="book-desc">An engaging guide introducing the principles, tools, and impacts of generative artificial intelligence in today's digital landscape.</p>
+                    <a href="https://www.amazon.in/Generative-AI-Introduction-Atul-Sah-ebook/dp/B0GL26R2XR/ref=sr_1_2?crid=3PH4KR2891H14&keywords=atul+sah&qid=1781060086" target="_blank" rel="noopener" class="btn book-btn">Buy on Amazon</a>
+                </div>
+                
+                <!-- Book 3 -->
+                <div class="cyber-card book-card">
+                    <div class="book-cover-mock">
+                        <img src="https://images-na.ssl-images-amazon.com/images/P/B0GBWYHLDC.01.LZZZZZZZ.jpg" alt="Machine Learning: From Basics to Advance Cover">
+                    </div>
+                    <h3 class="book-title">Machine Learning: From Basics to Advance</h3>
+                    <p class="book-desc">A step-by-step roadmap to mastering machine learning algorithms, models, and mathematical foundations with ease.</p>
+                    <a href="https://www.amazon.in/Machine-Learning-Advance-Atul-Sah-ebook/dp/B0GBWYHLDC/ref=sr_1_3?crid=3PH4KR2891H14&keywords=atul+sah&qid=1781060086" target="_blank" rel="noopener" class="btn book-btn">Buy on Amazon</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="publications.html" class="btn btn-secondary">View All 7 Books</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. All Rights Reserved. Created under the Department of Computer Science.
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Sah | Projects - Web Apps & ML Models</title>
+    <meta name="description" content="Portfolio projects developed by Atul Sah, including the B.N. College LMS, Plant Disease Detector, Fake News Classifier, and mobile apps.">
+    <meta name="keywords" content="Atul Sah Projects, LMS, B.N. College, Plant Disease Detector, Machine Learning, React, React Native">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="publications.html">Books</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="projects-page-section fade-in-section visible">
+            <p class="mono">// development blueprints</p>
+            <div class="page-title">
+                <h1>My <span class="yellow-accent">Projects</span></h1>
+            </div>
+
+            <!-- Featured LMS Section -->
+            <div class="featured-lms-section" id="lms">
+                <span class="mono" style="color: var(--color-yellow);">// primary case study</span>
+                <div class="lms-card">
+                    <div class="lms-visual">
+                        <div class="lms-badge badge badge-yellow">Featured Deployment</div>
+                        <div class="lms-mockup-graphics">
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">LMS Administration</div>
+                                <div class="lms-graphic-desc">Integrated dashboard for Department Faculty & Staff.</div>
+                            </div>
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">Student Dashboard</div>
+                                <div class="lms-graphic-desc">Onboarded database profiles for CA candidates & CS students.</div>
+                            </div>
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">Examination & Quizzes</div>
+                                <div class="lms-graphic-desc">Automated MCQs checking with real-time scoring.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lms-content">
+                        <span class="mono">Academic Enterprise Software</span>
+                        <h2>Personalized <span>LMS Portal</span></h2>
+                        <p class="lms-college">B. N. College (Department of Computer Application)</p>
+                        <p class="lms-desc">
+                            A highly optimized, custom learning management application developed for the Department of Computer Application at B.N. College. It registers all students, hosts core educational materials (class notes, PDFs, code files), distributes structured assignments, and manages online multiple-choice quiz testing, providing instant grading and data tracking for both professors and students.
+                        </p>
+                        
+                        <div class="lms-features-list">
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Student Onboarding System</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Lecture Notes Repository</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Assignments Tracker</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>MCQ Online Quiz Engine</span>
+                            </div>
+                        </div>
+
+                        <div class="lms-tech-stack">
+                            <div class="lms-tech-title">Technologies Used:</div>
+                            <span class="badge badge-yellow">React.js</span>
+                            <span class="badge badge-yellow">Node.js</span>
+                            <span class="badge badge-yellow">Express</span>
+                            <span class="badge badge-yellow">MongoDB</span>
+                            <span class="badge badge-yellow">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters Bar -->
+            <div class="projects-filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="aiml">AI & ML</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 (Already highlighted above, but listed here too) -->
+                <div class="cyber-card project-card" data-category="fullstack">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <div class="project-links">
+                            <span class="badge badge-yellow">Featured</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">B. N. College LMS</h3>
+                    <p class="project-desc">A learning management web portal built for Patna University BCA/MCA students. Features note downloads, homework modules, and dynamic MCQ exams.</p>
+                    <div class="project-footer">
+                        <span class="badge">React</span>
+                        <span class="badge">Node.js</span>
+                        <span class="badge">Express</span>
+                        <span class="badge">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="cyber-card project-card" data-category="aiml">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Plant Diseases Detector</h3>
+                    <p class="project-desc">A deep learning model utilizing Convolutional Neural Networks (CNN) trained to identify plant leaf diseases from user-uploaded images, helping farmers diagnose crops.</p>
+                    <div class="project-footer">
+                        <span class="badge">Python</span>
+                        <span class="badge">TensorFlow</span>
+                        <span class="badge">Keras</span>
+                        <span class="badge">Machine Learning</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="cyber-card project-card" data-category="aiml">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Fake News Detector</h3>
+                    <p class="project-desc">An NLP classification system analyzing news text patterns. Employs TF-IDF Vectorization and classifiers to determine whether a news block is genuine or fabricated.</p>
+                    <div class="project-footer">
+                        <span class="badge">Python</span>
+                        <span class="badge">Flask</span>
+                        <span class="badge">NLTK</span>
+                        <span class="badge">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="cyber-card project-card" data-category="mobile">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Expenses Tracker App</h3>
+                    <p class="project-desc">Cross-platform mobile application designed for budgeting, monitoring income flow, and displaying structured graphical summaries of weekly/monthly expenses.</p>
+                    <div class="project-footer">
+                        <span class="badge">React Native</span>
+                        <span class="badge">Android Studio</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Local DB</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="cyber-card project-card" data-category="other">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Vistredge Site</h3>
+                    <p class="project-desc">Designed and built the corporate website presence for Vistredge, ensuring high accessibility performance standards and seamless responsive animations.</p>
+                    <div class="project-footer">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">PHP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. All Rights Reserved. Created under the Department of Computer Science.
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Local Filtering Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    
+                    // Remove active class from all buttons
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (filterValue === 'all' || cardCategory === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <!-- JS Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

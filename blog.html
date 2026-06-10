@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Sah | Blog - Tech Articles & Roadmaps</title>
+    <meta name="description" content="Technical articles and blog posts written by Atul Sah on artificial intelligence job market trends, generative AI, cybersecurity, and machine learning roadmaps.">
+    <meta name="keywords" content="Atul Sah Blog, AI Job Market India, Generative AI future, AI Cybersecurity, Machine learning roadmap">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Specific Styles for Interactive Blog Reader Modal */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 4rem 2rem;
+        }
+        
+        .blog-modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 2px solid var(--color-yellow);
+            padding: 3rem;
+            position: relative;
+            box-shadow: var(--shadow-solid);
+        }
+        
+        .blog-modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            cursor: none;
+            transition: var(--transition-fast);
+        }
+        
+        .blog-modal-close:hover {
+            color: var(--color-yellow);
+        }
+        
+        .blog-modal-body h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-modal-meta {
+            font-family: var(--font-mono);
+            color: var(--color-yellow);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .blog-modal-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-grey-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Books</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="blog-page-section fade-in-section visible">
+            <p class="mono">// conceptual logs</p>
+            <div class="page-title">
+                <h1>Technical <span class="yellow-accent">Blog</span></h1>
+            </div>
+
+            <p class="blog-intro">
+                I regularly document insights regarding the progression of Artificial Intelligence, cybersecurity protocols, and roadmaps for aspiring software developers. Here are some of my recent thoughts.
+            </p>
+
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>MARCH 5, 2026</span>
+                        <span>•</span>
+                        <span>TECH & CAREERS</span>
+                    </div>
+                    <h3 class="blog-card-title">India's AI Job Market Surges</h3>
+                    <p class="blog-card-desc">
+                        An analysis of recent employment reports indicating a massive spikes in job advertisements requiring Prompt Engineering, TensorFlow integration, and custom AI agent alignment. Let's look at the key geographical and corporate hubs driving this hiring.
+                    </p>
+                    <button class="blog-read-more read-btn" data-post-id="1">Read Article</button>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>FEB 25, 2026</span>
+                        <span>•</span>
+                        <span>AI & SYSTEMS</span>
+                    </div>
+                    <h3 class="blog-card-title">The Future of Generative AI: 2026 Prospects</h3>
+                    <p class="blog-card-desc">
+                        Where is Generative AI heading in 2026? We investigate the transition from static LLM chatbots to complex multi-agent reasoning loops that can execute multi-step database and codebase modifications autonomously.
+                    </p>
+                    <button class="blog-read-more read-btn" data-post-id="2">Read Article</button>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>FEB 20, 2026</span>
+                        <span>•</span>
+                        <span>SECURITY & DEFENSE</span>
+                    </div>
+                    <h3 class="blog-card-title">How AI is Changing the Cybersecurity Landscape</h3>
+                    <p class="blog-card-desc">
+                        A detailed look into the dual-use nature of machine learning algorithms. While companies deploy ML to detect anomalies in real-time firewall transactions, attackers exploit model parameters to orchestrate polymorphic spear-phishing.
+                    </p>
+                    <button class="blog-read-more read-btn" data-post-id="3">Read Article</button>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>FEB 15, 2026</span>
+                        <span>•</span>
+                        <span>EDUCATION & MATH</span>
+                    </div>
+                    <h3 class="blog-card-title">Getting Started with ML: A Beginner's Roadmap</h3>
+                    <p class="blog-card-desc">
+                        An educational guide designed for computer application students. I outline the baseline mathematical prerequisites, dataset ingestion steps, and the foundational algorithms you should build from scratch.
+                    </p>
+                    <button class="blog-read-more read-btn" data-post-id="4">Read Article</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Blog Modal -->
+    <div id="blogModal" class="blog-modal">
+        <div class="blog-modal-content">
+            <button id="modalClose" class="blog-modal-close">&times;</button>
+            <div class="blog-modal-body">
+                <h2 id="modalTitle">Article Title</h2>
+                <div id="modalMeta" class="blog-modal-meta">DATE • CATEGORY</div>
+                <div id="modalText" class="blog-modal-text">
+                    <!-- Dynamic Text Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. All Rights Reserved. Created under the Department of Computer Science.
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Interactive Article Data & Controller Script -->
+    <script>
+        const articlesData = {
+            "1": {
+                title: "India's AI Job Market Surges",
+                meta: "MARCH 5, 2026 • TECH & CAREERS",
+                content: `
+                    <p>According to recent industry audits and recruitment metrics (such as the Naukri JobSpeak index), the requirement for artificial intelligence and machine learning specialists in India has witnessed a massive surge in the early quarters of 2026.</p>
+                    <p>This expansion is primarily driven by banking, financial services, and traditional software development firms seeking to integrate agentic models into their operations. The traditional role of full-stack developer is undergoing a rapid transition—hiring managers are now prioritizing candidates who can demonstrate concrete skills in prompt architecture, RAG (Retrieval-Augmented Generation) setups, and backend model routing.</p>
+                    <p>Major tech cities like Bengaluru, Hyderabad, and Noida remain the primary employment hubs. However, tier-2 cities are also recording rapid percentage increases as decentralized startup hubs expand. The demand for technical educators who can train this emerging workforce in practical AI skills is higher than ever before.</p>
+                `
+            },
+            "2": {
+                title: "The Future of Generative AI: 2026 Prospects",
+                meta: "FEB 25, 2026 • AI & SYSTEMS",
+                content: `
+                    <p>The conversation around Generative AI is shifting away from basic chatbot interfaces. In 2026, the focus has completely turned to autonomous agent networks capable of complex reasoning and independent task execution.</p>
+                    <p>Unlike early generation models that merely predicted text sequences, modern agentic systems are designed with planning loops, short-term memory registers, and tools execution access. This allows them to receive a broad objective, break it down into sequential subtasks, write code, run automated tests, and fix bugs until the task is successfully completed.</p>
+                    <p>For developers, this means that the core competency is evolving from writing boilerplate logic to designing instructions, structuring clean system prompt boundaries, and managing multi-modal data pipes. Security auditing of these autonomous agents is also becoming one of the fastest-growing niches in tech.</p>
+                `
+            },
+            "3": {
+                title: "How AI is Changing the Cybersecurity Landscape",
+                meta: "FEB 20, 2026 • SECURITY & DEFENSE",
+                content: `
+                    <p>Cybersecurity has transformed into a computational battle of algorithms. Machine learning algorithms are now standard features of enterprise security, processing billions of network transaction records per second to flag anomalous traffic vectors.</p>
+                    <p>However, AI is a double-edged sword. Offensive actors are actively employing generative models to create highly personalized, context-aware spear-phishing payloads at scale. By feeding public professional profiles into NLP engines, malicious agents automate the crafting of highly convincing communications.</p>
+                    <p>Defenders are counteracting this by setting up automated threat-modeling agents that simulate potential exploits. In this landscape, securing the ML pipelines themselves against prompt injections and data poisoning has become a high-priority challenge for software engineering teams.</p>
+                `
+            },
+            "4": {
+                title: "Getting Started with ML: A Beginner's Roadmap",
+                meta: "FEB 15, 2026 • EDUCATION & MATH",
+                content: `
+                    <p>Starting with machine learning can feel overwhelming due to the complex mathematical equations and libraries. To break it down simply, I always advise computer applications students to follow a structured, step-by-step progression.</p>
+                    <p>First, strengthen your foundational mathematics—specifically linear algebra (matrices, vector spaces), calculus (derivatives, gradient descent), and probability/statistics. Understanding these concepts is vital because algorithms like linear regression and support vector machines are fundamentally mathematical optimization equations.</p>
+                    <p>Second, master Python and its data manipulation ecosystem—namely NumPy for numeric arrays and Pandas for dataframes. Once you can comfortably clean and clean raw data, move on to building simple models using Scikit-Learn before diving into deep learning libraries like TensorFlow or PyTorch. The key to learning is building: implement algorithms from scratch before using pre-built APIs.</p>
+                `
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('blogModal');
+            const closeBtn = document.getElementById('modalClose');
+            const readButtons = document.querySelectorAll('.read-btn');
+            
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMeta = document.getElementById('modalMeta');
+            const modalText = document.getElementById('modalText');
+
+            readButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const postId = btn.getAttribute('data-post-id');
+                    const article = articlesData[postId];
+                    
+                    if (article) {
+                        modalTitle.textContent = article.title;
+                        modalMeta.textContent = article.meta;
+                        modalText.innerHTML = article.content;
+                        
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden'; // Disable background scrolling
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Enable background scrolling
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            
+            // Close modal when clicking outside content box
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <!-- JS Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
