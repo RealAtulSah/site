@@ -33,7 +33,7 @@ The website features a custom **Cyber-Minimalist** theme utilizing high contrast
 *   `about.html` (About): Outlines professional bio details, educational background timeline (Patna University MCA/BCA), and teaching/development history.
 *   `skills.html` (Skills): Categorized technical tag groups (Frontend, Backend, AI & ML, Systems & Tools) and animating progress bars showing core competence depth.
 *   `projects.html` (Projects): Detailed breakdown of software projects. Highlights the **Personalized LMS created for B.N. College (Department of Computer Application)**, detailing notes repositories, assignment managers, student databases, and MCQ test engines.
-*   `publications.html` (Books): Showcases the 7 self-published technical books on Java, Machine Learning, Generative AI, and Cybersecurity with purchase outbound links.
+*   `publications.html` (Books): Showcases the 8 self-published technical books on Agentic AI Systems, Java, Machine Learning, Generative AI, and Cybersecurity with purchase outbound links.
 *   `blog.html` (Blog): Technical articles previews with an integrated modal content container.
 *   `contact.html` (Contact): Active communication details and an asynchronous messaging form.
 
