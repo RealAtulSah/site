@@ -1,0 +1,9 @@
+# Local agent memory
+editing.md
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
