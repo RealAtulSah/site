@@ -89,16 +89,16 @@
     <!-- Header / Navigation -->
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <a href="index" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Books</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="skills">Skills</a></li>
+                    <li><a href="projects">Projects</a></li>
+                    <li><a href="publications">Books</a></li>
+                    <li><a href="blog" class="active">Blog</a></li>
+                    <li><a href="contact">Contact</a></li>
                 </ul>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
@@ -122,6 +122,23 @@
             </p>
 
             <div class="blog-grid">
+                <!-- Blog Post 0 (New Featured Post) -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>MARCH 10, 2026</span>
+                        <span>•</span>
+                        <span>AI & OPEN SOURCE</span>
+                    </div>
+                    <h3 class="blog-card-title">How Open-Source LLMs Are Changing the AI Industry</h3>
+                    <p class="blog-card-desc">
+                        An extensive exploration into how open-weight models (Llama, DeepSeek-R1, Qwen, Mistral) are democratizing AI access, enabling local deployment, lowering fine-tuning costs, and reshaping hardware market dynamics.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-open-source-llms" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn" data-post-id="5" style="border: 1px solid var(--color-border); padding: 0.5rem 1rem; font-size: 0.85rem; color: var(--color-grey-light);">Quick Preview</button>
+                    </div>
+                </div>
+
                 <!-- Blog Post 1 -->
                 <div class="cyber-card blog-card">
                     <div class="blog-meta">
@@ -202,11 +219,11 @@
                 &copy; 2026 Atul Sah. All Rights Reserved.
             </div>
             <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="publications.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="projects">Projects</a></li>
+                <li><a href="publications">Books</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
     </footer>
@@ -214,6 +231,15 @@
     <!-- Interactive Article Data & Controller Script -->
     <script>
         const articlesData = {
+            "5": {
+                title: "How Open-Source LLMs Are Changing the AI Industry",
+                meta: "MARCH 10, 2026 • AI & OPEN SOURCE",
+                content: `
+                    <p>Artificial intelligence was once a technology available mainly to organisations with massive computing resources and proprietary models. The rapid rise of open-source and open-weight Large Language Models (LLMs) such as Llama, Mistral, Qwen, Gemma, and DeepSeek-R1 is reshaping the entire landscape.</p>
+                    <p>According to Stanford's 2026 AI Index, open-source AI development has scaled to over 5.6 million GitHub projects. Key impacts include lowering fine-tuning costs, facilitating private local AI deployment, boosting data privacy, accelerating academic research, and shifting focus toward modular AI agents and efficient architectures.</p>
+                    <p><a href="blogs/blog-open-source-llms" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
             "1": {
                 title: "India's AI Job Market Surges",
                 meta: "MARCH 5, 2026 • TECH & CAREERS",

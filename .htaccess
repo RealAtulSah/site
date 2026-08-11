@@ -1,0 +1,14 @@
+# Apache Server Clean URLs Configuration (.htaccess)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Redirect external requests with .html extension to clean non-.html URL
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*([^.]+)\.html\ HTTP/ [NC]
+    RewriteRule ^(([^/]+/)*[^.]+)\.html$ /$1 [R=301,L]
+
+    # 2. Silently rewrite clean requests to the actual .html file if present
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
