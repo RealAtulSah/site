@@ -101,6 +101,11 @@
             align-items: center;
             gap: 1rem;
             margin-top: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 0.8rem 1.2rem;
+            border-radius: 6px;
+            width: fit-content;
         }
 
         .author-avatar-img {
@@ -112,14 +117,22 @@
         }
 
         .author-info-text h4 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--color-white);
-            margin: 0;
+            font-weight: 700;
+            margin: 0 0 0.15rem 0;
+        }
+
+        .author-role {
+            font-size: 0.82rem;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 0.2rem;
         }
 
         .author-info-text p {
-            font-size: 0.85rem;
-            color: var(--color-grey-light);
+            font-size: 0.8rem;
+            color: #d0d0d0;
             margin: 0;
         }
 
@@ -270,7 +283,8 @@
                     <img src="../avatar.jpg" alt="Atul Sah Profile" class="author-avatar-img">
                     <div class="author-info-text">
                         <h4>Atul Sah</h4>
-                        <p>Published on March 14, 2026 • 15 min read</p>
+                        <div class="author-role">Computer Science Educator, Author & Developer</div>
+                        <p>Published on August 14, 2026 • 15 min read</p>
                     </div>
                 </div>
             </header>
