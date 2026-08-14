@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atul Sah | Blog - Tech Articles & Roadmaps</title>
-    <meta name="description" content="Technical articles and blog posts written by Atul Sah on artificial intelligence job market trends, generative AI, cybersecurity, and machine learning roadmaps.">
-    <meta name="keywords" content="Atul Sah Blog, AI Job Market India, Generative AI future, AI Cybersecurity, Machine learning roadmap">
-    
+    <meta name="description"
+        content="Technical articles and blog posts written by Atul Sah on artificial intelligence job market trends, generative AI, cybersecurity, and machine learning roadmaps.">
+    <meta name="keywords"
+        content="Atul Sah Blog, AI Job Market India, Generative AI future, AI Cybersecurity, Machine learning roadmap">
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="avatar.jpg">
-    
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
         /* Specific Styles for Interactive Blog Reader Modal */
         .blog-modal {
@@ -27,7 +30,7 @@
             overflow-y: auto;
             padding: 4rem 2rem;
         }
-        
+
         .blog-modal-content {
             max-width: 800px;
             margin: 0 auto;
@@ -37,7 +40,7 @@
             position: relative;
             box-shadow: var(--shadow-solid);
         }
-        
+
         .blog-modal-close {
             position: absolute;
             top: 1.5rem;
@@ -50,17 +53,17 @@
             cursor: none;
             transition: var(--transition-fast);
         }
-        
+
         .blog-modal-close:hover {
             color: var(--color-yellow);
         }
-        
+
         .blog-modal-body h2 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
             line-height: 1.3;
         }
-        
+
         .blog-modal-meta {
             font-family: var(--font-mono);
             color: var(--color-yellow);
@@ -69,7 +72,7 @@
             padding-bottom: 1rem;
             font-size: 0.9rem;
         }
-        
+
         .blog-modal-text p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
@@ -78,6 +81,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Background Canvas for Particles -->
     <canvas id="particleCanvas"></canvas>
@@ -118,24 +122,52 @@
             </div>
 
             <p class="blog-intro">
-                I regularly document insights regarding the progression of Artificial Intelligence, cybersecurity protocols, and roadmaps for aspiring software developers. Here are some of my recent thoughts.
+                I regularly document insights regarding the progression of Artificial Intelligence, cybersecurity
+                protocols, and roadmaps for aspiring software developers. Here are some of my recent thoughts.
             </p>
 
             <div class="blog-grid">
-                <!-- Blog Post 0 (New Featured Post) -->
+                <!-- Blog Post 6 (Latest Featured Post) -->
                 <div class="cyber-card blog-card">
                     <div class="blog-meta">
-                        <span>MARCH 10, 2026</span>
+                        <span>August 14, 2026</span>
+                        <span>•</span>
+                        <span>AI & AUTONOMOUS SYSTEMS</span>
+                    </div>
+                    <h3 class="blog-card-title">AI Agents Are Becoming Autonomous: From Chatbots to Digital Workers</h3>
+                    <p class="blog-card-desc">
+                        An extensive analysis into how AI agents are evolving from reactive chatbots to goal-driven
+                        digital workers capable of planning, tool use, memory, Model Context Protocol (MCP), and
+                        multi-agent orchestration.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-ai-agents-autonomous" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn" data-post-id="6"
+                            style="border: 1px solid var(--color-border); padding: 0.5rem 1rem; font-size: 0.85rem; color: var(--color-grey-light);">Quick
+                            Preview</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>August 10, 2026</span>
                         <span>•</span>
                         <span>AI & OPEN SOURCE</span>
                     </div>
                     <h3 class="blog-card-title">How Open-Source LLMs Are Changing the AI Industry</h3>
                     <p class="blog-card-desc">
-                        An extensive exploration into how open-weight models (Llama, DeepSeek-R1, Qwen, Mistral) are democratizing AI access, enabling local deployment, lowering fine-tuning costs, and reshaping hardware market dynamics.
+                        An extensive exploration into how open-weight models (Llama, DeepSeek-R1, Qwen, Mistral) are
+                        democratizing AI access, enabling local deployment, lowering fine-tuning costs, and reshaping
+                        hardware market dynamics.
                     </p>
                     <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="blogs/blog-open-source-llms" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
-                        <button class="blog-read-more read-btn" data-post-id="5" style="border: 1px solid var(--color-border); padding: 0.5rem 1rem; font-size: 0.85rem; color: var(--color-grey-light);">Quick Preview</button>
+                        <a href="blogs/blog-open-source-llms" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn" data-post-id="5"
+                            style="border: 1px solid var(--color-border); padding: 0.5rem 1rem; font-size: 0.85rem; color: var(--color-grey-light);">Quick
+                            Preview</button>
                     </div>
                 </div>
 
@@ -148,7 +180,9 @@
                     </div>
                     <h3 class="blog-card-title">India's AI Job Market Surges</h3>
                     <p class="blog-card-desc">
-                        An analysis of recent employment reports indicating a massive spikes in job advertisements requiring Prompt Engineering, TensorFlow integration, and custom AI agent alignment. Let's look at the key geographical and corporate hubs driving this hiring.
+                        An analysis of recent employment reports indicating a massive spikes in job advertisements
+                        requiring Prompt Engineering, TensorFlow integration, and custom AI agent alignment. Let's look
+                        at the key geographical and corporate hubs driving this hiring.
                     </p>
                     <button class="blog-read-more read-btn" data-post-id="1">Read Article</button>
                 </div>
@@ -162,7 +196,9 @@
                     </div>
                     <h3 class="blog-card-title">The Future of Generative AI: 2026 Prospects</h3>
                     <p class="blog-card-desc">
-                        Where is Generative AI heading in 2026? We investigate the transition from static LLM chatbots to complex multi-agent reasoning loops that can execute multi-step database and codebase modifications autonomously.
+                        Where is Generative AI heading in 2026? We investigate the transition from static LLM chatbots
+                        to complex multi-agent reasoning loops that can execute multi-step database and codebase
+                        modifications autonomously.
                     </p>
                     <button class="blog-read-more read-btn" data-post-id="2">Read Article</button>
                 </div>
@@ -176,7 +212,9 @@
                     </div>
                     <h3 class="blog-card-title">How AI is Changing the Cybersecurity Landscape</h3>
                     <p class="blog-card-desc">
-                        A detailed look into the dual-use nature of machine learning algorithms. While companies deploy ML to detect anomalies in real-time firewall transactions, attackers exploit model parameters to orchestrate polymorphic spear-phishing.
+                        A detailed look into the dual-use nature of machine learning algorithms. While companies deploy
+                        ML to detect anomalies in real-time firewall transactions, attackers exploit model parameters to
+                        orchestrate polymorphic spear-phishing.
                     </p>
                     <button class="blog-read-more read-btn" data-post-id="3">Read Article</button>
                 </div>
@@ -190,7 +228,9 @@
                     </div>
                     <h3 class="blog-card-title">Getting Started with ML: A Beginner's Roadmap</h3>
                     <p class="blog-card-desc">
-                        An educational guide designed for computer application students. I outline the baseline mathematical prerequisites, dataset ingestion steps, and the foundational algorithms you should build from scratch.
+                        An educational guide designed for computer application students. I outline the baseline
+                        mathematical prerequisites, dataset ingestion steps, and the foundational algorithms you should
+                        build from scratch.
                     </p>
                     <button class="blog-read-more read-btn" data-post-id="4">Read Article</button>
                 </div>
@@ -231,6 +271,15 @@
     <!-- Interactive Article Data & Controller Script -->
     <script>
         const articlesData = {
+            "6": {
+                title: "AI Agents Are Becoming Autonomous: From Chatbots to Digital Workers",
+                meta: "MARCH 14, 2026 • AI & AUTONOMOUS SYSTEMS",
+                content: `
+                    <p>For years, artificial intelligence was mostly something we talked to. We asked a chatbot to write an email, explain a programming concept, or answer a question. That model is changing rapidly in 2026.</p>
+                    <p>The next phase of AI is about giving models the ability to plan, use tools, remember context, make decisions, execute actions, observe results, and pursue complex multi-step goals with minimal human intervention. Key drivers include Model Context Protocol (MCP), Gemini 3.7 Flash agent runtimes, multi-agent collaboration, and graduated autonomy safety frameworks.</p>
+                    <p><a href="blogs/blog-ai-agents-autonomous" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
             "5": {
                 title: "How Open-Source LLMs Are Changing the AI Industry",
                 meta: "MARCH 10, 2026 • AI & OPEN SOURCE",
@@ -282,7 +331,7 @@
             const modal = document.getElementById('blogModal');
             const closeBtn = document.getElementById('modalClose');
             const readButtons = document.querySelectorAll('.read-btn');
-            
+
             const modalTitle = document.getElementById('modalTitle');
             const modalMeta = document.getElementById('modalMeta');
             const modalText = document.getElementById('modalText');
@@ -292,12 +341,12 @@
                     e.stopPropagation();
                     const postId = btn.getAttribute('data-post-id');
                     const article = articlesData[postId];
-                    
+
                     if (article) {
                         modalTitle.textContent = article.title;
                         modalMeta.textContent = article.meta;
                         modalText.innerHTML = article.content;
-                        
+
                         modal.style.display = 'block';
                         document.body.style.overflow = 'hidden'; // Disable background scrolling
                     }
@@ -310,7 +359,7 @@
             };
 
             closeBtn.addEventListener('click', closeModal);
-            
+
             // Close modal when clicking outside content box
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
@@ -329,4 +378,5 @@
     <!-- JS Logic -->
     <script src="script.js"></script>
 </body>
+
 </html>
