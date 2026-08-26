@@ -44,6 +44,17 @@
     cursor: none; /* Hide default cursor for custom cursor experience */
 }
 
+/* --- High-Contrast Selection Style --- */
+::selection {
+    background-color: var(--color-yellow);
+    color: #000000 !important;
+}
+
+::-moz-selection {
+    background-color: var(--color-yellow);
+    color: #000000 !important;
+}
+
 button {
     font: inherit;
     background: none;
@@ -335,11 +346,15 @@ section {
     transition: var(--transition-smooth);
 }
 
-.btn:hover {
-    color: #000000;
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color: #000000 !important;
 }
 
-.btn:hover::before {
+.btn:hover::before,
+.btn:focus::before,
+.btn:active::before {
     left: 0;
 }
 
@@ -353,8 +368,10 @@ section {
     background-color: var(--color-white);
 }
 
-.btn-secondary:hover {
-    color: #000000;
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    color: #000000 !important;
 }
 
 /* Cards (Base Cyberpunk Grid Layout) */
@@ -395,6 +412,15 @@ section {
 .badge-yellow {
     border-color: var(--color-yellow);
     color: var(--color-yellow);
+}
+
+.badge-yellow-fill,
+.badge-yellow-solid,
+.bg-yellow,
+mark,
+.highlight-yellow {
+    background-color: var(--color-yellow) !important;
+    color: #000000 !important;
 }
 
 /* --- Hero / Welcome Page --- */
@@ -674,7 +700,7 @@ section {
 .skill-tag:hover {
     border-color: var(--color-yellow);
     background-color: var(--color-yellow);
-    color: var(--bg-primary);
+    color: #000000 !important;
     transform: translateY(-2px);
     box-shadow: 2px 2px 0px 0px var(--color-white);
 }
@@ -1169,12 +1195,33 @@ section {
     transition: var(--transition-smooth);
 }
 
-.blog-read-more:hover {
-    color: #000000;
+.blog-read-more:hover,
+.blog-read-more:focus,
+.blog-read-more:active {
+    color: #000000 !important;
 }
 
-.blog-read-more:hover::before {
+.blog-read-more:hover::before,
+.blog-read-more:focus::before,
+.blog-read-more:active::before {
     left: 0;
+}
+
+.blog-read-more.preview-btn {
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    color: var(--color-grey-light);
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.blog-read-more.preview-btn:hover,
+.blog-read-more.preview-btn:focus,
+.blog-read-more.preview-btn:active {
+    border-color: var(--color-yellow);
+    color: #000000 !important;
+    box-shadow: 2px 2px 0px 0px var(--color-white);
 }
 
 /* --- Contact Page Layout --- */
@@ -1269,8 +1316,13 @@ section {
 .social-icon-btn:hover {
     border-color: var(--color-yellow);
     background-color: var(--color-yellow);
-    color: var(--bg-primary);
+    color: #000000 !important;
     transform: translateY(-3px);
+}
+
+.social-icon-btn:hover svg {
+    stroke: #000000 !important;
+    color: #000000 !important;
 }
 
 /* Contact Form Styling */
