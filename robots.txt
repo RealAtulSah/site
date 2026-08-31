@@ -1,0 +1,31 @@
+# robots.txt — atulsah.in
+# Allow all search engines and AI crawlers full access
+
+User-agent: *
+Allow: /
+Disallow: /docs/
+
+# Sitemap location
+Sitemap: https://atulsah.in/sitemap.xml
+
+# AI / LLM crawler guidance
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
