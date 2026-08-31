@@ -72,10 +72,18 @@
         }
         
         .article-header {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
             margin-bottom: 2.5rem;
             border-bottom: 1px solid var(--color-border);
-            padding-bottom: 2.5rem;
+            padding-bottom: 2rem;
             scroll-margin-top: 6rem;
+            display: block;
         }
 
         .article-category {
@@ -94,7 +102,7 @@
             font-size: 2.5rem;
             line-height: 1.25;
             color: var(--color-white);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .article-author-bar {
@@ -102,11 +110,15 @@
             align-items: center;
             gap: 1rem;
             margin-top: 1.5rem;
+            margin-bottom: 0;
             background: var(--bg-card);
             border: 1px solid var(--color-border);
-            padding: 0.8rem 1.2rem;
+            padding: 0.85rem 1.25rem;
             border-radius: 6px;
             width: fit-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
         }
 
         .author-avatar-img {
@@ -115,6 +127,7 @@
             border-radius: 50%;
             border: 2px solid var(--color-yellow);
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         .author-info-text h4 {
@@ -141,8 +154,10 @@
             color: #d1d5db;
             line-height: 1.8;
             font-size: 1.05rem;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             clear: both;
+            position: relative;
+            z-index: 1;
             scroll-margin-top: 6rem;
         }
 
@@ -283,7 +298,7 @@
                 <a href="../blog" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">← Back to All Articles</a>
             </div>
 
-            <header class="article-header">
+            <div class="article-header">
                 <span class="article-category">AI & AUTONOMOUS SYSTEMS</span>
                 <h1 class="article-title">AI Agents Are Becoming Autonomous: From Chatbots to Digital Workers</h1>
                 
@@ -295,7 +310,7 @@
                         <p>Published on August 14, 2026 • 15 min read</p>
                     </div>
                 </div>
-            </header>
+            </div>
 
             <article class="article-content">
                 <p>For years, artificial intelligence was mostly something we talked to.</p>

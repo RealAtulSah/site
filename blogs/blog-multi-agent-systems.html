@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models | Atul Sah</title>
+    
+    <!-- SEO & Search Engine Optimization Metadata -->
+    <meta name="description" content="Explore how Multi-Agent Systems (MAS) are transforming modern AI architectures. Learn how specialized agent collaboration, delegation, and consensus mechanisms solve complex enterprise problems.">
+    <meta name="keywords" content="Multi-Agent Systems, MAS, AI Agents, Agentic AI, Autonomous Agents, Model Context Protocol, MCP, LangGraph, CrewAI, AutoGen, AI Architecture, Digital Workers, Atul Sah Blog">
+    <meta name="author" content="Atul Sah">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://atulsah.com/blogs/blog-multi-agent-systems">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://atulsah.com/blogs/blog-multi-agent-systems">
+    <meta property="og:title" content="Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models | Atul Sah">
+    <meta property="og:description" content="Explore how Multi-Agent Systems (MAS) are transforming modern AI architectures. Learn how specialized agent collaboration, delegation, and consensus mechanisms solve complex enterprise problems.">
+    <meta property="og:image" content="https://atulsah.com/avatar.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://atulsah.com/blogs/blog-multi-agent-systems">
+    <meta name="twitter:title" content="Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models">
+    <meta name="twitter:description" content="Explore how Multi-Agent Systems (MAS) are transforming modern AI architectures. Learn how specialized agent collaboration, delegation, and consensus mechanisms solve complex enterprise problems.">
+    <meta name="twitter:image" content="https://atulsah.com/avatar.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://atulsah.com/blogs/blog-multi-agent-systems"
+      },
+      "headline": "Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models",
+      "description": "Explore how Multi-Agent Systems (MAS) are transforming modern AI architectures. Learn how specialized agent collaboration, delegation, and consensus mechanisms solve complex enterprise problems.",
+      "author": {
+        "@type": "Person",
+        "name": "Atul Sah",
+        "jobTitle": "Computer Science Educator, Author & Developer",
+        "url": "https://atulsah.com/about"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Atul Sah"
+      },
+      "datePublished": "2026-08-22",
+      "dateModified": "2026-08-22",
+      "keywords": ["Multi-Agent Systems", "MAS", "AI Agents", "Agentic AI", "Model Context Protocol", "MCP", "LangGraph", "CrewAI", "AutoGen", "Autonomous Systems"]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
+        }
+        
+        .article-header {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2rem;
+            scroll-margin-top: 6rem;
+            display: block;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255, 221, 0, 0.1);
+            color: var(--color-yellow);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 221, 0, 0.3);
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            line-height: 1.25;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-author-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 0.85rem 1.25rem;
+            border-radius: 6px;
+            width: fit-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .author-avatar-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--color-yellow);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info-text h4 {
+            font-size: 1.05rem;
+            color: var(--color-white);
+            font-weight: 700;
+            margin: 0 0 0.15rem 0;
+        }
+
+        .author-role {
+            font-size: 0.82rem;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info-text p {
+            font-size: 0.8rem;
+            color: #d0d0d0;
+            margin: 0;
+        }
+
+        .article-content {
+            color: #d1d5db;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-top: 2rem;
+            clear: both;
+            position: relative;
+            z-index: 1;
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.6rem;
+        }
+
+        .article-content h2, .article-content h3 {
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--color-yellow);
+            margin-top: 3.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--color-white);
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.8rem;
+            padding-left: 1.8rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.6rem;
+        }
+
+        .article-content blockquote {
+            background: rgba(18, 18, 18, 0.8);
+            border-left: 4px solid var(--color-yellow);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #e5e7eb;
+        }
+
+        .article-content hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+            margin: 3.5rem 0;
+        }
+
+        .architecture-box {
+            background: #0d1117;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.92rem;
+            color: #58a6ff;
+            overflow-x: auto;
+            margin: 2rem 0;
+            line-height: 1.6;
+            white-space: pre;
+        }
+
+        .callout-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 2.2rem 0;
+        }
+
+        .callout-card h4 {
+            color: var(--color-yellow);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+        }
+
+        .data-table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .data-table th, .data-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .data-table th {
+            background: #111111;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background: rgba(255, 221, 0, 0.02);
+        }
+
+        .step-box {
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            border-left: 3px solid var(--color-yellow);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .step-box-title {
+            color: var(--color-yellow);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-box ul {
+            margin-bottom: 0;
+            padding-left: 1.25rem;
+        }
+
+        .article-nav-bottom {
+            margin-top: 5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.9rem;
+            }
+            .article-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="../index" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="../index">Home</a></li>
+                    <li><a href="../about">About</a></li>
+                    <li><a href="../skills">Skills</a></li>
+                    <li><a href="../projects">Projects</a></li>
+                    <li><a href="../publications">Books</a></li>
+                    <li><a href="../blog" class="active">Blog</a></li>
+                    <li><a href="../contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main>
+        <div class="article-wrapper fade-in-section visible">
+            <div style="margin-bottom: 1.5rem;">
+                <a href="../blog" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">← Back to All Articles</a>
+            </div>
+
+            <div class="article-header">
+                <span class="article-category">AI &amp; MULTI-AGENT SYSTEMS</span>
+                <h1 class="article-title">Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models</h1>
+                
+                <div class="article-author-bar">
+                    <img src="../avatar.jpg" alt="Atul Sah Profile" class="author-avatar-img">
+                    <div class="author-info-text">
+                        <h4>Atul Sah</h4>
+                        <div class="author-role">Computer Science Educator, Author &amp; Developer</div>
+                        <p>Published on August 22, 2026 • 14 min read</p>
+                    </div>
+                </div>
+            </div>
+
+            <article class="article-content">
+                <p>For the past couple of years, the primary race in artificial intelligence revolved around making a single model larger, smarter, and more capable. We expected one massive model to write code, analyse financial reports, debug system logs, write marketing copy, and verify regulatory compliance—all inside a single prompt.</p>
+
+                <p>While large language models (LLMs) have achieved remarkable benchmarks, monolithic systems run into practical engineering limits when dealing with complex, multi-stage enterprise workflows: <strong>context window dilution, hallucination accumulation, and high operational latency</strong>.</p>
+
+                <p>The industry is rapidly shifting toward a new architectural paradigm: <strong>Multi-Agent Systems (MAS)</strong>.</p>
+
+                <p>Instead of asking one giant model to do everything, we build <strong>teams of specialised AI agents</strong> that collaborate, critique, delegate, and execute tasks together.</p>
+
+                <p>The defining question is evolving from:</p>
+
+                <blockquote>
+                    <p>"How powerful is this single model?"</p>
+                </blockquote>
+
+                <p>To:</p>
+
+                <blockquote>
+                    <p><strong>"How effectively can specialised agents communicate, divide labour, and achieve complex goals together?"</strong></p>
+                </blockquote>
+
+                <hr>
+
+                <h2>1. The Monolithic LLM Bottleneck</h2>
+
+                <p>When we assign a massive, multi-faceted workflow to a single prompt or model, the execution flow usually looks like this:</p>
+
+                <div class="architecture-box">
+Complex User Goal ──► [ Monolithic LLM ] ──► Output (High risk of hallucination / context drift)
+                </div>
+
+                <p>While this approach works for conversational queries and straightforward text synthesis, enterprise production environments reveal three severe bottlenecks:</p>
+
+                <ul>
+                    <li><strong>Context Contamination:</strong> When instructions for software engineering, compliance rules, domain constraints, and business logic are packed into one long context window, the model struggles with precision and attention allocation.</li>
+                    <li><strong>Cascading Errors:</strong> If step 2 of a 10-step reasoning process fails, the entire remaining output becomes flawed without any opportunity for mid-flight self-correction or sandboxed isolation.</li>
+                    <li><strong>High Operational Cost &amp; Latency:</strong> Running a heavyweight frontier model for simple routing, JSON schema validation, or text formatting wastes compute, increases latency, and drains production budgets.</li>
+                </ul>
+
+                <hr>
+
+                <h2>2. What Is a Multi-Agent System (MAS)?</h2>
+
+                <p>In a Multi-Agent System, we decompose a complex objective into modular, purpose-built agent roles. Each agent is a self-contained entity possessing:</p>
+
+                <div class="callout-card">
+                    <h4>Core Anatomy of an Autonomous Agent</h4>
+                    <ul>
+                        <li><strong>Specific Role &amp; Persona:</strong> Defined system prompt establishing domain expertise and behavioural boundaries.</li>
+                        <li><strong>Dedicated Tool Access:</strong> Curated API endpoints, database query executors, file system parsers, or code compilers.</li>
+                        <li><strong>State &amp; Memory Management:</strong> Short-term session buffers and long-term vector/relational state stores.</li>
+                        <li><strong>Inter-Agent Communication Protocols:</strong> Standardised interfaces for message passing, delegation, and artifact exchange.</li>
+                    </ul>
+                </div>
+
+                <div class="architecture-box">
+                           [ User Objective ]
+                                   │
+                                   ▼
+                         [ Orchestrator Agent ]
+                                   │
+         ┌─────────────────────────┼─────────────────────────┐
+         ▼                         ▼                         ▼
+  [ Research Agent ]        [ Coder Agent ]          [ Reviewer Agent ]
+  • Web Scraping            • Code Generation        • Security Audit
+  • Documentation           • Test Writing           • Quality Check
+         │                         │                         │
+         └─────────────────────────┼─────────────────────────┘
+                                   │
+                                   ▼
+                          [ Final Deliverable ]
+                </div>
+
+                <p>The fundamental shift here is <strong>division of labour, isolated context windows, and automated self-correction</strong>.</p>
+
+                <hr>
+
+                <h2>3. Core Architectures in Multi-Agent Workflows</h2>
+
+                <p>Different enterprise challenges require distinct interaction topologies. In modern software engineering, we see three primary architectural patterns:</p>
+
+                <h3>A. Hierarchical Pattern (Supervisor / Orchestrator)</h3>
+
+                <p>A central "Supervisor" or "Planner" agent interprets user requirements, generates an execution graph, delegates discrete sub-tasks to specialised worker agents, and aggregates results into a cohesive deliverable.</p>
+
+                <div class="architecture-box">
+[ Orchestrator ] ──(Assigns sub-task)──► [ Specialist Agent A ]
+       ▲                                          │
+       │                                          │ (Returns result)
+       └──────────────────────────────────────────┘
+                </div>
+
+                <p><strong>Best for:</strong> Complex end-to-end software development lifecycles, full-stack migrations, and multi-source research synthesis.</p>
+
+                <h3>B. Sequential Pipeline Pattern (Chain of Responsibility)</h3>
+
+                <p>Agents execute tasks in a deterministic linear chain, passing the validated output of one step as the input to the next agent in the pipeline.</p>
+
+                <div class="architecture-box">
+[ Ingestion Agent ] ──► [ Summarizer Agent ] ──► [ Validator Agent ] ──► [ Final Output ]
+                </div>
+
+                <p><strong>Best for:</strong> Document intake workflows, regulatory compliance audits, data ETL transformations, and CI/CD pull request triage.</p>
+
+                <h3>C. Collaborative / Consensus Pattern (Debate &amp; Verification)</h3>
+
+                <p>Multiple agents generate distinct perspectives or solutions, actively critique each other's work, and negotiate until a mathematically verified threshold or consensus is achieved.</p>
+
+                <div class="architecture-box">
+[ Proposal Agent ] ──(Generates Patch)──► [ Critique Agent ]
+         ▲                                       │
+         │                                       │ (Suggests Refactor)
+         └───────────────────────────────────────┘
+                </div>
+
+                <p><strong>Best for:</strong> Critical cybersecurity audits, financial risk modeling, automated code review, and mathematical problem-solving.</p>
+
+                <hr>
+
+                <h2>4. Practical Example: Building an Automated Bug-Fixing Pipeline</h2>
+
+                <p>Let's examine how a multi-agent team handles production incident triage compared to a traditional single-prompt chatbot:</p>
+
+                <div class="step-box">
+                    <div class="step-box-title">Step 1: Log Analyser Agent</div>
+                    <ul>
+                        <li><strong>Role:</strong> Ingests production error logs, parses stack traces, and isolates root causes.</li>
+                        <li><strong>Tooling:</strong> Direct read access to Elasticsearch, AWS CloudWatch, and Datadog APIs.</li>
+                        <li><strong>Output:</strong> Identified null pointer exception in <code>UserService.java</code> at line 84.</li>
+                    </ul>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-box-title">Step 2: Coder Agent</div>
+                    <ul>
+                        <li><strong>Role:</strong> Navigates codebase repository and synthesises targeted patches.</li>
+                        <li><strong>Tooling:</strong> Git repository read/write access and AST syntax parser.</li>
+                        <li><strong>Action:</strong> Implements defensive null checks and structured fallback exception handling.</li>
+                    </ul>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-box-title">Step 3: Test &amp; Verification Agent</div>
+                    <ul>
+                        <li><strong>Role:</strong> Executes local unit and integration test suites in isolated sandboxes.</li>
+                        <li><strong>Tooling:</strong> Headless container runner and Maven/Gradle build executors.</li>
+                        <li><strong>Observation:</strong> Verifies regression safety and automatically writes new unit test cases.</li>
+                    </ul>
+                </div>
+
+                <div class="step-box">
+                    <div class="step-box-title">Step 4: Security &amp; Compliance Agent</div>
+                    <ul>
+                        <li><strong>Role:</strong> Audits generated code against OWASP Top 10 vulnerabilities and enterprise style guides.</li>
+                        <li><strong>Decision:</strong> Issues cryptographic approval signature and opens an automated GitHub Pull Request.</li>
+                    </ul>
+                </div>
+
+                <p>By isolating roles, each model operates with a <strong>hyper-focused context window and zero cognitive noise</strong>, reducing hallucinations to near zero.</p>
+
+                <hr>
+
+                <h2>5. Standardisation: Why Protocols Like MCP Matter for MAS</h2>
+
+                <p>As multi-agent ecosystems scale across enterprise infrastructure, interoperability becomes the primary engineering hurdle. If Agent A uses proprietary schema formatting while Agent B operates over disparate JSON structures, orchestrating them requires fragile, high-maintenance glue code.</p>
+
+                <p>Open standards like the <strong>Model Context Protocol (MCP)</strong> and orchestration frameworks (such as <strong>LangGraph, CrewAI, AutoGen, and Semantic Kernel</strong>) establish uniform foundations that allow agents to:</p>
+
+                <ul>
+                    <li><strong>Expose Internal Tools as Callable RPC Endpoints:</strong> Enable arbitrary agents to invoke external capabilities seamlessly.</li>
+                    <li><strong>Exchange Structured State Payloads:</strong> Maintain typed schema contracts across agent handoffs without context degradation.</li>
+                    <li><strong>Preserve Distributed Session State:</strong> Manage durable checkpoints and resumable workflows across long-running asynchronous execution loops.</li>
+                </ul>
+
+                <hr>
+
+                <h2>6. Engineering Challenges in Multi-Agent Deployment</h2>
+
+                <p>While Multi-Agent Systems provide superior modularity and reasoning depth, deploying them in production introduces distinct technical challenges:</p>
+
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Operational Impact</th>
+                                <th>Architectural Mitigation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Agent Loops &amp; Deadlocks</strong></td>
+                                <td>Agents enter infinite critique cycles without converging on a deliverable.</td>
+                                <td>Enforce deterministic iteration limits (max steps) and automated supervisor escalation timeouts.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Token Consumption &amp; Latency</strong></td>
+                                <td>Extensive inter-agent chatter increases token overhead and response times.</td>
+                                <td>Deploy specialised Small Language Models (SLMs) for routing and reserve frontier models for synthesis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>State Drift &amp; Corruption</strong></td>
+                                <td>Shared memory context degrades across multi-turn asynchronous handoffs.</td>
+                                <td>Implement deterministic state-graph machines with strict typed schemas (e.g. Pydantic/Zod).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr>
+
+                <h2>7. The Road Ahead: From Chatbots to Digital Workforces</h2>
+
+                <p>We are officially moving away from the era where AI is viewed as an interactive oracle that passively answers single prompts. Multi-Agent Systems transform artificial intelligence into an <strong>autonomous operational workforce</strong>.</p>
+
+                <p>In this emergent paradigm:</p>
+
+                <ul>
+                    <li><strong>Human Engineers &amp; Managers:</strong> Define high-level business objectives, system guardrails, ethical constraints, and final success metrics.</li>
+                    <li><strong>Specialised Agent Collectives:</strong> Execute deep research, technical architecture design, robust code implementation, and automated security verification.</li>
+                </ul>
+
+                <p>The future of software engineering and AI systems will not be defined solely by who trains the largest foundation model—it will belong to those who build the <strong>most resilient, collaborative, and observable multi-agent architectures</strong>.</p>
+
+                <hr>
+
+                <div class="callout-card" style="border-color: var(--color-yellow); background: rgba(255, 221, 0, 0.04);">
+                    <h4 style="color: var(--color-yellow); font-size: 1.25rem; margin-bottom: 1rem;">Key Takeaways</h4>
+                    <ol style="margin-bottom: 0;">
+                        <li><strong>Specialisation Outperforms Generalisation:</strong> Modular agents with isolated context windows and tailored toolkits consistently beat monolithic models on complex, multi-step workflows.</li>
+                        <li><strong>Built-In Self-Correction Loops:</strong> Multi-agent topologies enable automated critique, verification, and testing cycles before deliverables reach production.</li>
+                        <li><strong>Standardised Protocols Enable Scale:</strong> Open standards like MCP and typed state graphs are turning autonomous agents into modular, plug-and-play digital workflows.</li>
+                    </ol>
+                </div>
+            </article>
+
+            <footer class="article-nav-bottom">
+                <a href="../blog" class="btn btn-secondary">← Back to All Articles</a>
+                <a href="../contact" class="btn">Discuss AI &amp; Collaborate</a>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. All Rights Reserved.
+            </div>
+            <ul class="footer-links">
+                <li><a href="../index">Home</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="../projects">Projects</a></li>
+                <li><a href="../publications">Books</a></li>
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="../script.js"></script>
+</body>
+</html>

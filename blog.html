@@ -127,7 +127,43 @@
             </p>
 
             <div class="blog-grid">
-                <!-- Blog Post 6 (Latest Featured Post) -->
+                <!-- Blog Post 8 (Latest Featured Post) -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>August 28, 2026</span>
+                        <span>•</span>
+                        <span>AI & EDGE COMPUTING</span>
+                    </div>
+                    <h3 class="blog-card-title">Small Language Models (SLMs) & Edge AI: Why Smaller, Domain-Specific Models Are the Future of Practical AI</h3>
+                    <p class="blog-card-desc">
+                        Explore why the AI industry is shifting from massive cloud LLMs to Small Language Models (1B–8B) running locally on edge devices. Learn about quantisation (GGUF/AWQ), zero-latency offline execution, and compound AI architectures.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-small-language-models" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="8">Quick Preview</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>August 22, 2026</span>
+                        <span>•</span>
+                        <span>AI & MULTI-AGENT SYSTEMS</span>
+                    </div>
+                    <h3 class="blog-card-title">Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models</h3>
+                    <p class="blog-card-desc">
+                        Explore how Multi-Agent Systems (MAS) are transforming modern AI architectures. Learn how specialized agent collaboration, delegation, consensus mechanisms, and protocols like MCP solve complex real-world problems.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-multi-agent-systems" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="7">Quick Preview</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
                 <div class="cyber-card blog-card">
                     <div class="blog-meta">
                         <span>August 14, 2026</span>
@@ -166,70 +202,6 @@
                         <button class="blog-read-more read-btn preview-btn" data-post-id="5">Quick Preview</button>
                     </div>
                 </div>
-
-                <!-- Blog Post 1 -->
-                <div class="cyber-card blog-card">
-                    <div class="blog-meta">
-                        <span>MARCH 5, 2026</span>
-                        <span>•</span>
-                        <span>TECH & CAREERS</span>
-                    </div>
-                    <h3 class="blog-card-title">India's AI Job Market Surges</h3>
-                    <p class="blog-card-desc">
-                        An analysis of recent employment reports indicating a massive spikes in job advertisements
-                        requiring Prompt Engineering, TensorFlow integration, and custom AI agent alignment. Let's look
-                        at the key geographical and corporate hubs driving this hiring.
-                    </p>
-                    <button class="blog-read-more read-btn" data-post-id="1">Read Article</button>
-                </div>
-
-                <!-- Blog Post 2 -->
-                <div class="cyber-card blog-card">
-                    <div class="blog-meta">
-                        <span>FEB 25, 2026</span>
-                        <span>•</span>
-                        <span>AI & SYSTEMS</span>
-                    </div>
-                    <h3 class="blog-card-title">The Future of Generative AI: 2026 Prospects</h3>
-                    <p class="blog-card-desc">
-                        Where is Generative AI heading in 2026? We investigate the transition from static LLM chatbots
-                        to complex multi-agent reasoning loops that can execute multi-step database and codebase
-                        modifications autonomously.
-                    </p>
-                    <button class="blog-read-more read-btn" data-post-id="2">Read Article</button>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div class="cyber-card blog-card">
-                    <div class="blog-meta">
-                        <span>FEB 20, 2026</span>
-                        <span>•</span>
-                        <span>SECURITY & DEFENSE</span>
-                    </div>
-                    <h3 class="blog-card-title">How AI is Changing the Cybersecurity Landscape</h3>
-                    <p class="blog-card-desc">
-                        A detailed look into the dual-use nature of machine learning algorithms. While companies deploy
-                        ML to detect anomalies in real-time firewall transactions, attackers exploit model parameters to
-                        orchestrate polymorphic spear-phishing.
-                    </p>
-                    <button class="blog-read-more read-btn" data-post-id="3">Read Article</button>
-                </div>
-
-                <!-- Blog Post 4 -->
-                <div class="cyber-card blog-card">
-                    <div class="blog-meta">
-                        <span>FEB 15, 2026</span>
-                        <span>•</span>
-                        <span>EDUCATION & MATH</span>
-                    </div>
-                    <h3 class="blog-card-title">Getting Started with ML: A Beginner's Roadmap</h3>
-                    <p class="blog-card-desc">
-                        An educational guide designed for computer application students. I outline the baseline
-                        mathematical prerequisites, dataset ingestion steps, and the foundational algorithms you should
-                        build from scratch.
-                    </p>
-                    <button class="blog-read-more read-btn" data-post-id="4">Read Article</button>
-                </div>
             </div>
         </section>
     </main>
@@ -267,9 +239,27 @@
     <!-- Interactive Article Data & Controller Script -->
     <script>
         const articlesData = {
+            "8": {
+                title: "Small Language Models (SLMs) & Edge AI: Why Smaller, Domain-Specific Models Are the Future of Practical AI",
+                meta: "AUGUST 28, 2026 • AI & EDGE COMPUTING",
+                content: `
+                    <p>Instead of routing every query through a massive cloud data centre, the industry is shifting toward compact, highly-trained Small Language Models (1B–8B) running locally on consumer CPUs, Apple Silicon, and mobile NPUs.</p>
+                    <p>Through synthetic data curation and advanced quantisation (GGUF, AWQ), modern SLMs match earlier 70B models on domain-specific tasks while delivering zero-latency, complete data privacy, offline reliability, and zero token costs.</p>
+                    <p><a href="blogs/blog-small-language-models" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
+            "7": {
+                title: "Multi-Agent Systems (MAS): How Teams of Specialised AI Agents Are Replacing Monolithic Models",
+                meta: "AUGUST 22, 2026 • AI & MULTI-AGENT SYSTEMS",
+                content: `
+                    <p>Instead of asking one giant monolithic model to do everything, modern enterprise AI architectures build teams of specialised AI agents that collaborate, critique, delegate, and execute tasks together.</p>
+                    <p>Key architectural patterns include Hierarchical (Supervisor/Orchestrator), Sequential Pipelines, and Collaborative Consensus/Debate topologies. Integrated with open standards like the Model Context Protocol (MCP) and orchestration frameworks (LangGraph, CrewAI, AutoGen), multi-agent systems eliminate context dilution and cascading errors.</p>
+                    <p><a href="blogs/blog-multi-agent-systems" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
             "6": {
                 title: "AI Agents Are Becoming Autonomous: From Chatbots to Digital Workers",
-                meta: "MARCH 14, 2026 • AI & AUTONOMOUS SYSTEMS",
+                meta: "AUGUST 14, 2026 • AI & AUTONOMOUS SYSTEMS",
                 content: `
                     <p>For years, artificial intelligence was mostly something we talked to. We asked a chatbot to write an email, explain a programming concept, or answer a question. That model is changing rapidly in 2026.</p>
                     <p>The next phase of AI is about giving models the ability to plan, use tools, remember context, make decisions, execute actions, observe results, and pursue complex multi-step goals with minimal human intervention. Key drivers include Model Context Protocol (MCP), Gemini 3.7 Flash agent runtimes, multi-agent collaboration, and graduated autonomy safety frameworks.</p>
@@ -278,47 +268,11 @@
             },
             "5": {
                 title: "How Open-Source LLMs Are Changing the AI Industry",
-                meta: "MARCH 10, 2026 • AI & OPEN SOURCE",
+                meta: "AUGUST 10, 2026 • AI & OPEN SOURCE",
                 content: `
                     <p>Artificial intelligence was once a technology available mainly to organisations with massive computing resources and proprietary models. The rapid rise of open-source and open-weight Large Language Models (LLMs) such as Llama, Mistral, Qwen, Gemma, and DeepSeek-R1 is reshaping the entire landscape.</p>
                     <p>According to Stanford's 2026 AI Index, open-source AI development has scaled to over 5.6 million GitHub projects. Key impacts include lowering fine-tuning costs, facilitating private local AI deployment, boosting data privacy, accelerating academic research, and shifting focus toward modular AI agents and efficient architectures.</p>
                     <p><a href="blogs/blog-open-source-llms" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
-                `
-            },
-            "1": {
-                title: "India's AI Job Market Surges",
-                meta: "MARCH 5, 2026 • TECH & CAREERS",
-                content: `
-                    <p>According to recent industry audits and recruitment metrics (such as the Naukri JobSpeak index), the requirement for artificial intelligence and machine learning specialists in India has witnessed a massive surge in the early quarters of 2026.</p>
-                    <p>This expansion is primarily driven by banking, financial services, and traditional software development firms seeking to integrate agentic models into their operations. The traditional role of full-stack developer is undergoing a rapid transition—hiring managers are now prioritizing candidates who can demonstrate concrete skills in prompt architecture, RAG (Retrieval-Augmented Generation) setups, and backend model routing.</p>
-                    <p>Major tech cities like Bengaluru, Hyderabad, and Noida remain the primary employment hubs. However, tier-2 cities are also recording rapid percentage increases as decentralized startup hubs expand. The demand for technical educators who can train this emerging workforce in practical AI skills is higher than ever before.</p>
-                `
-            },
-            "2": {
-                title: "The Future of Generative AI: 2026 Prospects",
-                meta: "FEB 25, 2026 • AI & SYSTEMS",
-                content: `
-                    <p>The conversation around Generative AI is shifting away from basic chatbot interfaces. In 2026, the focus has completely turned to autonomous agent networks capable of complex reasoning and independent task execution.</p>
-                    <p>Unlike early generation models that merely predicted text sequences, modern agentic systems are designed with planning loops, short-term memory registers, and tools execution access. This allows them to receive a broad objective, break it down into sequential subtasks, write code, run automated tests, and fix bugs until the task is successfully completed.</p>
-                    <p>For developers, this means that the core competency is evolving from writing boilerplate logic to designing instructions, structuring clean system prompt boundaries, and managing multi-modal data pipes. Security auditing of these autonomous agents is also becoming one of the fastest-growing niches in tech.</p>
-                `
-            },
-            "3": {
-                title: "How AI is Changing the Cybersecurity Landscape",
-                meta: "FEB 20, 2026 • SECURITY & DEFENSE",
-                content: `
-                    <p>Cybersecurity has transformed into a computational battle of algorithms. Machine learning algorithms are now standard features of enterprise security, processing billions of network transaction records per second to flag anomalous traffic vectors.</p>
-                    <p>However, AI is a double-edged sword. Offensive actors are actively employing generative models to create highly personalized, context-aware spear-phishing payloads at scale. By feeding public professional profiles into NLP engines, malicious agents automate the crafting of highly convincing communications.</p>
-                    <p>Defenders are counteracting this by setting up automated threat-modeling agents that simulate potential exploits. In this landscape, securing the ML pipelines themselves against prompt injections and data poisoning has become a high-priority challenge for software engineering teams.</p>
-                `
-            },
-            "4": {
-                title: "Getting Started with ML: A Beginner's Roadmap",
-                meta: "FEB 15, 2026 • EDUCATION & MATH",
-                content: `
-                    <p>Starting with machine learning can feel overwhelming due to the complex mathematical equations and libraries. To break it down simply, I always advise computer applications students to follow a structured, step-by-step progression.</p>
-                    <p>First, strengthen your foundational mathematics—specifically linear algebra (matrices, vector spaces), calculus (derivatives, gradient descent), and probability/statistics. Understanding these concepts is vital because algorithms like linear regression and support vector machines are fundamentally mathematical optimization equations.</p>
-                    <p>Second, master Python and its data manipulation ecosystem—namely NumPy for numeric arrays and Pandas for dataframes. Once you can comfortably clean and clean raw data, move on to building simple models using Scikit-Learn before diving into deep learning libraries like TensorFlow or PyTorch. The key to learning is building: implement algorithms from scratch before using pre-built APIs.</p>
                 `
             }
         };
