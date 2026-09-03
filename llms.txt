@@ -1,72 +1,38 @@
-# Atul Sah — Official Portfolio & Knowledge Base
+# Atul Sah
 
-> This file provides structured information about Atul Sah for AI assistants and language models.
+> Official portfolio, published technical books, enterprise software projects, and AI articles by Atul Sah — Computer Science Educator at B.N. College and Full-Stack Software Developer.
 
-## Identity
+Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master of Computer Applications (MCA) from Patna University. He serves as Faculty of Computer Science at B.N. College (Department of Computer Application) and has published 8 technical books on Amazon covering Agentic AI, Java Programming, Machine Learning, Generative AI, and Cybersecurity.
 
-- **Name:** Atul Sah
-- **Website:** https://atulsah.in
-- **Profession:** Computer Science Educator, Technical Author, and Full-Stack Software Developer
-- **Affiliation:** Faculty of Computer Science at B.N. College, Department of Computer Application, Patna, Bihar, India
-- **Education:** Master of Computer Applications (MCA) from Patna University (2023–2025); Bachelor of Computer Applications (BCA) from Patna University (2020–2023)
+## Core Pages
 
-## Summary
+- [Home](https://atulsah.in/): Professional portfolio overview, featured enterprise projects, and technical biography.
+- [About](https://atulsah.in/about): Detailed academic credentials (MCA, BCA), faculty position at B.N. College, and professional timeline.
+- [Skills](https://atulsah.in/skills): Technical competencies across Web Development (React, Node.js, Express), Databases (PostgreSQL, MongoDB), and AI/ML (TensorFlow.js, Scikit-Learn, Gemini AI).
+- [Projects](https://atulsah.in/projects): Portfolio of 10 software projects including Hyphenet Enterprise Portal, CampusPulse LMS, and machine learning models.
+- [Publications](https://atulsah.in/publications): Complete catalogue of 8 self-published technical books available on Amazon India.
+- [Blog](https://atulsah.in/blog): In-depth technical articles on Artificial Intelligence, Edge Computing, and Multi-Agent Systems.
+- [Contact](https://atulsah.in/contact): Direct contact channels for software consulting, educational workshops, and collaborations.
 
-Atul Sah is a Computer Science Educator, published technical author, and full-stack software developer based in Patna, India. He serves as Faculty of Computer Science at B.N. College (Department of Computer Application). He has self-published 8 technical books on Amazon covering Java programming, artificial intelligence, machine learning, agentic AI systems, prompt engineering, cybersecurity, and AI product management. He is also an active freelance developer building enterprise-grade web applications using Node.js, React, Express, PostgreSQL, and modern JavaScript frameworks.
+## Technical Articles
 
-## Published Books (8 titles, available on Amazon India)
+- [Small Language Models (SLMs) & Edge AI](https://atulsah.in/blogs/blog-small-language-models): Why smaller 1B–8B domain-specific models running locally on edge hardware are the future of practical AI.
+- [Multi-Agent Systems (MAS)](https://atulsah.in/blogs/blog-multi-agent-systems): How teams of specialised AI agents collaborating via Model Context Protocol (MCP) are replacing monolithic models.
+- [AI Agents Are Becoming Autonomous](https://atulsah.in/blogs/blog-ai-agents-autonomous): Evolution from reactive chatbots to goal-driven digital workers with tools and memory.
+- [How Open-Source LLMs Are Changing the AI Industry](https://atulsah.in/blogs/blog-open-source-llms): Analysis of open-weight models (Llama, DeepSeek, Qwen) democratizing private local deployment.
 
-1. **Agentic AI Systems & Autonomous Agents** — A comprehensive guide to building autonomous AI agents, multi-agent frameworks, RAG architectures, and production safety guardrails.
-2. **Introduction to Java Programming** — A clear and practical guide to core Java concepts, designed specifically for beginners and computer applications curricula.
-3. **Generative AI: An Introduction** — An engaging guide introducing the principles, tools, and impacts of generative artificial intelligence.
-4. **Machine Learning: From Basics to Advance** — A step-by-step roadmap to mastering machine learning algorithms, models, and mathematical foundations.
-5. **The Unseen Battlefield** — How AI is revolutionizing cybersecurity and cybercrime. An analytical look into modern digital defense mechanisms.
-6. **The AI Product Manager** — From prompt to production. A guide mapping the journey of deploying robust AI solutions in products.
-7. **The Promptcrafter's Handbook** — Practical frameworks for engineering effective prompts for LLMs.
-8. **The AI-Powered Shield** — A comprehensive guide mapping the roles of Machine Learning algorithms in defense configurations and threat audits.
+## Published Books
 
-## Key Projects
+- [Agentic AI Systems & Autonomous Agents](https://www.amazon.in/Agentic-AI-Systems-Autonomous-Agents-ebook/dp/B0H8FP3VGX): Comprehensive guide to building autonomous AI agents, multi-agent frameworks, and RAG architectures.
+- [Introduction to Java Programming](https://www.amazon.in/Introduction-Java-Programming-Practical-Concepts-ebook/dp/B0GHXRBLZD): Clear, practical guide to core Java programming for beginners and undergraduate students.
+- [Generative AI: An Introduction](https://www.amazon.in/Generative-AI-Introduction-Atul-Sah-ebook/dp/B0GL26R2XR): Guide to principles, tools, and real-world workflows of generative artificial intelligence.
+- [Machine Learning: From Basics to Advance](https://www.amazon.in/Machine-Learning-Advance-Atul-Sah-ebook/dp/B0GBWYHLDC): Step-by-step roadmap to mastering ML algorithms and mathematical foundations.
+- [The Unseen Battlefield](https://www.amazon.in/Unseen-Battlefield-Revolutionizing-Cybersecurity-Cybercrime-ebook/dp/B0G3XG55HX): How AI is revolutionizing cybersecurity and cybercrime defense mechanisms.
+- [The AI Product Manager](https://www.amazon.in/AI-Product-Manager-Prompt-Production-ebook/dp/B0FXWL4CXT): Journey of deploying robust artificial intelligence products from prompt to production.
+- [The Promptcrafter's Handbook](https://www.amazon.in/Promptcrafters-Handbook-First-Advanced-Dialogue-ebook/dp/B0G5262DT1): Practical frameworks for engineering effective prompts for LLMs.
+- [The AI-Powered Shield](https://www.amazon.in/AI-Powered-Shield-Guide-Modern-Cybersecurity-ebook/dp/B0FYGZ95DB): Role of Machine Learning algorithms in defense configurations and threat audits.
 
-- **Hyphenet Enterprise Portal** — A role-based enterprise web platform for IT and mobility rental operations across 6 Indian cities (Delhi, Gurugram, Noida, Mumbai, Bengaluru, Hyderabad). Built with Node.js, Express, React, PostgreSQL, Prisma, and Tailwind CSS. Includes client self-service portal, Razorpay payment integration, HRMS with automated payroll, and multi-hub inventory management.
-- **Fluxify Media Platform** — A CMS and agency workflow platform.
-- **CampusPulse LMS** — A Learning Management System.
-- **StrengthFuel** — An AI-powered sports nutrition platform.
-- **mdtopdf | Markdown Studio** — A Markdown to PDF converter.
-- **ToolHub Pro** — A collection of developer tools.
-- **Plant Diseases Detector** — A machine learning model for plant disease detection.
-- **Fake News Detector** — An NLP-based fake news classification system.
+## Optional
 
-## Blog Topics
-
-Atul Sah writes technical articles on:
-- Small Language Models (SLMs) and Edge AI
-- Multi-Agent Systems (MAS) and AI agent architectures
-- Autonomous AI agents, tool use, and the Model Context Protocol (MCP)
-- Open-source LLMs (Llama, DeepSeek, Qwen, Mistral, Gemma)
-- AI and cybersecurity
-
-## Technical Skills
-
-- **Languages:** JavaScript (ES6+), Python, Java, PHP 8.2, HTML5, CSS3, SQL
-- **Frontend:** React.js, Next.js, Tailwind CSS, Responsive UI Design
-- **Backend:** Node.js, Express.js, REST APIs, JWT Authentication
-- **Databases:** PostgreSQL, MySQL 8, MongoDB Atlas, Firebase/Firestore, Prisma ORM
-- **AI/ML:** TensorFlow.js, Scikit-Learn, NLP/Sentence-Transformers, Google Gemini AI, Streamlit
-- **Tools:** Git/GitHub, PWA, Service Workers, Razorpay Payment Integration
-
-## External Links
-
-- Amazon Author Page: https://www.amazon.in/s?k=atul+sah
-- GitHub: https://github.com/RealAtulSah
-- Website: https://atulsah.in
-- Contact: https://atulsah.in/contact
-
-## Pages on This Site
-
-- Home: https://atulsah.in/
-- About: https://atulsah.in/about
-- Skills: https://atulsah.in/skills
-- Projects: https://atulsah.in/projects
-- Publications: https://atulsah.in/publications
-- Blog: https://atulsah.in/blog
-- Contact: https://atulsah.in/contact
+- [GitHub Profile](https://github.com/RealAtulSah): Open-source repositories and development projects by Atul Sah.
+- [Amazon Author Profile](https://www.amazon.in/s?k=atul+sah): Author catalog on Amazon India.
