@@ -3,6 +3,10 @@
     RewriteEngine On
     RewriteBase /
 
+    # 0. Redirect external requests for /index or /index.html to root /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?(\?|\ ) [NC]
+    RewriteRule ^index(\.html)?$ / [R=301,L]
+
     # 1. Redirect external requests with .html extension to clean non-.html URL
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*([^.]+)\.html\ HTTP/ [NC]
     RewriteRule ^(([^/]+/)*[^.]+)\.html$ /$1 [R=301,L]
