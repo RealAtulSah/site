@@ -46,6 +46,12 @@
 
     <!-- Blog Posts -->
     <url>
+        <loc>https://atulsah.in/blogs/blog-research-gap-computer-science</loc>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://atulsah.in/blogs/blog-small-language-models</loc>
         <lastmod>2026-08-28</lastmod>
         <changefreq>yearly</changefreq>
