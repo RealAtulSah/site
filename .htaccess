@@ -1,18 +1,75 @@
-# Apache Server Clean URLs Configuration (.htaccess)
+# Apache Server Clean URLs & Performance Configuration (.htaccess)
+
+# 1. Clean URLs & 301 Redirections
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
 
-    # 0. Redirect external requests for /index or /index.html to root /
+    # Redirect external requests for /index or /index.html to root /
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index(\.html)?(\?|\ ) [NC]
     RewriteRule ^index(\.html)?$ / [R=301,L]
 
-    # 1. Redirect external requests with .html extension to clean non-.html URL
+    # Redirect external requests with .html extension to clean non-.html URL
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*([^.]+)\.html\ HTTP/ [NC]
     RewriteRule ^(([^/]+/)*[^.]+)\.html$ /$1 [R=301,L]
 
-    # 2. Silently rewrite clean requests to the actual .html file if present
+    # Silently rewrite clean requests to the actual .html file if present
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME}\.html -f
     RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# 2. Gzip / Deflate Compression for Faster LCP & Payload Reduction
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/ld+json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE image/x-icon
+</IfModule>
+
+# 3. Leverage Browser Caching (Expires Headers)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    # HTML Documents: 1 hour (revalidate often for fresh content)
+    ExpiresByType text/html "access plus 1 hour"
+
+    # CSS and JavaScript: 1 year (aggressive caching)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+
+    # Images and Media
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+</IfModule>
+
+# 4. Cache-Control & Performance Headers
+<IfModule mod_headers.c>
+    # Static Assets Cache-Control
+    <FilesMatch "\.(css|js|png|jpg|jpeg|webp|svg|woff|woff2|ico)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # HTML Cache-Control
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=3600, public, must-revalidate"
+    </FilesMatch>
 </IfModule>
