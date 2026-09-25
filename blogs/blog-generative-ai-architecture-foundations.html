@@ -114,6 +114,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- KaTeX for Scientific & Mathematical Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"></script>
+    
     <style>
         .article-wrapper {
             max-width: 900px;
@@ -279,14 +285,20 @@
             background: #0d1117;
             border: 1px solid rgba(255, 221, 0, 0.25);
             border-radius: 8px;
-            padding: 1.25rem 1.5rem;
-            font-family: 'Fira Code', monospace;
-            font-size: 1rem;
+            padding: 1.5rem;
+            font-size: 1.25rem;
             color: var(--color-yellow);
             text-align: center;
-            margin: 1.8rem 0;
+            margin: 2rem 0;
             overflow-x: auto;
-            letter-spacing: 0.5px;
+        }
+
+        .math-block .katex {
+            color: var(--color-yellow);
+        }
+
+        .math-block .katex-display {
+            margin: 0.25rem 0;
         }
 
         .callout-card {
@@ -413,7 +425,7 @@
                 <div class="article-content">
                     <p>For decades, modern machine learning was primarily <strong>discriminative</strong>.</p>
 
-                    <p>We built algorithms to classify, detect, predict, or filter data. Given an input <em>X</em>, a discriminative model estimates the conditional probability distribution <em>P(Y | X)</em>:</p>
+                    <p>We built algorithms to classify, detect, predict, or filter data. Given an input $X$, a discriminative model estimates the conditional probability distribution $P(Y \mid X)$:</p>
 
                     <ul>
                         <li><em>"Is this email spam or not spam?"</em></li>
@@ -421,7 +433,7 @@
                         <li><em>"What is the probability this credit card transaction is fraudulent?"</em></li>
                     </ul>
 
-                    <p>In contrast, <strong>Generative AI</strong> models the joint probability distribution <em>P(X, Y)</em> or the marginal distribution <em>P(X)</em> of the data itself. Instead of drawing a boundary to separate classes, a generative model learns how the underlying data was distributed in the high-dimensional latent space.</p>
+                    <p>In contrast, <strong>Generative AI</strong> models the joint probability distribution $P(X, Y)$ or the marginal distribution $P(X)$ of the data itself. Instead of drawing a boundary to separate classes, a generative model learns how the underlying data was distributed in the high-dimensional latent space.</p>
 
                     <p>Once a system understands the structure, relationships, and variations of that distribution, it can sample from it to synthesize <strong>entirely new, never-before-seen artifacts</strong>—whether that is clean Java code, high-resolution imagery, molecular structures, or realistic audio.</p>
 
@@ -449,8 +461,8 @@ Generative Model:       Noise / Prompt (z) ─► [ Data Distribution ] ──�
                             <tbody>
                                 <tr>
                                     <td><strong>Mathematical Goal</strong></td>
-                                    <td>Learn the conditional boundary <em>P(Y | X)</em>.</td>
-                                    <td>Learn the data distribution <em>P(X)</em> or <em>P(X, Y)</em>.</td>
+                                    <td>Learn the conditional boundary $P(Y \mid X)$.</td>
+                                    <td>Learn the data distribution $P(X)$ or $P(X, Y)$.</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Objective</strong></td>
@@ -513,22 +525,22 @@ Generative Model:       Noise / Prompt (z) ─► [ Data Distribution ] ──�
                     <p><strong>The Scaled Dot-Product Attention Formula:</strong></p>
 
                     <div class="math-block">
-                        Attention(Q, K, V) = softmax( (Q · Kᵀ) / √dₖ ) · V
+                        $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
                     </div>
 
                     <p>Where:</p>
                     <ul>
-                        <li><strong>Q (Query):</strong> What the current token representation is searching for.</li>
-                        <li><strong>K (Key):</strong> What contextual information other tokens in the sequence offer.</li>
-                        <li><strong>V (Value):</strong> The actual content or contextual feature representation of each token.</li>
-                        <li><strong>√dₖ:</strong> A scaling factor preventing inner products from growing excessively large in high dimensions, which would drive softmax gradients into near-zero saturation.</li>
+                        <li><strong>$Q$ (Query):</strong> What the current token representation is searching for.</li>
+                        <li><strong>$K$ (Key):</strong> What contextual information other tokens in the sequence offer.</li>
+                        <li><strong>$V$ (Value):</strong> The actual content or contextual feature representation of each token.</li>
+                        <li><strong>$\sqrt{d_k}$:</strong> A scaling factor preventing inner products from growing excessively large in high dimensions, which would drive softmax gradients into near-zero saturation.</li>
                     </ul>
 
                     <p><strong>Autoregressive Decoding:</strong></p>
-                    <p>During text generation, models operate autoregressively: given tokens <em>(x₁, x₂, …, xₜ)</em>, the model calculates probabilities over vocabulary <em>V</em> for the token <em>xₜ₊₁</em>:</p>
+                    <p>During text generation, models operate autoregressively: given tokens $(x_1, x_2, \dots, x_t)$, the model calculates probabilities over vocabulary $V$ for the token $x_{t+1}$:</p>
 
                     <div class="math-block">
-                        P(x₁, x₂, …, x_T) = ∏ [t=1 to T] P(xₜ | x₁, …, xₜ₋₁)
+                        $$P(x_1, x_2, \dots, x_T) = \prod_{t=1}^T P(x_t \mid x_1, \dots, x_{t-1})$$
                     </div>
 
                     <h3>B. Diffusion Models (The Standard for Visual &amp; Media Synthesis)</h3>
@@ -542,17 +554,17 @@ Reverse Process (Generation):   Pure Noise (x_T) ──► [- Noise] ──► [
                                                   (Learned Neural Network / U-Net)</div>
 
                     <ol>
-                        <li><strong>Forward Process (Noising):</strong> A clean image <em>x₀</em> is systematically corrupted over <em>T</em> timesteps by adding small amounts of Gaussian noise until it turns into pure static.</li>
-                        <li><strong>Reverse Process (Denoising):</strong> A neural network (often a U-Net or Diffusion Transformer/DiT) is trained to estimate the exact noise <em>ε_θ(xₜ, t)</em> introduced at timestep <em>t</em>.</li>
+                        <li><strong>Forward Process (Noising):</strong> A clean image $x_0$ is systematically corrupted over $T$ timesteps by adding small amounts of Gaussian noise until it turns into pure static.</li>
+                        <li><strong>Reverse Process (Denoising):</strong> A neural network (often a U-Net or Diffusion Transformer/DiT) is trained to estimate the exact noise $\epsilon_\theta(x_t, t)$ introduced at timestep $t$.</li>
                         <li><strong>Latent Diffusion:</strong> Running denoising in high-resolution pixel space is computationally prohibitive. Modern systems compress images into a low-dimensional latent space using an autoencoder first, perform diffusion inside that latent manifold, and decode the result back to pixels.</li>
                     </ol>
 
                     <h3>C. Variational Autoencoders (VAEs)</h3>
 
-                    <p>A VAE maps high-dimensional input <em>X</em> into a smooth, probabilistic latent space characterized by a mean (<em>μ</em>) and variance (<em>σ</em>), then reconstructs it.</p>
+                    <p>A VAE maps high-dimensional input $X$ into a smooth, probabilistic latent space characterized by a mean ($\mu$) and variance ($\sigma$), then reconstructs it.</p>
 
                     <ul>
-                        <li>By enforcing a regularized latent space (via Kullback-Leibler divergence), we can sample random points <em>z ~ N(0, I)</em> and pass them through the Decoder to generate valid, novel data samples.</li>
+                        <li>By enforcing a regularized latent space (via Kullback-Leibler divergence), we can sample random points $z \sim \mathcal{N}(0, I)$ and pass them through the Decoder to generate valid, novel data samples.</li>
                         <li>Today, VAEs serve primarily as perceptual compression backbones for diffusion pipelines and anomaly detection.</li>
                     </ul>
 
@@ -561,12 +573,12 @@ Reverse Process (Generation):   Pure Noise (x_T) ──► [- Noise] ──► [
                     <p>A zero-sum minimax game between two networks:</p>
 
                     <ul>
-                        <li><strong>The Generator (G):</strong> Tries to produce fake data indistinguishable from real training data.</li>
-                        <li><strong>The Discriminator (D):</strong> Tries to classify whether a given sample is real or synthetic.</li>
+                        <li><strong>The Generator ($G$):</strong> Tries to produce fake data indistinguishable from real training data.</li>
+                        <li><strong>The Discriminator ($D$):</strong> Tries to classify whether a given sample is real or synthetic.</li>
                     </ul>
 
                     <div class="math-block">
-                        min_G max_D V(D, G) = E_{x~p_data}[log D(x)] + E_{z~p_z}[log(1 - D(G(z)))]
+                        $$\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]$$
                     </div>
 
                     <p>While GANs offer low latency during inference, they are notoriously difficult to train due to mode collapse and vanishing gradients, leading to diffusion models taking the lead in creative generation.</p>
@@ -654,13 +666,13 @@ Reverse Process (Generation):   Pure Noise (x_T) ──► [- Noise] ──► [
                     </ul>
 
                     <h3>Parameter-Efficient Fine-Tuning (PEFT / LoRA)</h3>
-                    <p>Instead of retraining billions of weights, <strong>Low-Rank Adaptation (LoRA)</strong> freezes the base model weights <em>W₀</em> and injects trainable rank-decomposition matrices <em>A</em> and <em>B</em>:</p>
+                    <p>Instead of retraining billions of weights, <strong>Low-Rank Adaptation (LoRA)</strong> freezes the base model weights $W_0$ and injects trainable rank-decomposition matrices $A$ and $B$:</p>
 
                     <div class="math-block">
-                        W = W₀ + ΔW = W₀ + B · A
+                        $$W = W_0 + \Delta W = W_0 + B \cdot A$$
                     </div>
 
-                    <p>Where <em>B ∈ ℝ^(d×r)</em> and <em>A ∈ ℝ^(r×k)</em>, with rank <em>r ≪ min(d, k)</em>.</p>
+                    <p>Where $B \in \mathbb{R}^{d \times r}$ and $A \in \mathbb{R}^{r \times k}$, with rank $r \ll \min(d, k)$.</p>
                     <ul>
                         <li><strong>Best for:</strong> Adapting a model to a proprietary coding framework, adopting a specific brand voice, or outputting niche, highly constrained JSON/XML schemas.</li>
                     </ul>
