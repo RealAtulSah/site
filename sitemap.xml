@@ -46,6 +46,12 @@
 
     <!-- Blog Posts -->
     <url>
+        <loc>https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://atulsah.in/blogs/blog-research-gap-computer-science</loc>
         <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>

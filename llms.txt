@@ -16,6 +16,7 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 
 ## Technical Articles
 
+- [The Engineering Anatomy of AI Agents](https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents): Deep-dive architectural handbook deconstructing agent runtime control loops, function calling JSON schemas, memory hierarchies, MCP, and deterministic state graphs.
 - [How to Find a Research Gap in Computer Science](https://atulsah.in/blogs/blog-research-gap-computer-science): Systematic guide to identifying defensible CS research gaps through literature matrices, benchmark teardowns, and methodology conflicts.
 - [Small Language Models (SLMs) & Edge AI](https://atulsah.in/blogs/blog-small-language-models): Why smaller 1B–8B domain-specific models running locally on edge hardware are the future of practical AI.
 - [Multi-Agent Systems (MAS)](https://atulsah.in/blogs/blog-multi-agent-systems): How teams of specialised AI agents collaborating via Model Context Protocol (MCP) are replacing monolithic models.

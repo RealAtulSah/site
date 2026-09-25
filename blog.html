@@ -84,6 +84,13 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
+          "headline": "The Engineering Anatomy of AI Agents: From Conceptual Models to Resilient Production Architecture",
+          "url": "https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents",
+          "datePublished": "2026-09-25",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
           "headline": "How to Find a Research Gap in Computer Science: A Systematic, End-to-End Guide",
           "url": "https://atulsah.in/blogs/blog-research-gap-computer-science",
           "datePublished": "2026-09-09",
@@ -243,7 +250,25 @@
             </p>
 
             <div class="blog-grid">
-                <!-- Blog Post 9 (Latest Featured Post) -->
+                <!-- Blog Post 10 (Latest Featured Post) -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>September 25, 2026</span>
+                        <span>•</span>
+                        <span>AI ARCHITECTURE &amp; AUTONOMOUS SYSTEMS</span>
+                    </div>
+                    <h3 class="blog-card-title">The Engineering Anatomy of AI Agents: From Conceptual Models to Resilient Production Architecture</h3>
+                    <p class="blog-card-desc">
+                        A deep-dive architectural handbook on AI Agents. Deconstruct control loops, function calling runtime internals, graph-based orchestration, deterministic state management, memory hierarchies, and failure recovery.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-engineering-anatomy-ai-agents" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="10">Quick Preview</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 9 -->
                 <div class="cyber-card blog-card">
                     <div class="blog-meta">
                         <span>September 09, 2026</span>
@@ -373,6 +398,15 @@
     <!-- Interactive Article Data & Controller Script -->
     <script>
         const articlesData = {
+            "10": {
+                title: "The Engineering Anatomy of AI Agents: From Conceptual Models to Resilient Production Architecture",
+                meta: "SEPTEMBER 25, 2026 • AI ARCHITECTURE & AUTONOMOUS SYSTEMS",
+                content: `
+                    <p>At the bare metal level, an LLM is a stateless next-token predictor. Agency is an illusion created by an external runtime engine that executes control loops, evaluates JSON function calls, and injects tool observation payloads.</p>
+                    <p>This architectural guide deconstructs the agent micro-step cycle, dynamic DAG planners, evaluator-optimizer reflection loops, OpenAPI/JSON schemas with Pydantic type validation, multi-tiered memory hierarchies, Model Context Protocol (MCP) integration, and deterministic state graphs.</p>
+                    <p><a href="blogs/blog-engineering-anatomy-ai-agents" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
             "9": {
                 title: "How to Find a Research Gap in Computer Science: A Systematic, End-to-End Guide",
                 meta: "SEPTEMBER 09, 2026 • RESEARCH & ACADEMIC CS",
