@@ -84,9 +84,16 @@
       "blogPost": [
         {
           "@type": "BlogPosting",
+          "headline": "Generative AI: Architecture, Foundations, and Production Engineering",
+          "url": "https://atulsah.in/blogs/blog-generative-ai-architecture-foundations",
+          "datePublished": "2026-09-25",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
           "headline": "The Engineering Anatomy of AI Agents: From Conceptual Models to Resilient Production Architecture",
           "url": "https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents",
-          "datePublished": "2026-09-25",
+          "datePublished": "2026-09-16",
           "author": { "@id": "https://atulsah.in/#person" }
         },
         {
@@ -250,10 +257,28 @@
             </p>
 
             <div class="blog-grid">
-                <!-- Blog Post 10 (Latest Featured Post) -->
+                <!-- Blog Post 11 (Latest Featured Post) -->
                 <div class="cyber-card blog-card">
                     <div class="blog-meta">
                         <span>September 25, 2026</span>
+                        <span>•</span>
+                        <span>GENERATIVE AI &amp; MACHINE LEARNING</span>
+                    </div>
+                    <h3 class="blog-card-title">Generative AI: Architecture, Foundations, and Production Engineering</h3>
+                    <p class="blog-card-desc">
+                        A comprehensive technical breakdown of Generative AI. Explore the mathematical shift from discriminative modeling, Transformer and Diffusion mechanics, foundation model training lifecycles, and enterprise deployment challenges.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-generative-ai-architecture-foundations" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">Read Full Article</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="11">Quick Preview</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 10 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>September 16, 2026</span>
                         <span>•</span>
                         <span>AI ARCHITECTURE &amp; AUTONOMOUS SYSTEMS</span>
                     </div>
@@ -398,9 +423,18 @@
     <!-- Interactive Article Data & Controller Script -->
     <script>
         const articlesData = {
+            "11": {
+                title: "Generative AI: Architecture, Foundations, and Production Engineering",
+                meta: "SEPTEMBER 25, 2026 • GENERATIVE AI & MACHINE LEARNING",
+                content: `
+                    <p>Instead of drawing decision boundaries to separate classes (discriminative modeling P(Y|X)), Generative AI models the underlying data distribution P(X) to synthesize novel, high-dimensional artifacts.</p>
+                    <p>This handbook deconstructs Transformer self-attention mathematics, Diffusion Markov chains and Latent Diffusion Models (LDMs), the 3-phase foundation model lifecycle (Pre-Training, SFT, RLHF/DPO), RAG vs. LoRA parameter adaptation, and production bottlenecks (KV cache VRAM walls, TTFT latency, and hallucinations).</p>
+                    <p><a href="blogs/blog-generative-ai-architecture-foundations" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">Click here to read the full in-depth article →</a></p>
+                `
+            },
             "10": {
                 title: "The Engineering Anatomy of AI Agents: From Conceptual Models to Resilient Production Architecture",
-                meta: "SEPTEMBER 25, 2026 • AI ARCHITECTURE & AUTONOMOUS SYSTEMS",
+                meta: "SEPTEMBER 16, 2026 • AI ARCHITECTURE & AUTONOMOUS SYSTEMS",
                 content: `
                     <p>At the bare metal level, an LLM is a stateless next-token predictor. Agency is an illusion created by an external runtime engine that executes control loops, evaluates JSON function calls, and injects tool observation payloads.</p>
                     <p>This architectural guide deconstructs the agent micro-step cycle, dynamic DAG planners, evaluator-optimizer reflection loops, OpenAPI/JSON schemas with Pydantic type validation, multi-tiered memory hierarchies, Model Context Protocol (MCP) integration, and deterministic state graphs.</p>
