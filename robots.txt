@@ -8,24 +8,27 @@ Disallow: /docs/
 # Sitemap location
 Sitemap: https://atulsah.in/sitemap.xml
 
-# AI / LLM crawler guidance
+# AI & Search Engine Crawler Guidance
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: ClaudeBot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Googlebot
 Allow: /

@@ -27,6 +27,26 @@
     <meta name="twitter:description" content="Get in touch with Atul Sah for software development, academic talks, and technical collaborations.">
     <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
 
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://atulsah.in/#person",
+      "name": "Atul Sah",
+      "url": "https://atulsah.in",
+      "image": "https://atulsah.in/avatar.jpg",
+      "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+      "sameAs": [
+        "https://github.com/RealAtulSah",
+        "https://in.linkedin.com/in/realatulsah",
+        "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+        "https://store.pothi.com/",
+        "https://www.amazon.in/s?k=atul+sah"
+      ]
+    }
+    </script>
+
     <!-- Structured Data: ContactPage -->
     <script type="application/ld+json">
     {
@@ -36,6 +56,28 @@
       "url": "https://atulsah.in/contact",
       "description": "Get in touch with Atul Sah for consulting, software development projects, academic talks, and book publishing collaborations.",
       "mainEntity": { "@id": "https://atulsah.in/#person" }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://atulsah.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://atulsah.in/contact"
+        }
+      ]
     }
     </script>
 

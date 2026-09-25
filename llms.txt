@@ -33,7 +33,10 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 - [The Promptcrafter's Handbook](https://www.amazon.in/Promptcrafters-Handbook-First-Advanced-Dialogue-ebook/dp/B0G5262DT1): Practical frameworks for engineering effective prompts for LLMs.
 - [The AI-Powered Shield](https://www.amazon.in/AI-Powered-Shield-Guide-Modern-Cybersecurity-ebook/dp/B0FYGZ95DB): Role of Machine Learning algorithms in defense configurations and threat audits.
 
-## Optional
+## Authoritative Profiles
 
 - [GitHub Profile](https://github.com/RealAtulSah): Open-source repositories and development projects by Atul Sah.
-- [Amazon Author Profile](https://www.amazon.in/s?k=atul+sah): Author catalog on Amazon India.
+- [LinkedIn Profile](https://in.linkedin.com/in/realatulsah): Professional experience, faculty appointments, and education history.
+- [Google Books Author Page](https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ): Author record and academic book listings.
+- [Amazon Author Profile](https://www.amazon.in/s?k=atul+sah): Author catalogue across all 8 technical books on Amazon India.
+- [Pothi Author Catalog](https://store.pothi.com/): Published print and digital technical editions.

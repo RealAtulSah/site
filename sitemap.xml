@@ -3,76 +3,76 @@
     <!-- Main Pages -->
     <url>
         <loc>https://atulsah.in/</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://atulsah.in/about</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://atulsah.in/skills</loc>
-        <lastmod>2026-08-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://atulsah.in/projects</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://atulsah.in/projects</loc>
+        <lastmod>2026-09-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://atulsah.in/publications</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blog</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/contact</loc>
-        <lastmod>2026-08-31</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
     </url>
 
     <!-- Blog Posts -->
     <url>
         <loc>https://atulsah.in/blogs/blog-research-gap-computer-science</loc>
-        <lastmod>2026-09-09</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-small-language-models</loc>
-        <lastmod>2026-08-28</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-multi-agent-systems</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-ai-agents-autonomous</loc>
-        <lastmod>2026-08-14</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-open-source-llms</loc>
-        <lastmod>2026-03-10</lastmod>
+        <lastmod>2026-09-25</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 </urlset>
