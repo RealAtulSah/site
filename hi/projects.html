@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अतुल साह | Projects — Enterprise Web Apps, AI Tools एवं ML Models</title>
+    <meta name="description" content="अतुल साह द्वारा निर्मित 10 सॉफ्टवेयर प्रोजेक्ट्स — Hyphenet Enterprise Portal, Fluxify Media, CampusPulse LMS, StrengthFuel AI, एवं Machine Learning Models।">
+    <meta name="keywords" content="अतुल साह प्रोजेक्ट्स, Hyphenet Enterprise Portal, Fluxify Media, CampusPulse LMS, StrengthFuel, Plant Diseases Detector, Full-Stack Projects">
+    <meta name="author" content="अतुल साह">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://atulsah.in/hi/projects">
+    <link rel="alternate" hreflang="en" href="https://atulsah.in/projects">
+    <link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/projects">
+    <link rel="alternate" hreflang="x-default" href="https://atulsah.in/projects">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atulsah.in/hi/projects">
+    <meta property="og:title" content="अतुल साह | Projects — Enterprise Web Apps, AI Tools एवं ML Models">
+    <meta property="og:description" content="अतुल साह द्वारा निर्मित 10 सॉफ्टवेयर प्रोजेक्ट्स — Enterprise Portals, LMS Platforms, AI Tools एवं Machine Learning Models।">
+    <meta property="og:image" content="https://atulsah.in/avatar.jpg">
+    <meta property="og:site_name" content="अतुल साह">
+    <meta property="og:locale" content="hi_IN">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="अतुल साह | Projects — Enterprise Web Apps, AI Tools एवं ML Models">
+    <meta name="twitter:description" content="अतुल साह द्वारा निर्मित 10 सॉफ्टवेयर प्रोजेक्ट्स — Enterprise Portals, AI Tools एवं Machine Learning Models।">
+    <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://atulsah.in/#person",
+      "name": "Atul Sah",
+      "url": "https://atulsah.in/hi/projects",
+      "image": "https://atulsah.in/avatar.jpg",
+      "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+      "sameAs": [
+        "https://github.com/RealAtulSah",
+        "https://in.linkedin.com/in/realatulsah",
+        "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+        "https://store.pothi.com/",
+        "https://www.amazon.in/s?k=atul+sah"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "होम",
+          "item": "https://atulsah.in/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "प्रोजेक्ट्स",
+          "item": "https://atulsah.in/hi/projects"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: CollectionPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "अतुल साह के प्रोजेक्ट्स",
+      "url": "https://atulsah.in/hi/projects",
+      "description": "अतुल साह द्वारा निर्मित 10 सॉफ्टवेयर प्रोजेक्ट्स का संग्रह, जिसमें Enterprise Web Apps, AI Tools एवं Machine Learning Models शामिल हैं।",
+      "author": { "@id": "https://atulsah.in/#person" }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/hi/" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="/hi/">होम</a></li>
+                    <li><a href="about">परिचय</a></li>
+                    <li><a href="skills">कौशल</a></li>
+                    <li><a href="projects" class="active">प्रोजेक्ट्स</a></li>
+                    <li><a href="publications">पुस्तकें</a></li>
+                    <li><a href="blog">ब्लॉग</a></li>
+                    <li><a href="contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="/projects" class="lang-switch-btn" title="Switch to English" aria-label="Switch to English"><span class="lang-text">Aअ</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="projects-page-section">
+            <p class="mono">// सॉफ्टवेयर विकास एवं इंजीनियरिंग ब्लूप्रिंट</p>
+            <div class="page-title">
+                <h1>मेरे <span class="yellow-accent">प्रोजेक्ट्स</span></h1>
+            </div>
+
+            <!-- Featured Case Study: Hyphenet Enterprise Portal -->
+            <div class="featured-lms-section" id="hyphenet-featured">
+                <span class="mono" style="color: var(--color-yellow);">// प्रमुख Case Study</span>
+                <div class="lms-card">
+                    <div class="lms-visual">
+                        <div class="lms-badge badge badge-yellow">Production Deployment</div>
+                        <div class="lms-mockup-graphics">
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">Client Self-Service</div>
+                                <div class="lms-graphic-desc">सपोर्ट टिकट लॉगिंग, रीयल-टाइम समाधान एवं जन-पूछताछ प्रबंधन।</div>
+                            </div>
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">Razorpay ऑनलाइन भुगतान</div>
+                                <div class="lms-graphic-desc">ऑनलाइन Rental भुगतान (UPI, Cards, Net Banking) एवं Webhook सत्यापन।</div>
+                            </div>
+                            <div class="lms-graphic-item active">
+                                <div class="lms-graphic-title">HRMS एवं Inventory</div>
+                                <div class="lms-graphic-desc">कर्मचारी उपस्थिति एवं अवकाश, स्वचालित Payroll एवं Warehouse स्टॉक प्रबंधन।</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lms-content">
+                        <span class="mono">Enterprise IT एवं Mobility Rentals</span>
+                        <h2>Hyphenet <span>Enterprise Portal</span></h2>
+                        <p class="lms-college">Node.js, Express.js एवं React Architecture</p>
+                        <p class="lms-desc">
+                            Hyphenet Enterprises के 6 प्रमुख क्षेत्रीय केंद्रों (दिल्ली, गुरुग्राम, नोएडा, मुंबई, बेंगलुरु, हैदराबाद) में IT एवं Mobility Hardware Rentals परिचालन के लिए विकसित एक व्यापक Role-based Enterprise Web Platform। इसमें Client Self-Service Portal के साथ-साथ इन-हाउस HRMS, स्वचालित Payroll एवं Multi-warehouse Inventory प्रबंधन समाहित है।
+                        </p>
+                        
+                        <div class="lms-features-list">
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Client Support Ticketing एवं Tracking</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Razorpay ऑनलाइन Rental भुगतान</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Staff HRMS एवं स्वचालित Payroll इंजन</span>
+                            </div>
+                            <div class="lms-feature">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Multi-hub Warehouse Inventory ट्रैकिंग</span>
+                            </div>
+                        </div>
+
+                        <div class="lms-tech-stack">
+                            <div class="lms-tech-title">प्रयुक्त तकनीकें:</div>
+                            <span class="badge badge-yellow">Node.js</span>
+                            <span class="badge badge-yellow">Express.js</span>
+                            <span class="badge badge-yellow">React</span>
+                            <span class="badge badge-yellow">PostgreSQL</span>
+                            <span class="badge badge-yellow">Prisma</span>
+                            <span class="badge badge-yellow">Tailwind CSS</span>
+                        </div>
+                        <div>
+                            <button class="btn open-project-btn" data-project-id="hyphenet">संपूर्ण विवरण देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters Bar -->
+            <div class="projects-filter-bar">
+                <button class="filter-btn active" data-filter="all">सभी Projects</button>
+                <button class="filter-btn" data-filter="freelancing">Freelancing Projects</button>
+                <button class="filter-btn" data-filter="fun">Tools & Apps</button>
+                <button class="filter-btn" data-filter="academic">शोध एवं ML Projects</button>
+            </div>
+
+            <!-- SECTION 1: Freelancing Projects -->
+            <div class="project-category-section" id="section-freelancing" data-category-section="freelancing">
+                <div class="project-section-header">
+                    <div class="project-section-meta">
+                        <span class="mono">// 01. Client & Enterprise Solutions</span>
+                        <h2 class="project-section-title">Freelancing <span class="yellow-accent">Projects</span></h2>
+                    </div>
+                    <span class="badge badge-yellow">4 Deployments</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Hyphenet Enterprise Portal (Featured) -->
+                    <div class="cyber-card project-card" data-project-id="hyphenet">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge badge-yellow">Featured</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Hyphenet Enterprise Portal</h3>
+                        <p class="project-desc">6 क्षेत्रीय केंद्रों में Enterprise IT Hardware Rentals परिचालन के लिए Role-based Web Platform। Client Self-Service Ticketing, Razorpay भुगतान, Staff HRMS एवं Inventory ट्रैकिंग का एकीकृत समाधान।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">Node.js</span>
+                                <span class="badge">Express</span>
+                                <span class="badge">React</span>
+                                <span class="badge">PostgreSQL</span>
+                                <span class="badge">Prisma</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Fluxify Media -->
+                    <div class="cyber-card project-card" data-project-id="fluxify">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Agency CMS</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Fluxify Media Platform</h3>
+                        <p class="project-desc">डिजिटल एजेंसियों के लिए PHP 8.2 एवं MySQL 8 पर निर्मित Production Web Platform और कस्टम प्रशासनिक CMS। Case Studies, Blog प्रबंधन एवं PHPMailer SMTP एकीकरण।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">PHP 8.2</span>
+                                <span class="badge">MySQL 8</span>
+                                <span class="badge">PHPMailer</span>
+                                <span class="badge">Tailwind CSS</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: CampusPulse LMS -->
+                    <div class="cyber-card project-card" data-project-id="campuspulse">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Academic LMS</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">CampusPulse LMS</h3>
+                        <p class="project-desc">बी.एन. कॉलेज, पटना के Computer Applications विभाग के लिए विकसित Learning Management System (LMS)। OTP प्रमाणीकरण, ऑनलाइन MCQ परीक्षाएं एवं 75% उपस्थिति थ्रेशोल्ड चेतावनी अलर्ट।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">Node.js</span>
+                                <span class="badge">Express</span>
+                                <span class="badge">MongoDB</span>
+                                <span class="badge">Brevo API</span>
+                                <span class="badge">PWA</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Vistredge Corporate Site -->
+                    <div class="cyber-card project-card" data-project-id="vistredge">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Corporate Website</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Vistredge Corporate Site</h3>
+                        <p class="project-desc">Vistredge के लिए निर्मित बहु-पृष्ठीय Corporate Web उपस्थिति, उच्च Accessibility मानकों, तरल उत्तरदायी एनिमेशन एवं क्लाइंट पूछताछ कार्यप्रवाह के साथ।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">HTML5</span>
+                                <span class="badge">CSS3</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">PHP</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: Fun & Open-Source Projects -->
+            <div class="project-category-section" id="section-fun" data-category-section="fun">
+                <div class="project-section-header">
+                    <div class="project-section-meta">
+                        <span class="mono">// 02. अभिनव Tools एवं Utility Apps</span>
+                        <h2 class="project-section-title">Tools एवं <span class="yellow-accent">Apps</span></h2>
+                    </div>
+                    <span class="badge badge-yellow">4 Applications</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 5: StrengthFuel -->
+                    <div class="cyber-card project-card" data-project-id="strengthfuel">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">AI Nutrition</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">StrengthFuel AI</h3>
+                        <p class="project-desc">भारतीय एथलीटों के लिए AI-संचालित खेल पोषण एवं Recovery ट्रैकिंग प्लेटफॉर्म। वैज्ञानिक Macro एल्गोरिदम, Google Gemini AI असिस्टेंट और 4-tier Anti-Doping Supplement Inspector।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">Gemini AI</span>
+                                <span class="badge">Firebase</span>
+                                <span class="badge">Firestore</span>
+                                <span class="badge">PWA</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: mdtopdf -->
+                    <div class="cyber-card project-card" data-project-id="mdtopdf">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Markdown Studio</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">mdtopdf | Markdown Studio</h3>
+                        <p class="project-desc">100% Client-side Markdown Editor एवं Document Converter। रीयल-टाइम Split-view, 4 Styling Presets, और बिना किसी सर्वर अपलोड के Crisp Vector PDF एवं Word (.docx) निर्यात।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">JavaScript ES6</span>
+                                <span class="badge">Marked.js</span>
+                                <span class="badge">html2pdf</span>
+                                <span class="badge">DOMPurify</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: ToolHub Pro -->
+                    <div class="cyber-card project-card" data-project-id="toolhub">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">120+ Tools</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">ToolHub Pro</h3>
+                        <p class="project-desc">Image Manipulation, PDF प्रबंधन एवं Data Encoding हेतु 120+ उपयोगी टूल्स का निजी संग्रह। 100% ब्राउज़र मेमोरी में निष्पादित, शून्य सर्वर अपलोड और ऑफलाइन PWA सहायता।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">PWA</span>
+                                <span class="badge">Service Workers</span>
+                                <span class="badge">Canvas API</span>
+                                <span class="badge">Web Workers</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Expenses Tracker App -->
+                    <div class="cyber-card project-card" data-project-id="expenses-tracker">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Mobile App</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Expenses Tracker App</h3>
+                        <p class="project-desc">React Native पर निर्मित Cross-platform Mobile Finance App। बहु-स्रोत आय ट्रैकिंग, वर्गीकृत व्यय, स्थानीय ऑफलाइन डेटाबेस और विस्तृत दृश्य वित्तीय विश्लेषण।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">React Native</span>
+                                <span class="badge">JavaScript ES6</span>
+                                <span class="badge">Local DB</span>
+                                <span class="badge">Android/iOS</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: Academic & Research ML Projects -->
+            <div class="project-category-section" id="section-academic" data-category-section="academic">
+                <div class="project-section-header">
+                    <div class="project-section-meta">
+                        <span class="mono">// 03. Machine Learning एवं अकादमिक शोध</span>
+                        <h2 class="project-section-title">अकादमिक एवं <span class="yellow-accent">ML Models</span></h2>
+                    </div>
+                    <span class="badge badge-yellow">2 ML Systems</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 9: Plant Diseases Detector -->
+                    <div class="cyber-card project-card" data-project-id="plant-diseases">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">Deep Learning CNN</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Plant Diseases Detector</h3>
+                        <p class="project-desc">फसल की पत्तियों की तस्वीरों से रोगों की पहचान करने वाला Deep Learning CNN सिस्टम। Python और TensorFlow में प्रशिक्षित तथा शून्य-लेटेंसी इन-ब्राउज़र निष्पादन हेतु TensorFlow.js में रूपांतरित।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">Python</span>
+                                <span class="badge">TensorFlow</span>
+                                <span class="badge">TensorFlow.js</span>
+                                <span class="badge">CNN</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10: Fake News Detector -->
+                    <div class="cyber-card project-card" data-project-id="fake-news">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <span class="badge">NLP & Embeddings</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Fake News Detector</h3>
+                        <p class="project-desc">Sentence-Transformers (all-MiniLM-L6-v2) एवं Scikit-Learn पर आधारित NLP Fake News Classifier। 72,000+ लेखों के WELFake डेटासेट पर प्रशिक्षित और इंटरैक्टिव Streamlit Web UI।</p>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span class="badge">Python</span>
+                                <span class="badge">Sentence-Transformers</span>
+                                <span class="badge">Scikit-Learn</span>
+                                <span class="badge">Streamlit</span>
+                            </div>
+                            <div class="project-card-action">
+                                <span>प्रोजेक्ट विवरण देखें</span>
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Project Detail Modal -->
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="project-modal-container">
+            <button class="project-modal-close" id="projectModalClose" aria-label="विवरण बंद करें">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="project-modal-header">
+                <div id="modalCategoryBadge" class="project-modal-category">
+                    <span class="badge badge-yellow">Freelancing Project</span>
+                </div>
+                <h2 id="modalTitle" class="project-modal-title">प्रोजेक्ट शीर्षक</h2>
+                <div id="modalSubtitle" class="project-modal-subtitle">प्रोजेक्ट उपशीर्षक / तकनीकी ढांचा</div>
+            </div>
+            <div class="project-modal-body">
+                <div class="project-modal-section-title">अवलोकन एवं उद्देश्य</div>
+                <p id="modalDesc" class="project-modal-desc"></p>
+                
+                <div class="project-modal-section-title">मुख्य क्षमताएं एवं विशेषताएं</div>
+                <div id="modalFeatures" class="project-modal-features"></div>
+
+                <div class="project-modal-section-title">आर्किटेक्चर एवं कार्यान्वयन</div>
+                <p id="modalArchitecture" class="project-modal-desc"></p>
+
+                <div class="project-modal-section-title">प्रयुक्त तकनीकें</div>
+                <div id="modalTechStack" class="project-modal-tech-list"></div>
+
+                <div id="modalActions" class="project-modal-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 अतुल साह. सर्वाधिकार सुरक्षित.
+            </div>
+            <ul class="footer-links">
+                <li><a href="/hi/">होम</a></li>
+                <li><a href="about">परिचय</a></li>
+                <li><a href="projects">प्रोजेक्ट्स</a></li>
+                <li><a href="publications">पुस्तकें</a></li>
+                <li><a href="contact">संपर्क</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Interactive Projects Data & Modal Controller Script -->
+    <script>
+        const projectsData = {
+            "hyphenet": {
+                category: "Freelancing Project",
+                title: "Hyphenet Enterprise Portal",
+                subtitle: "Role-based Enterprise IT Hardware Rentals, HRMS एवं Inventory Platform",
+                desc: "Hyphenet Enterprises के 6 प्रमुख क्षेत्रीय केंद्रों (दिल्ली, गुरुग्राम, नोएडा, मुंबई, बेंगलुरु, हैदराबाद) में IT एवं Mobility Hardware Rentals परिचालन के लिए विकसित एक व्यापक Role-based Enterprise Web Platform। इसमें Client Self-Service Portal के साथ-साथ इन-हाउस HRMS, स्वचालित Payroll एवं Multi-warehouse Inventory प्रबंधन समाहित है।",
+                features: [
+                    "Client Self-Service Portal: सपोर्ट टिकट निर्माण एवं रीयल-टाइम समाधान ट्रैकिंग प्रणाली",
+                    "Razorpay ऑनलाइन भुगतान इंजन: सुरक्षित Checkout एवं Webhook सिग्नेचर सत्यापन (UPI, Cards, Net Banking)",
+                    "कर्मचारी HRMS मॉड्यूल: अवकाश प्रबंधन, उपस्थिति ट्रैकिंग एवं कार्य-प्रदर्शन समीक्षा",
+                    "स्वचालित Payroll इंजन: डायनामिक कटौती नियम एवं डाउनलोड करने योग्य वेतन पर्ची (PDF) जेनरेशन",
+                    "Multi-hub Warehouse Inventory प्रबंधन: स्टॉक ट्रैकिंग, उपकरण स्थिति लॉग एवं वेंडर खरीद आदेश",
+                    "स्वचालित बहु-माध्यम सूचनाएं: Nodemailer SMTP ईमेल एवं Twilio WhatsApp API द्वारा त्वरित अपडेट"
+                ],
+                architecture: "मॉड्यूलर React SPA फ्रंटएंड (Tailwind CSS) और Node.js / Express.js REST API। रिलेशनल PostgreSQL डेटाबेस (Prisma ORM), सुरक्षित JWT प्रमाणीकरण और सर्वर-साइड Role-Based Access Control (RBAC)।",
+                tech: ["Node.js", "Express.js", "React", "PostgreSQL", "Prisma ORM", "Tailwind CSS", "Razorpay", "Twilio API", "JWT"],
+                links: []
+            },
+            "fluxify": {
+                category: "Freelancing Project",
+                title: "Fluxify Media Platform",
+                subtitle: "PHP 8.2 एवं MySQL 8 पर निर्मित Production Agency CMS इंजन",
+                desc: "Fluxify Media के लिए विकसित Production-ready Full-Stack वेबसाइट और कस्टम प्रशासनिक CMS। आधुनिक PHP 8.2 एवं MySQL 8 पर निर्मित, यह एजेंसी सेवाओं, Case Studies, प्रशंसापत्र, रिच ब्लॉग प्रकाशन और सुरक्षित Lead Generation का प्रबंधन करता है।",
+                features: [
+                    "कस्टम Admin CMS कंट्रोल पैनल (/admin/*) सुरक्षित सत्र प्रबंधन के साथ",
+                    "डायनामिक Case Studies, Portfolio एवं ग्राहक प्रशंसापत्र प्रकाशन प्रणाली",
+                    "PHPMailer Gmail SMTP डिलीवरी इंजन समर्पित पूछताछ रूटिंग के साथ",
+                    "Quill Editor एवं DataTables एकीकरण के साथ Rich Content संपादन सुइट",
+                    "cPanel एवं Apache वातावरण के लिए अनुकूलित Production Architecture"
+                ],
+                architecture: "PHP 8.2 में तैयार बैकएंड आर्किटेक्चर (सुरक्षित MySQLi Prepared Statements)। फ्रंटएंड Tailwind CSS CDN, AOS स्क्रॉल एनिमेशन, और Quill रिच टेक्स्ट एडिटर द्वारा संचालित।",
+                tech: ["PHP 8.2", "MySQL 8", "PHPMailer", "Tailwind CSS", "JavaScript ES6", "Quill Editor", "DataTables"],
+                links: []
+            },
+            "campuspulse": {
+                category: "Freelancing Project",
+                title: "CampusPulse LMS",
+                subtitle: "बी.एन. कॉलेज (पटना विश्वविद्यालय) BCA विभाग के लिए Full-Stack Learning Management System",
+                desc: "बी. एन. कॉलेज (पटना विश्वविद्यालय) के Computer Applications विभाग के लिए विशेष रूप से निर्मित Learning Management System (LMS)। आधुनिक उत्तरदायी इंटरफ़ेस के अंतर्गत शैक्षणिक पाठ्यक्रम, ऑनलाइन परीक्षा, छात्र उपस्थिति थ्रेशोल्ड और विभागीय घोषणाओं का प्रबंधन करता है।",
+                features: [
+                    "Brevo HTTP Email API के माध्यम से OTP-आधारित छात्र स्व-पंजीकरण",
+                    "Cropper.js के साथ अनिवार्य प्रोफाइल फोटो स्क्वायर क्रॉपिंग एवं शिक्षक अनुमोदन कार्यप्रवाह",
+                    "डायनामिक सेमेस्टर-आधारित पाठ्यक्रम नामांकन एवं अध्ययन सामग्री वितरण",
+                    "समयबद्ध MCQ ऑनलाइन परीक्षा इंजन स्वचालित सबमिशन एवं स्कोरिंग के साथ",
+                    "दैनिक उपस्थिति ट्रैकिंग एवं 75% उपस्थिति थ्रेशोल्ड चेतावनी अलर्ट",
+                    "Progressive Web App (PWA) सर्विस वर्कर्स के माध्यम से VAPID वेब पुश नोटिफिकेशन के साथ"
+                ],
+                architecture: "Node.js एवं Express.js REST API के साथ MongoDB Atlas एवं Mongoose ODM। HTTPOnly JWT कुकीज़, bcryptjs पासवर्ड हैशिंग और GridFS मीडिया स्टोरेज।",
+                tech: ["Node.js", "Express.js", "MongoDB Atlas", "Brevo API", "Cropper.js", "PWA", "JavaScript ES6"],
+                links: []
+            },
+            "vistredge": {
+                category: "Freelancing Project",
+                title: "Vistredge Corporate Site",
+                subtitle: "कॉर्पोरेट वेब उपस्थिति एवं इंटरैक्टिव सेवा प्रदर्शन",
+                desc: "Vistredge के लिए बहु-पृष्ठीय Corporate Web उपस्थिति का निर्माण किया गया, जिसमें उच्च Accessibility मानक, तरल उत्तरदायी एनिमेशन एवं सहज क्लाइंट संचार माध्यम सुनिश्चित किए गए।",
+                features: [
+                    "आधुनिक बहु-पृष्ठीय संरचना (Home, Services, Testimonials, Contact)",
+                    "डायनामिक उपयोगकर्ता प्रवाह के साथ इंटरैक्टिव सेवा प्रदर्शन",
+                    "उच्च-कंट्रास्ट, सुलभ UI मानक उत्तरदायी CSS ट्रांज़िशन्स के साथ",
+                    "एकीकृत क्लाइंट पूछताछ एवं फीडबैक सबमिशन कार्यप्रवाह",
+                    "क्रॉस-ब्राउज़र एसेट लोडिंग एवं त्वरित मोबाइल प्रदर्शन हेतु अनुकूलित"
+                ],
+                architecture: "उत्तरदायी CSS3 स्टाइलिंग, वैनिला जावास्क्रिप्ट DOM एनिमेशन और ऑप्टिमाइज़्ड एसेट्स के साथ मॉड्यूलर HTML5 सिमेंटिक संरचना।",
+                tech: ["HTML5", "CSS3", "JavaScript ES6", "PHP", "Responsive UI"],
+                links: []
+            },
+            "strengthfuel": {
+                category: "Tools & Apps",
+                title: "StrengthFuel AI",
+                subtitle: "एथलीटों के लिए AI-संचालित खेल पोषण एवं Recovery Platform",
+                desc: "भारतीय प्रतिस्पर्धी भारोत्तोलकों एवं एथलीटों के लिए अनुकूलित एक AI-संचालित खेल पोषण, आहार योजना एवं रिकवरी ट्रैकिंग वेब ऐप्लिकेशन। वैज्ञानिक Macro/Calorie एल्गोरिदम को Google Gemini AI रीजनिंग और संरचित भारतीय खाद्य डेटाबेस के साथ संयोजित करता है।",
+                features: [
+                    "Natural Language भारतीय खाद्य पार्सर: प्रामाणिक मुख्य भोजन, कस्टम भाग गुणक एवं त्वरित मैक्रो विश्लेषण",
+                    "Analyse My Meal मॉड्यूल: मांसपेशी प्रोटीन संश्लेषण (MPS) गुणात्मक मूल्यांकन एवं 1-क्लिक लॉग ट्रांसफर",
+                    "4-लेयर साक्ष्य-आधारित Anti-Doping Supplement Inspector: Tier A/B/C/D वर्गीकरण एवं बैच सत्यापन",
+                    "इंटरैक्टिव बॉडी वेट एवं रिकवरी ट्रैकिंग: SVG Moving Average चार्ट्स (7d/30d) एवं तत्परता संकेतक",
+                    "Google Gemini API द्वारा संचालित व्यक्तिगत कोच AI सहायक",
+                    "Full-Day भारतीय भोजन योजना जनरेटर कसरत समय रणनीतियों के साथ"
+                ],
+                architecture: "हाइब्रिड क्लाइंट राउटर के साथ बहु-पृष्ठीय HTML5/CSS3/Vanilla JS आर्किटेक्चर, Firebase Cloud Functions (Node.js) और Firestore डेटाबेस कैशिंग द्वारा संचालित।",
+                tech: ["JavaScript ES6", "Firebase Functions", "Google Gemini AI", "Firestore", "HTML5", "CSS3", "PWA"],
+                links: []
+            },
+            "mdtopdf": {
+                category: "Tools & Apps",
+                title: "mdtopdf | Markdown Studio",
+                subtitle: "100% Client-side Markdown से वेक्टर PDF एवं DOCX Studio",
+                desc: "एक आधुनिक, उच्च-गति और पूरी तरह से Client-side Markdown Editor एवं Document Converter। रीयल-टाइम Side-by-side संपादन और बिना किसी सर्वर अपलोड के Crisp Vector PDF व Word (.docx) निर्यात की सुविधा देता है।",
+                features: [
+                    "Dual-pane स्प्लिट वर्कस्पेस सिंक्रोनाइज़्ड स्क्रॉलिंग और लाइन नंबर गटर के साथ",
+                    "4 दस्तावेज़ स्टाइलिंग प्रीसेट: Dark Yellow (Obsidian), GitHub Style, Academic Paper, एवं Minimalist",
+                    "फ्लोटिंग फॉर्मेटिंग टूलबार (Headings, Code Blocks, Tables, Task Lists, Undo/Redo)",
+                    "लाइव डॉक्यूमेंट मेट्रिक्स: रीयल-टाइम Word Count, Character Count, लाइन संख्या एवं अनुमानित पढ़ने का समय",
+                    "Multi-format Export: हाई-कंट्रास्ट टेक्स्ट के साथ वेक्टर PDF एवं मूल Word OpenXML (.docx) निर्यात",
+                    "LocalStorage ऑटो-सेविंग लाइव स्टेटस इंडिकेटर और ड्रैग-एंड-ड्रॉप फाइल अपलोड के साथ"
+                ],
+                architecture: "मार्कडाउन पार्सिंग के लिए Marked.js, XSS सैनिटाइजेशन हेतु DOMPurify, सिंटैक्स हाइलाइटिंग हेतु Highlight.js, वेक्टर PDF हेतु html2pdf.js का उपयोग करके 100% Client-side निष्पादन।",
+                tech: ["HTML5", "CSS3 Glassmorphic", "JavaScript ES6", "Marked.js", "DOMPurify", "html2pdf.js", "html-docx-js"],
+                links: []
+            },
+            "toolhub": {
+                category: "Tools & Apps",
+                title: "ToolHub Pro",
+                subtitle: "ऑल-इन-वन, सुरक्षित, 100% Client-side वेब उपयोगिता सूट",
+                desc: "Image Manipulation, PDF प्रबंधन एवं File Format रूपांतरणों में 120+ उपयोगिताओं की पेशकश करने वाला एक व्यापक और पूरी तरह से निजी वेब टूल्स प्लेटफॉर्म। ब्राउज़र मेमोरी में 100% Client-side संचालित होता है, यह सुनिश्चित करते हुए कि उपयोगकर्ता फाइलें और डेटा कभी भी स्थानीय डिवाइस से बाहर न जाएं।",
+                features: [
+                    "100% Client-side Sandbox: शून्य सर्वर अपलोड, शून्य टेलीमेट्री, तत्काल ब्राउज़र मेमोरी सफाई",
+                    "PWA पूर्ण ऑफ़लाइन सहायता: Service Worker पूर्ण ऑफ़लाइन निष्पादन के लिए सभी 120+ टूल्स को प्री-कैश करता है",
+                    "स्मार्ट Global Search: कीबोर्ड-सुलभ फ्लोटिंग सर्च बार (Arrow Up/Down/Enter/Escape)",
+                    "Image Utility Suite: Crop, Resize, Compress, OCR टेक्स्ट पहचान, Filters एवं Meme निर्माण",
+                    "PDF Utility Suite: Merge, Split, Annotate, Protect, Sign, Encrypt एवं Convert Document Formats",
+                    "Encoders & Converters: Base64, Hex, Binary, URL, Hash, JSON/XML एवं Unit/Currency कनवर्टर्स"
+                ],
+                architecture: "Progressive Web App (PWA) सर्विस वर्कर कैशिंग लेयर के साथ पैकेज्ड मूल ब्राउज़र APIs (Canvas API, Web Workers, File API) का उपयोग करते हुए मॉड्यूलर ES6 जावास्क्रिप्ट आर्किटेक्चर।",
+                tech: ["JavaScript ES6", "PWA", "Service Worker", "LocalStorage", "HTML5", "CSS3"],
+                links: []
+            },
+            "expenses-tracker": {
+                category: "Tools & Apps",
+                title: "Expenses Tracker App",
+                subtitle: "व्यक्तिगत मोबाइल वित्त एवं व्यय प्रबंधन ऐप्लिकेशन",
+                desc: "व्यक्तिगत वित्त प्रबंधन के लिए React Native के साथ विकसित एक Cross-platform Mobile Application। उपयोगकर्ताओं को कस्टम बहु-स्रोत विकल्पों और संरचित ग्राफिकल सारांशों के साथ अपनी आय और व्यय लेनदेन को रिकॉर्ड, वर्गीकृत और मॉनिटर करने की सुविधा देता है।",
+                features: [
+                    "कॉन्फ़िगर करने योग्य बहु-स्रोत विकल्पों (वेतन, फ्रीलांस, निवेश आदि) के साथ व्यक्तिगत आय लॉगिंग",
+                    "कस्टम टैग, भुगतान माध्यम और टाइमस्टैम्प्ड नोट्स के साथ वर्गीकृत व्यय ट्रैकिंग",
+                    "Fast Search, श्रेणी फिल्टर और ऐतिहासिक वित्तीय लेनदेन क्वेरीज़",
+                    "दृश्य विश्लेषण रिपोर्ट के साथ संरचित साप्ताहिक और मासिक वित्तीय सारांश",
+                    "स्थानीय ऑफ़लाइन डेटाबेस संग्रहण पूर्ण गोपनीयता और त्वरित प्रतिक्रिया सुनिश्चित करता है",
+                    "Android एवं iOS उपकरणों के लिए परीक्षण किया गया सहज उत्तरदायी मोबाइल UI"
+                ],
+                architecture: "React Native और JavaScript ES6 का उपयोग करके निर्मित Cross-platform Mobile Client, ऑफ़लाइन-प्रथम डेटा दृढ़ता के लिए स्थानीय डेटाबेस का उपयोग करता है।",
+                tech: ["React Native", "JavaScript ES6", "Android Studio", "Local DB", "Mobile UI"],
+                links: []
+            },
+            "plant-diseases": {
+                category: "शोध एवं ML Projects",
+                title: "Plant Diseases Detector",
+                subtitle: "फसल पत्ती रोग निदान के लिए Deep Learning CNN मॉडल एवं वेब प्लेटफॉर्म",
+                desc: "एक AI-संचालित कृषि निदान प्रणाली जो उपयोगकर्ता द्वारा अपलोड की गई फसल पत्तियों की तस्वीरों से रोगों की पहचान और वर्गीकरण करने के लिए Deep Learning Convolutional Neural Network (CNN) का उपयोग करती है। Python और TensorFlow में प्रशिक्षित और ब्राउज़र में शून्य-लेटेंसी क्लाइंट-साइड निष्पादन के लिए TensorFlow.js में रूपांतरित।",
+                features: [
+                    "विविध फसल पत्ती रोग डेटासेट पर प्रशिक्षित Deep Learning CNN Architecture",
+                    "TensorFlow.js क्लाइंट-साइड इन्फरेंस का उपयोग करके इन-ब्राउज़र तत्काल रोग निदान",
+                    "रीयल-टाइम Class Probability Score के साथ छवि अपलोड और लाइव फोटो विश्लेषण",
+                    "उपचारात्मक उपायों और फसल उपचार अनुशंसाओं के साथ विस्तृत निदान विश्लेषण",
+                    "Multi-crop कवरेज (टमाटर, आलू, मक्का, सेब एवं अन्य)",
+                    "ग्रामीण क्षेत्रों में मोबाइल उपकरणों और कम-बैंडविड्थ कनेक्शनों पर सुलभ हल्का वेब ऐप्लिकेशन"
+                ],
+                architecture: "Google Colab पर Python, TensorFlow, और Keras के साथ प्रशिक्षित, बिना किसी सर्वर लेटेंसी के ब्राउज़र में क्लाइंट-साइड निष्पादन के लिए TensorFlow.js Graph Model में परिवर्तित।",
+                tech: ["Python", "TensorFlow", "TensorFlow.js", "Keras", "CNN", "JavaScript", "HTML5/CSS3"],
+                links: []
+            },
+            "fake-news": {
+                category: "शोध एवं ML Projects",
+                title: "Fake News Detector",
+                subtitle: "Streamlit UI के साथ NLP Semantic Embedding वर्गीकरण प्रणाली",
+                desc: "भ्रामक या मनगढ़ंत समाचार पाठ का पता लगाने और वर्गीकृत करने के लिए विकसित एक उन्नत Natural Language Processing (NLP) प्रणाली। समाचार सुर्खियों और मुख्य भाग से घने अर्थ संबंधी एम्बेडिंग निकालने के लिए Sentence-Transformers (all-MiniLM-L6-v2) का उपयोग करता है, जिसे 72,000+ लेखों के WELFake डेटासेट पर प्रशिक्षित किया गया है।",
+                features: [
+                    "all-MiniLM-L6-v2 का उपयोग करके Dense Semantic Sentence Transformers Embedding निष्कर्षण",
+                    "व्यापक WELFake डेटासेट (72,000+ लेख) पर प्रशिक्षित उच्च-सटीकता क्लासिफायर मॉडल",
+                    "रीयल-टाइम संभावना विश्वास स्कोर ब्रेकडाउन के साथ Real / Fake वर्गीकरण",
+                    "त्वरित पूर्वानुमान हेतु पर्सिस्टेंट .pkl मॉडल आर्टिफैक्ट कैशिंग के साथ Feature Scaling पाइपलाइन",
+                    "लाइव टेक्स्ट पेस्टिंग और तत्काल सत्यापन के लिए इंटरैक्टिव Streamlit वेब इंटरफ़ेस (app.py)",
+                    "Jupyter Notebook अनुसंधान और सेमेंटिक विश्लेषण पाइपलाइन (ml.ipynb, Semantic.ipynb)"
+                ],
+                architecture: "Semantic Vectorization के लिए Sentence-Transformers, Feature Scaling के साथ Scikit-Learn क्लासिफायर, और वेब ऐप रेंडरिंग के लिए Streamlit का उपयोग करने वाली Python NLP पाइपलाइन।",
+                tech: ["Python", "Sentence-Transformers", "Scikit-Learn", "Streamlit", "Joblib", "NumPy", "NLP"],
+                links: []
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Section Filter Logic ---
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const sections = document.querySelectorAll('.project-category-section');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    sections.forEach(sec => {
+                        const secCategory = sec.getAttribute('data-category-section');
+                        if (filterValue === 'all' || secCategory === filterValue) {
+                            sec.style.display = 'block';
+                        } else {
+                            sec.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // --- Project Details Modal Logic ---
+            const modal = document.getElementById('projectModal');
+            const closeBtn = document.getElementById('projectModalClose');
+            const modalCategoryBadge = document.getElementById('modalCategoryBadge');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalFeatures = document.getElementById('modalFeatures');
+            const modalArchitecture = document.getElementById('modalArchitecture');
+            const modalTechStack = document.getElementById('modalTechStack');
+            const modalActions = document.getElementById('modalActions');
+
+            function openModal(projectId) {
+                const data = projectsData[projectId];
+                if (!data) return;
+
+                modalCategoryBadge.innerHTML = `<span class="badge badge-yellow">${data.category}</span>`;
+                modalTitle.textContent = data.title;
+                modalSubtitle.textContent = data.subtitle;
+                modalDesc.textContent = data.desc;
+                modalArchitecture.textContent = data.architecture;
+
+                // Populate Features
+                modalFeatures.innerHTML = '';
+                data.features.forEach(feat => {
+                    const featItem = document.createElement('div');
+                    featItem.className = 'project-modal-feature-item';
+                    featItem.innerHTML = `
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>${feat}</span>
+                    `;
+                    modalFeatures.appendChild(featItem);
+                });
+
+                // Populate Tech Stack
+                modalTechStack.innerHTML = '';
+                data.tech.forEach(t => {
+                    const tag = document.createElement('span');
+                    tag.className = 'badge badge-yellow';
+                    tag.textContent = t;
+                    modalTechStack.appendChild(tag);
+                });
+
+                // Populate Action Links
+                modalActions.innerHTML = '';
+                if (data.links && data.links.length > 0) {
+                    data.links.forEach(l => {
+                        const linkBtn = document.createElement('a');
+                        linkBtn.href = l.url;
+                        linkBtn.target = '_blank';
+                        linkBtn.rel = 'noopener';
+                        linkBtn.className = l.type === 'github' ? 'btn btn-secondary' : 'btn';
+
+                        const iconSvg = l.type === 'github'
+                            ? `<svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`
+                            : `<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>`;
+
+                        linkBtn.innerHTML = `${iconSvg} <span>${l.text}</span>`;
+                        modalActions.appendChild(linkBtn);
+                    });
+                }
+
+                modal.style.display = 'block';
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+
+                // Re-bind cursor hover state for newly rendered interactive buttons
+                const hoverElements = modal.querySelectorAll('a, button');
+                hoverElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+                });
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            // Bind click to all project cards and open buttons
+            document.querySelectorAll('.project-card, .open-project-btn').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const projectId = card.getAttribute('data-project-id');
+                    if (projectId) {
+                        openModal(projectId);
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+
+            // Close when clicking outside dialog container
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <!-- Main JS Logic -->
+    <script src="../script.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7651eb4980a4d819b94ab12839bc0a9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

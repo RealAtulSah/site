@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अतुल साह का तकनीकी ब्लॉग | AI, एज कंप्यूटिंग, मल्टी-एजेंट सिस्टम्स और LLMs पर लेख</title>
+    <meta name="description"
+        content="अतुल साह द्वारा स्मॉल लैंग्वेज मॉडल्स (SLMs), एज AI, मल्टी-एजेंट सिस्टम्स, ऑटोनॉमस AI एजेंट्स, ओपन-सोर्स LLMs और साइबर सुरक्षा पर गहन तकनीकी ब्लॉग और शोध लेख।">
+    <meta name="keywords"
+        content="अतुल साह ब्लॉग, AI लेख, Small Language Models, Edge AI, Multi-Agent Systems, autonomous AI agents, open-source LLMs, Llama, DeepSeek, MCP protocol, agentic AI blog">
+    <meta name="author" content="Atul Sah">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://atulsah.in/hi/blog">
+    <link rel="alternate" hreflang="en" href="https://atulsah.in/blog">
+    <link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blog">
+    <link rel="alternate" hreflang="x-default" href="https://atulsah.in/blog">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://atulsah.in/hi/blog">
+    <meta property="og:title" content="अतुल साह का तकनीकी ब्लॉग | AI, एज कंप्यूटिंग और मल्टी-एजेंट सिस्टम्स">
+    <meta property="og:description" content="अतुल साह द्वारा SLMs, एज AI, मल्टी-एजेंट सिस्टम्स, ऑटोनॉमस AI एजेंट्स और ओपन-सोर्स मॉडल्स पर तकनीकी विश्लेषण।">
+    <meta property="og:image" content="https://atulsah.in/avatar.jpg">
+    <meta property="og:site_name" content="Atul Sah">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="अतुल साह का तकनीकी ब्लॉग | AI, एज कंप्यूटिंग और मल्टी-एजेंट सिस्टम्स">
+    <meta name="twitter:description" content="अतुल साह द्वारा AI, SLMs, मल्टी-एजेंट सिस्टम्स और ओपन-सोर्स LLMs पर गहन तकनीकी लेख।">
+    <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://atulsah.in/#person",
+      "name": "Atul Sah",
+      "url": "https://atulsah.in/hi/",
+      "image": "https://atulsah.in/avatar.jpg",
+      "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+      "sameAs": [
+        "https://github.com/RealAtulSah",
+        "https://in.linkedin.com/in/realatulsah",
+        "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+        "https://store.pothi.com/",
+        "https://www.amazon.in/s?k=atul+sah"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "होम",
+          "item": "https://atulsah.in/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ब्लॉग",
+          "item": "https://atulsah.in/hi/blog"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "@id": "https://atulsah.in/hi/blog#blog",
+      "name": "अतुल साह का ब्लॉग",
+      "url": "https://atulsah.in/hi/blog",
+      "description": "आर्टिफिशियल इंटेलिजेंस, एज कंप्यूटिंग, मल्टी-एजेंट सिस्टम्स और सॉफ्टवेयर डेवलपमेंट पर अतुल साह के तकनीकी लेख।",
+      "author": { "@id": "https://atulsah.in/#person" },
+      "publisher": { "@id": "https://atulsah.in/#person" },
+      "inLanguage": "hi",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग",
+          "url": "https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations",
+          "datePublished": "2026-09-25",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक",
+          "url": "https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents",
+          "datePublished": "2026-09-16",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "कंप्यूटर साइंस में रिसर्च गैप कैसे खोजें: एक व्यवस्थित और संपूर्ण मार्गदर्शिका",
+          "url": "https://atulsah.in/hi/blogs/blog-research-gap-computer-science",
+          "datePublished": "2026-09-09",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "स्मॉल लैंग्वेज मॉडल्स (SLMs) और एज AI: छोटे, डोमेन-विशिष्ट मॉडल्स व्यावहारिक AI का भविष्य क्यों हैं",
+          "url": "https://atulsah.in/hi/blogs/blog-small-language-models",
+          "datePublished": "2026-08-28",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "मल्टी-एजेंट सिस्टम्स (MAS): कैसे विशिष्ट AI एजेंट्स की टीमें मोनोलिथिक मॉडल्स की जगह ले रही हैं",
+          "url": "https://atulsah.in/hi/blogs/blog-multi-agent-systems",
+          "datePublished": "2026-08-22",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "AI एजेंट्स बन रहे हैं ऑटोनॉमस: चैटबॉट्स से डिजिटल वर्कर्स तक",
+          "url": "https://atulsah.in/hi/blogs/blog-ai-agents-autonomous",
+          "datePublished": "2026-08-14",
+          "author": { "@id": "https://atulsah.in/#person" }
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं",
+          "url": "https://atulsah.in/hi/blogs/blog-open-source-llms",
+          "datePublished": "2026-03-10",
+          "author": { "@id": "https://atulsah.in/#person" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Specific Styles for Interactive Blog Reader Modal */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 4rem 2rem;
+        }
+
+        .blog-modal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 2px solid var(--color-yellow);
+            padding: 3rem;
+            position: relative;
+            box-shadow: var(--shadow-solid);
+        }
+
+        .blog-modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            font-family: var(--font-heading);
+            cursor: none;
+            transition: var(--transition-fast);
+        }
+
+        .blog-modal-close:hover {
+            color: var(--color-yellow);
+        }
+
+        .blog-modal-body h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-modal-meta {
+            font-family: var(--font-mono);
+            color: var(--color-yellow);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .blog-modal-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-grey-light);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/hi/" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="/hi/">होम</a></li>
+                    <li><a href="about">परिचय</a></li>
+                    <li><a href="skills">कौशल</a></li>
+                    <li><a href="projects">प्रोजेक्ट्स</a></li>
+                    <li><a href="publications">पुस्तकें</a></li>
+                    <li><a href="blog" class="active">ब्लॉग</a></li>
+                    <li><a href="contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="/blog" class="lang-switch-btn" title="View in English" aria-label="Switch to English"><span class="lang-text">Aअ</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="blog-page-section fade-in-section visible">
+            <p class="mono">// तकनीकी आलेख और विचार</p>
+            <div class="page-title">
+                <h1>तकनीकी <span class="yellow-accent">ब्लॉग</span></h1>
+            </div>
+
+            <p class="blog-intro">
+                मैं आर्टिफिशियल इंटेलिजेंस के विकास, साइबर सुरक्षा प्रोटोकॉल और उभरते डेवलपर्स के लिए रोडमैप से संबंधित तकनीकी विचारों को नियमित रूप से दस्तावेज़ित करता हूँ। यहाँ मेरे हालिया लेख प्रस्तुत हैं।
+            </p>
+
+            <div class="blog-grid">
+                <!-- Blog Post 11 (Latest Featured Post) -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>25 सितंबर, 2026</span>
+                        <span>•</span>
+                        <span>Generative AI एवं Machine Learning</span>
+                    </div>
+                    <h3 class="blog-card-title">Generative AI: आर्किटेक्चर, आधारभूत सिद्धांत और Production Engineering</h3>
+                    <p class="blog-card-desc">
+                        Generative AI का एक संपूर्ण तकनीकी विश्लेषण। Discriminative Modeling से परे डेटा वितरण, Transformer Self-Attention, Diffusion Mechanics, Foundation Model Training Lifecycle और Production Bottlenecks का व्यवस्थित अध्ययन।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-generative-ai-architecture-foundations" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="11">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 10 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>16 सितंबर, 2026</span>
+                        <span>•</span>
+                        <span>AI Architecture एवं Autonomous Systems</span>
+                    </div>
+                    <h3 class="blog-card-title">The Engineering Anatomy of AI Agents: वैचारिक मॉडल से Resilient Production Architecture तक</h3>
+                    <p class="blog-card-desc">
+                        AI Agents पर एक गहन तकनीकी हैंडबुक। Runtime Control Loops, Function Calling JSON Schemas, Graph-Based Orchestration, Deterministic State Management, Memory Hierarchies और Model Context Protocol (MCP) का विश्लेषण।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-engineering-anatomy-ai-agents" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="10">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 9 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>09 सितंबर, 2026</span>
+                        <span>•</span>
+                        <span>Academic Research & Computer Science</span>
+                    </div>
+                    <h3 class="blog-card-title">Computer Science में Research Gap कैसे खोजें: एक व्यवस्थित एवं प्रामाणिक मार्गदर्शिका</h3>
+                    <p class="blog-card-desc">
+                        Computer Science में उच्च प्रभाव वाले, वैज्ञानिक रूप से मान्य Research Gaps की पहचान करने की चरणबद्ध मार्गदर्शिका। Literature Review Matrices, Benchmark Teardowns, क्रियाविधि टकराव और शोध प्रस्ताव संरचना।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-research-gap-computer-science" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="9">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 8 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>28 अगस्त, 2026</span>
+                        <span>•</span>
+                        <span>AI एवं Edge Computing</span>
+                    </div>
+                    <h3 class="blog-card-title">Small Language Models (SLMs) और Edge AI: कॉम्पैक्ट, डोमेन-विशिष्ट मॉडल्स का महत्व</h3>
+                    <p class="blog-card-desc">
+                        जानिए क्यों AI उद्योग विशाल Cloud LLMs से आगे बढ़कर स्थानीय Edge Hardware पर चलने वाले कॉम्पैक्ट Small Language Models (1B–8B) की ओर बढ़ रहा है। Quantization (GGUF/AWQ), शून्य-विलंबता ऑफलाइन निष्पादन और Compound AI Architectures।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-small-language-models" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="8">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>22 अगस्त, 2026</span>
+                        <span>•</span>
+                        <span>AI एवं Multi-Agent Systems</span>
+                    </div>
+                    <h3 class="blog-card-title">Multi-Agent Systems (MAS): विशिष्ट AI Agents का सहयोगात्मक आर्किटेक्चर</h3>
+                    <p class="blog-card-desc">
+                        देखें कि Multi-Agent Systems (MAS) आधुनिक AI आर्किटेक्चर को कैसे नया रूप दे रहे हैं। जानिए कैसे विशेष एजेंट्स का सहयोग, कार्य-विभाजन, Consensus Protocols और Model Context Protocol (MCP) जटिल समस्याओं को हल करते हैं।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-multi-agent-systems" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="7">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>14 अगस्त, 2026</span>
+                        <span>•</span>
+                        <span>AI एवं Autonomous Systems</span>
+                    </div>
+                    <h3 class="blog-card-title">AI Agents Are Becoming Autonomous: Chatbots से Digital Workers तक का विकास</h3>
+                    <p class="blog-card-desc">
+                        इस बात का विस्तृत विश्लेषण कि कैसे AI Agents केवल प्रतिक्रिया देने वाले चैटबॉट्स से विकसित होकर स्वायत्त Digital Workers बन रहे हैं, जो योजना निर्माण, Tool Use, Persistent Memory और Least-Privilege Security लागू करने में सक्षम हैं।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-ai-agents-autonomous" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="6">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="cyber-card blog-card">
+                    <div class="blog-meta">
+                        <span>10 अगस्त, 2026</span>
+                        <span>•</span>
+                        <span>AI एवं Open Source</span>
+                    </div>
+                    <h3 class="blog-card-title">How Open-Source LLMs Are Changing the AI Industry</h3>
+                    <p class="blog-card-desc">
+                        Open-Weight Models (Llama, DeepSeek-R1, Qwen, Mistral) किस प्रकार AI पहुंच का लोकतंत्रीकरण कर रहे हैं, Local Deployment को सक्षम बना रहे हैं, Fine-Tuning लागत को घटा रहे हैं और सॉफ्टवेयर संप्रभुता को बढ़ावा दे रहे हैं।
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 1rem;">
+                        <a href="blogs/blog-open-source-llms" class="btn"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;">पूरा लेख पढ़ें</a>
+                        <button class="blog-read-more read-btn preview-btn" data-post-id="5">त्वरित पूर्वावलोकन</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Blog Modal -->
+    <div id="blogModal" class="blog-modal">
+        <div class="blog-modal-content">
+            <button id="modalClose" class="blog-modal-close">&times;</button>
+            <div class="blog-modal-body">
+                <h2 id="modalTitle">लेख शीर्षक</h2>
+                <div id="modalMeta" class="blog-modal-meta">दिनांक • श्रेणी</div>
+                <div id="modalText" class="blog-modal-text">
+                    <!-- Dynamic Text Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. सर्वाधिकार सुरक्षित।
+            </div>
+            <ul class="footer-links">
+                <li><a href="/hi/">होम</a></li>
+                <li><a href="about">परिचय</a></li>
+                <li><a href="projects">प्रोजेक्ट्स</a></li>
+                <li><a href="publications">पुस्तकें</a></li>
+                <li><a href="contact">संपर्क</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Interactive Article Data & Controller Script -->
+    <script>
+        const articlesData = {
+            "11": {
+                title: "Generative AI: आर्किटेक्चर, आधारभूत सिद्धांत और Production Engineering",
+                meta: "25 सितंबर, 2026 • Generative AI एवं Machine Learning",
+                content: `
+                    <p>केवल क्लास को अलग करने वाली सीमाएं तय करने (Discriminative Modeling P(Y|X)) के बजाय, Generative AI अंतर्निहित डेटा वितरण P(X) को मॉडल करता है ताकि नए, उच्च-आयामी सैंपल्स का संश्लेषण किया जा सके।</p>
+                    <p>यह हैंडबुक Transformer Self-Attention मैथमेटिक्स, Diffusion Markov Chains, Latent Diffusion Models (LDMs), 3-चरणीय Foundation Model Lifecycle (Pre-training, SFT, RLHF/DPO), RAG बनाम LoRA अडैप्टेशन, और Production Bottlenecks (KV Cache VRAM सीमाएं, TTFT लेटेंसी और Hallucination) का व्यवस्थित विश्लेषण प्रस्तुत करती है।</p>
+                    <p><a href="blogs/blog-generative-ai-architecture-foundations" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "10": {
+                title: "The Engineering Anatomy of AI Agents: वैचारिक मॉडल से Resilient Production Architecture तक",
+                meta: "16 सितंबर, 2026 • AI Architecture एवं Autonomous Systems",
+                content: `
+                    <p>मूल स्तर पर, एक LLM एक स्टेटलेस Next-Token Predictor होता है। Agency एक बाहरी Runtime Engine द्वारा संचालित होती है जो Control Loops निष्पादित करता है, JSON Function Calls का मूल्यांकन करता है, और Tool Observation Payloads को इंजेक्ट करता है।</p>
+                    <p>यह आर्किटेक्चरल गाइड Agent Micro-Step Cycles, Dynamic DAG Planners, Evaluator-Optimizer Reflection Loops, Pydantic Type Validation के साथ OpenAPI/JSON Schemas, Multi-Tier Memory Hierarchies और Model Context Protocol (MCP) इंटीग्रेशन का विश्लेषण करती है।</p>
+                    <p><a href="blogs/blog-engineering-anatomy-ai-agents" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "9": {
+                title: "Computer Science में Research Gap कैसे खोजें: एक व्यवस्थित एवं प्रामाणिक मार्गदर्शिका",
+                meta: "09 सितंबर, 2026 • Academic Research & Computer Science",
+                content: `
+                    <p>एक प्रामाणिक Research Gap वर्तमान साहित्य में एक सार्थक सीमा, अंतर्विरोध, अनसुलझी समस्या या सैद्धांतिक शून्यता का प्रतिनिधित्व करता है जिसके समाधान से हमारी वैज्ञानिक या व्यावहारिक समझ आगे बढ़ती है।</p>
+                    <p>यह व्यवस्थित मार्गदर्शिका CS Research Gaps के 5 मूलभूत प्रकारों, 4-स्तरीय साहित्य खोज प्रोटोकॉल, Literature Review Matrix के निर्माण, शोध पत्रों की कमजोरियों के विश्लेषण और सुदृढ़ शोध प्रस्ताव (Research Proposal) संरचना को कवर करती है।</p>
+                    <p><a href="blogs/blog-research-gap-computer-science" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "8": {
+                title: "Small Language Models (SLMs) और Edge AI: कॉम्पैक्ट, डोमेन-विशिष्ट मॉडल्स का महत्व",
+                meta: "28 अगस्त, 2026 • AI एवं Edge Computing",
+                content: `
+                    <p>प्रत्येक क्वेरी को विशाल Cloud Data Centers के माध्यम से रूट करने के बजाय, उद्योग कॉम्पैक्ट, अत्यधिक प्रशिक्षित Small Language Models (1B–8B) की ओर बढ़ रहा है जो उपभोक्ता CPU, Apple Silicon और Mobile NPU पर स्थानीय रूप से निष्पादित होते हैं।</p>
+                    <p>Synthetic Data Curation और उन्नत Quantization (GGUF, AWQ) के माध्यम से, आधुनिक SLMs डोमेन-विशिष्ट कार्यों पर पहले के 70B मॉडल्स के समान परिणाम देते हैं और शून्य-विलंबता, पूर्ण डेटा गोपनीयता और बिना API लागत के ऑफ़लाइन काम करते हैं।</p>
+                    <p><a href="blogs/blog-small-language-models" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "7": {
+                title: "Multi-Agent Systems (MAS): विशिष्ट AI Agents का सहयोगात्मक आर्किटेक्चर",
+                meta: "22 अगस्त, 2026 • AI एवं Multi-Agent Systems",
+                content: `
+                    <p>एक ही विशालकाय मॉडल से सब कुछ कराने के बजाय, आधुनिक एंटरप्राइज AI आर्किटेक्चर विशेषीकृत AI Agents की टीमें बनाते हैं जो मिलकर सहयोग करते हैं, समीक्षा करते हैं, काम सौंपते हैं और कार्यों को निष्पादित करते हैं।</p>
+                    <p>प्रमुख आर्किटेक्चरल पैटर्न्स में Hierarchical (पर्यवेक्षक/Orchestrator), Sequential Pipelines और सहयोगी Consensus Topologies शामिल हैं। Model Context Protocol (MCP) और ऑर्केस्ट्रेशन फ्रेमवर्क (LangGraph, CrewAI) के साथ एकीकृत होकर, Multi-Agent Systems संदर्भ क्षरण को समाप्त करते हैं।</p>
+                    <p><a href="blogs/blog-multi-agent-systems" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "6": {
+                title: "AI Agents Are Becoming Autonomous: Chatbots से Digital Workers तक का विकास",
+                meta: "14 अगस्त, 2026 • AI एवं Autonomous Systems",
+                content: `
+                    <p>वर्षों से, आर्टिफिशियल इंटेलिजेंस मुख्य रूप से कुछ ऐसा था जिससे हम केवल बातचीत करते थे। हम एक चैटबॉट से ईमेल लिखने, कोड समझाने या सवाल का जवाब देने के लिए कहते थे। 2026 में यह मॉडल तेजी से बदल रहा है।</p>
+                    <p>AI का अगला चरण मॉडल्स को न्यूनतम मानवीय हस्तक्षेप के साथ योजना बनाने, Tools का उपयोग करने, Context याद रखने, निर्णय लेने और जटिल बहु-चरणीय लक्ष्यों को आगे बढ़ाने की क्षमता देने के बारे में है। प्रमुख कारकों में MCP, Google Gemini Runtimes और Multi-Agent Collaboration शामिल हैं।</p>
+                    <p><a href="blogs/blog-ai-agents-autonomous" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            },
+            "5": {
+                title: "How Open-Source LLMs Are Changing the AI Industry",
+                meta: "10 अगस्त, 2026 • AI एवं Open Source",
+                content: `
+                    <p>आर्टिफिशियल इंटेलिजेंस कभी मुख्य रूप से भारी कंप्यूटिंग संसाधनों और प्रोप्राइटरी मॉडल्स वाले संगठनों तक सीमित थी। Llama, Mistral, Qwen, Gemma, और DeepSeek-R1 जैसे Open-Weight Models का उदय पूरे परिदृश्य को नया रूप दे रहा है।</p>
+                    <p>Stanford AI Index के अनुसार, Open-Source AI विकास 5.6 मिलियन से अधिक GitHub Project तक पहुंच गया है। इसके प्रमुख प्रभावों में Fine-Tuning लागत कम करना, सुरक्षित Local AI Deployment, डेटा संप्रभुता और Modular AI Agents का विस्तार शामिल है।</p>
+                    <p><a href="blogs/blog-open-source-llms" style="color: var(--color-yellow); font-weight: bold; text-decoration: underline;">पूरा विस्तृत लेख यहाँ पढ़ें →</a></p>
+                `
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('blogModal');
+            const closeBtn = document.getElementById('modalClose');
+            const readButtons = document.querySelectorAll('.read-btn');
+
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMeta = document.getElementById('modalMeta');
+            const modalText = document.getElementById('modalText');
+
+            readButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const postId = btn.getAttribute('data-post-id');
+                    const article = articlesData[postId];
+
+                    if (article) {
+                        modalTitle.textContent = article.title;
+                        modalMeta.textContent = article.meta;
+                        modalText.innerHTML = article.content;
+
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+    <!-- JS Logic -->
+    <script src="../script.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7651eb4980a4d819b94ab12839bc0a9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+
+</html>

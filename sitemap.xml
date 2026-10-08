@@ -1,89 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main Pages -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- English Main Pages -->
     <url>
         <loc>https://atulsah.in/</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://atulsah.in/about</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/about"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/about"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/about"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://atulsah.in/skills</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/skills"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/skills"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/skills"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/projects</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/projects"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/projects"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/projects"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://atulsah.in/publications</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/publications"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/publications"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/publications"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blog</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blog"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blog"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blog"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/contact</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/contact"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/contact"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
-    <!-- Blog Posts -->
+    <!-- English Blog Posts -->
     <url>
         <loc>https://atulsah.in/blogs/blog-generative-ai-architecture-foundations</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-research-gap-computer-science</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-research-gap-computer-science"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-research-gap-computer-science"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-research-gap-computer-science"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-small-language-models</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-small-language-models"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-small-language-models"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-small-language-models"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-multi-agent-systems</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-multi-agent-systems"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-multi-agent-systems"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-multi-agent-systems"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-ai-agents-autonomous</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-ai-agents-autonomous"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-ai-agents-autonomous"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-ai-agents-autonomous"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://atulsah.in/blogs/blog-open-source-llms</loc>
-        <lastmod>2026-09-25</lastmod>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-open-source-llms"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-open-source-llms"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-open-source-llms"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Hindi Main Pages -->
+    <url>
+        <loc>https://atulsah.in/hi/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/about</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/about"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/about"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/about"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/skills</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/skills"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/skills"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/skills"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/projects</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/projects"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/projects"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/projects"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/publications</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/publications"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/publications"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/publications"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blog</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blog"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blog"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blog"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/contact</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/contact"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/contact"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Hindi Blog Posts -->
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-research-gap-computer-science</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-research-gap-computer-science"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-research-gap-computer-science"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-research-gap-computer-science"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-small-language-models</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-small-language-models"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-small-language-models"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-small-language-models"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-multi-agent-systems</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-multi-agent-systems"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-multi-agent-systems"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-multi-agent-systems"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-ai-agents-autonomous</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-ai-agents-autonomous"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-ai-agents-autonomous"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-ai-agents-autonomous"/>
+        <lastmod>2026-10-08</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://atulsah.in/hi/blogs/blog-open-source-llms</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-open-source-llms"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-open-source-llms"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-open-source-llms"/>
+        <lastmod>2026-10-08</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>

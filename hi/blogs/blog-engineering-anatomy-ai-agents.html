@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक | अतुल साह</title>
+    
+    <!-- SEO & Search Engine Optimization Metadata -->
+    <meta name="description" content="AI एजेंट्स पर गहन आर्किटेक्चरल हैंडबुक। कंट्रोल लूप्स, फंक्शन कॉलिंग रनटाइम इंटरनल्स, ग्राफ-बेस्ड ऑर्केस्ट्रेशन, डिटरमिनिस्टिक स्टेट मैनेजमेंट, मेमोरी हायरार्की और फेलियर रिकवरी का संपूर्ण विश्लेषण।">
+    <meta name="keywords" content="AI Agents Architecture, Autonomous AI Agents, Agent Runtime Engine, Model Context Protocol, MCP Protocol, Function Calling JSON Schema, Deterministic State Graphs, LangGraph, Multi-Agent Systems, Agent Memory Hierarchy, Production AI Engineering, Atul Sah Blog, AI एजेंट्स">
+    <meta name="author" content="Atul Sah">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents">
+    <link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents">
+    <link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents">
+    <link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents">
+    <meta property="og:title" content="AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक | अतुल साह">
+    <meta property="og:description" content="AI एजेंट्स पर गहन आर्किटेक्चरल हैंडबुक: कंट्रोल लूप्स, फंक्शन कॉलिंग, ग्राफ ऑर्केस्ट्रेशन, स्टेट मैनेजमेंट और मेमोरी हायरार्की।">
+    <meta property="og:image" content="https://atulsah.in/avatar.jpg">
+    <meta property="og:site_name" content="Atul Sah">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents">
+    <meta name="twitter:title" content="AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक">
+    <meta name="twitter:description" content="AI एजेंट्स का डीप-डाइव आर्किटेक्चर: रनटाइम इंजन, JSON स्कीमा, मल्टी-टियर मेमोरी, MCP इंटीग्रेशन और डिटरमिनिस्टिक स्टेट ग्राफ्स।">
+    <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents"
+      },
+      "headline": "AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक",
+      "description": "AI एजेंट्स पर गहन आर्किटेक्चरल हैंडबुक। कंट्रोल लूप्स, फंक्शन कॉलिंग रनटाइम इंटरनल्स, ग्राफ-बेस्ड ऑर्केस्ट्रेशन, डिटरमिनिस्टिक स्टेट मैनेजमेंट, मेमोरी हायरार्की और फेलियर रिकवरी का संपूर्ण विश्लेषण।",
+      "image": "https://atulsah.in/avatar.jpg",
+      "author": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah",
+        "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+        "url": "https://atulsah.in/hi/about",
+        "sameAs": [
+          "https://github.com/RealAtulSah",
+          "https://in.linkedin.com/in/realatulsah",
+          "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+          "https://store.pothi.com/",
+          "https://www.amazon.in/s?k=atul+sah"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah"
+      },
+      "datePublished": "2026-09-16",
+      "dateModified": "2026-09-16",
+      "keywords": [
+        "AI Agents Architecture",
+        "Autonomous AI Agents",
+        "Agent Runtime Engine",
+        "Model Context Protocol",
+        "MCP Protocol",
+        "Function Calling Schema",
+        "Deterministic State Graphs",
+        "Multi-Agent Orchestration",
+        "Context Compaction",
+        "Production AI Safety"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "होम",
+          "item": "https://atulsah.in/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ब्लॉग",
+          "item": "https://atulsah.in/hi/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI एजेंट्स का इंजीनियरिंग एनाटॉमी",
+          "item": "https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
+        }
+        
+        .article-header {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2rem;
+            scroll-margin-top: 6rem;
+            display: block;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255, 221, 0, 0.1);
+            color: var(--color-yellow);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 221, 0, 0.3);
+        }
+
+        .article-title {
+            font-size: 2.35rem;
+            line-height: 1.25;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-author-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 0.85rem 1.25rem;
+            border-radius: 6px;
+            width: fit-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .author-avatar-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--color-yellow);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info-text h4 {
+            font-size: 1.05rem;
+            color: var(--color-white);
+            font-weight: 700;
+            margin: 0 0 0.15rem 0;
+        }
+
+        .author-role {
+            font-size: 0.82rem;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info-text p {
+            font-size: 0.8rem;
+            color: #d0d0d0;
+            margin: 0;
+        }
+
+        .article-content {
+            color: #d1d5db;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-top: 2rem;
+            clear: both;
+            position: relative;
+            z-index: 1;
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.6rem;
+        }
+
+        .article-content h2, .article-content h3 {
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--color-yellow);
+            margin-top: 3.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--color-white);
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.8rem;
+            padding-left: 1.8rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.6rem;
+        }
+
+        .article-content blockquote {
+            background: rgba(18, 18, 18, 0.8);
+            border-left: 4px solid var(--color-yellow);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #e5e7eb;
+        }
+
+        .article-content hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+            margin: 3.5rem 0;
+        }
+
+        .architecture-box {
+            background: #0d1117;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.88rem;
+            color: #58a6ff;
+            overflow-x: auto;
+            margin: 2rem 0;
+            line-height: 1.6;
+            white-space: pre;
+        }
+
+        .code-container {
+            background: #0d1117;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            color: #c9d1d9;
+            overflow-x: auto;
+            margin: 2rem 0;
+            line-height: 1.65;
+        }
+
+        .code-container .json-key {
+            color: #79c0ff;
+        }
+        .code-container .json-str {
+            color: #a5d6ff;
+        }
+        .code-container .json-num {
+            color: #d2a8ff;
+        }
+
+        .callout-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 2.2rem 0;
+        }
+
+        .callout-card h4 {
+            color: var(--color-yellow);
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
+        }
+
+        .data-table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .data-table th, .data-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .data-table th {
+            background-color: #161b22;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .article-nav-bottom {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.75rem;
+            }
+            .article-wrapper {
+                padding: 2.5rem 1rem 4rem;
+            }
+            .architecture-box {
+                font-size: 0.76rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/hi/" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="/hi/">होम</a></li>
+                    <li><a href="../about">परिचय</a></li>
+                    <li><a href="../skills">कौशल</a></li>
+                    <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                    <li><a href="../publications">पुस्तकें</a></li>
+                    <li><a href="../blog" class="active">ब्लॉग</a></li>
+                    <li><a href="../contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="/blogs/blog-engineering-anatomy-ai-agents" class="lang-switch-btn" title="View in English" aria-label="Switch to English"><span class="lang-text">Aअ</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main>
+        <div class="article-wrapper">
+            <article>
+                <div class="article-header">
+                    <span class="article-category">AI Architecture एवं Autonomous Systems</span>
+                    <h1 class="article-title">AI एजेंट्स का इंजीनियरिंग एनाटॉमी: वैचारिक मॉडल से रेजिलिएंट प्रोडक्शन आर्किटेक्चर तक</h1>
+                    
+                    <div class="article-author-bar">
+                        <img src="../../avatar.jpg" alt="Atul Sah" class="author-avatar-img">
+                        <div class="author-info-text">
+                            <h4>Atul Sah</h4>
+                            <div class="author-role">Computer Science प्राध्यापक, लेखक एवं Full-Stack Developer</div>
+                            <p>प्रकाशित: 16 सितंबर, 2026 • 26 मिनट पठन</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <p>AI एजेंट्स के बारे में अधिकांश तकनीकी चर्चाएं व्यापक सामान्यीकरणों पर समाप्त हो जाती हैं: <em>"एक एजेंट टूल्स से जुड़ा हुआ एक मॉडल है।"</em></p>
+
+                    <p>यद्यपि यह परिभाषा वैचारिक रूप से सही है, लेकिन यह उन सॉफ्टवेयर इंजीनियरिंग वास्तविकताओं को पूरी तरह नजरअंदाज कर देती है जो इन प्रणालियों को नियतात्मक (deterministic), दोष-सहिष्णु (fault-tolerant) और आर्थिक रूप से व्यावहारिक बनाने के लिए आवश्यक हैं। व्यवहार में, एक एजेंट का निर्माण प्रॉम्प्ट इंजीनियरिंग से बहुत कम और <strong>डिस्ट्रिब्यूटेड सिस्टम्स इंजीनियरिंग, स्टेट मशीन्स और API ऑर्केस्ट्रेशन</strong> से बहुत अधिक संबंधित है।</p>
+
+                    <p>आइए परिचयात्मक अवधारणाओं से आगे बढ़ें और उन सटीक मैकेनिक्स, डेटा स्ट्रक्चर्स और रनटाइम लाइफसाइकिल को डिकंस्ट्रक्ट करें जो प्रोडक्शन में ऑटोनॉमस एजेंट्स को नियंत्रित करते हैं।</p>
+
+                    <hr>
+
+                    <h2>1. एजेंट रनटाइम लाइफसाइकिल का विश्लेषण</h2>
+
+                    <p>हार्डवेयर के स्तर पर, एक लार्ज लैंग्वेज मॉडल (LLM) एक स्टेटलेस (stateless) नेक्स्ट-टोकन प्रिडिक्टर होता है। इसमें कोई सतत चेतना नहीं होती, कोई बैकग्राउंड वर्कर थ्रेड नहीं होता, और "पुनः प्रयास करने" की कोई आंतरिक अवधारणा नहीं होती।</p>
+
+                    <p>एजेंसी वास्तव में एक <strong>बाहरी रनटाइम इंजन द्वारा निर्मित भ्रम</strong> है। यह रनटाइम लगातार एक बंद लूप में मॉडल को इनवोक करता है, संरचित जनरेशन आउटपुट को इंटरसेप्ट करता है, बाहरी कॉल निष्पादित करता है, और पर्यावरण पेलोड को संदर्भ विंडो (context window) में वापस फीड करता है।</p>
+
+                    <div class="architecture-box"> ┌────────────────────────────────────────────────────────────────────────┐
+ │                            एजेंट रनटाइम इंजन                           │
+ │                                                                        │
+ │   उपयोगकर्ता लक्ष्य / घटना (User Goal / Event)                         │
+ │          │                                                             │
+ │          ▼                                                             │
+ │   ┌──────────────┐      अनुमान अनुरोध        ┌─────────────────────┐   │
+ │   │ State / Env  │ ────────────────────────► │   फाउंडेशन मॉडल     │   │
+ │   │ Context Pack │ ◄──────────────────────── │ (रीजनिंग/प्लानर)    │   │
+ │   └──────────────┘     संरचित टूल कॉल        └─────────────────────┘   │
+ │          ▲                      │                                      │
+ │          │                      ▼                                      │
+ │          │            ┌────────────────────┐                           │
+ │          │            │ टूल कॉल राउटर      │                           │
+ │          │            └─────────┬──────────┘                           │
+ │          │                      │                                      │
+ │    अवलोकन पेलोड                 ▼                                      │
+ │          │            ┌────────────────────┐                           │
+ │          └─────────── │ निष्पादक / सैंडबॉक्स│                          │
+ │                       └────────────────────┘                           │
+ └────────────────────────────────────────────────────────────────────────┘</div>
+
+                    <h3>माइक्रो-स्टेप अनुक्रम (The Micro-Step Sequence)</h3>
+
+                    <p>एक एजेंट का प्रत्येक असतत निष्पादन लूप चार नियतात्मक चरणों से मिलकर बनता है:</p>
+
+                    <ol>
+                        <li><strong>कंटेक्स्ट संकलन (Context Compilation):</strong> रनटाइम सिस्टम निर्देशों, संवादी स्मृति, गतिशील टूल परिभाषाओं (JSON स्कीमा के रूप में), और हालिया निष्पादन इतिहास को एक सीमित टोकन बजट में इकट्ठा करता है।</li>
+                        <li><strong>अनुमान और शाखा मूल्यांकन:</strong> मॉडल इनमें से किसी एक का आउटपुट देता है:
+                            <ul>
+                                <li>एक अंतिम टेक्स्ट प्रतिक्रिया (कार्य पूरा होने या उपयोगकर्ता से स्पष्टीकरण का संकेत)।</li>
+                                <li>एक पूर्वनिर्धारित JSON स्कीमा (फ़ंक्शन नाम + टाइप किए गए तर्क) से मेल खाने वाला संरचित टूल कॉल अनुरोध।</li>
+                            </ul>
+                        </li>
+                        <li><strong>डिस्पैच और सैंडबॉक्स्ड निष्पादन:</strong> होस्ट सिस्टम टूल कॉल को पकड़ता है, सख्त स्कीमा के विरुद्ध तर्कों को मान्य करता है, और लक्षित फ़ंक्शन को निष्पादित करता है (उदा. डेटाबेस क्वेरी, API आमंत्रण, फाइल सिस्टम ऑपरेशन)।</li>
+                        <li><strong>ऑब्जर्वेशन इंजेक्शन (Observation Injection):</strong> टूल द्वारा लौटाए गए stdout, stderr या JSON पेलोड को एक मानकीकृत टूल रिस्पॉन्स फॉर्मेट में लपेटा जाता है और मैसेज ऐरे में वापस जोड़ा जाता है। लूप चरण 1 पर रीसेट हो जाता है।</li>
+                    </ol>
+
+                    <hr>
+
+                    <h2>2. उन्नत संज्ञानात्मक और निष्पादन टोपोलॉजी</h2>
+
+                    <p>पारंपरिक ReAct (Reason + Act) लूप सरल, एकल-बारी खोजों के लिए पर्याप्त है। हालाँकि, बहु-घंटे, गैर-तुच्छ इंजीनियरिंग कार्यों के लिए, एकल-लूप आर्किटेक्चर तेजी से ख़राब हो जाते हैं। औद्योगिक एजेंट आर्किटेक्चर अधिक परिष्कृत निष्पादन टोपोलॉजी पर निर्भर करते हैं।</p>
+
+                    <div class="architecture-box">             A. ReAct                      B. Plan-and-Solve (DAG)
+      ┌──────────────────┐               ┌────────────────────────┐
+      │  Thought ──► Act │               │   उच्च-स्तरीय प्लानर   │
+      │        ▲     │   │               └───────────┬────────────┘
+      │        └─────┘   │                           │ उत्पन्न करता है
+      └──────────────────┘                           ▼
+                                          [T1] ──► [T2] ──► [T3]
+                                         (स्थैतिक या गतिशील DAG)
+
+             C. Evaluator-Optimizer (परावर्तन / Reflection)
+      ┌───────────────────────────────────────────────────────────┐
+      │  ┌───────────────┐      कलाकृति       ┌────────────────┐   │
+      │  │   जनरेटर      │ ────────────────►  │  मूल्यांकनकर्ता│   │
+      │  └───────────────┘                    └────────┬───────┘   │
+      │          ▲                                     │           │
+      │          └──────── फीडबैक / आलोचना ────────────┘           │
+      └───────────────────────────────────────────────────────────┘</div>
+
+                    <h3>A. गतिशील DAG (Directed Acyclic Graph) निष्पादन</h3>
+
+                    <p>बिना किसी दूरदर्शिता के एक बार में एक कदम उठाने के बजाय, एक <strong>प्लानर मॉडल (Planner Model)</strong> असतत उप-कार्यों का एक निर्भरता ग्राफ उत्पन्न करता है।</p>
+
+                    <ul>
+                        <li>नोड्स विशिष्ट उप-लक्ष्यों का प्रतिनिधित्व करते हैं (उदा. <code>FetchLogs</code>, <code>ParseStacktrace</code>, <code>LocateSourceFile</code>)।</li>
+                        <li>निर्देशित किनारे डेटा निर्भरता का प्रतिनिधित्व करते हैं (उदा. <code>LocateSourceFile</code> को <code>ParseStacktrace</code> के आउटपुट की आवश्यकता होती है)।</li>
+                        <li>शून्य परस्पर निर्भरता वाले कार्य वर्कर थ्रेड्स में समवर्ती (concurrently) रूप से चलते हैं, जिससे लेटेंसी में भारी कमी आती है।</li>
+                    </ul>
+
+                    <h3>B. Evaluator-Optimizer / परावर्तन लूप (Reflection Loop)</h3>
+
+                    <p>जब सटीकता की सीमाएं सख्त होती हैं (जैसे कोड संकलन या डेटाबेस माइग्रेशन), जनरेशन और वैलिडेशन के बीच जिम्मेदारियों का पृथक्करण अनिवार्य हो जाता है।</p>
+
+                    <ol>
+                        <li><strong>जनरेटर नोड:</strong> समस्या विनिर्देश के आधार पर पूरी तरह से लक्षित आउटपुट बनाने पर ध्यान केंद्रित करता है।</li>
+                        <li><strong>मूल्यांकनकर्ता नोड (क्रिटिक):</strong> सख्त नियमों के विरुद्ध आउटपुट को ग्रेड करने के लिए विशेष मूल्यांकन प्रॉम्प्ट्स के साथ डिटरमिनिस्टिक टूल्स (यूनिट टेस्ट, सॉनारक्विब जैसे स्टेटिक एनालाइजर, सिंटैक्स वैलिडेटर) का उपयोग करता है।</li>
+                        <li><strong>त्रुटियों का बैक-प्रोपोगेशन:</strong> यदि मूल्यांकनकर्ता आर्टिफैक्ट को फेल कर देता है, तो वह सटीक कंपाइलर एरर या लिंटर ट्रेस को संदर्भ में जोड़ता है, जिससे जनरेटर केवल असफल खंड को ठीक करता है।</li>
+                    </ol>
+
+                    <hr>
+
+                    <h2>3. फंक्शन कॉलिंग प्रोटोकॉल: मॉडल कोड से कैसे बात करते हैं</h2>
+
+                    <p>आधुनिक मॉडल्स को ढीले मार्कडाउन स्ट्रिंग्स के बजाय नेटिव फंक्शन-कॉलिंग फॉर्मेट्स आउटपुट करने के लिए RLHF और फाइन-ट्यूनिंग के माध्यम से प्रशिक्षित किया जाता है।</p>
+
+                    <p>जब हम एजेंट इंजन के साथ किसी टूल को पंजीकृत करते हैं, तो हम एक OpenAPI/JSON स्कीमा प्रदान करते हैं। उदाहरण के लिए, एक फाइल सिस्टम राइटर पंजीकृत करना:</p>
+
+                    <div class="code-container">
+<pre style="margin: 0; white-space: pre-wrap;">{
+  <span class="json-key">"name"</span>: <span class="json-str">"write_source_file"</span>,
+  <span class="json-key">"description"</span>: <span class="json-str">"अनुमत वर्कस्पेस निर्देशिका के भीतर डिस्क पर फ़ाइल लिखता या अधिलेखित करता है।"</span>,
+  <span class="json-key">"parameters"</span>: {
+    <span class="json-key">"type"</span>: <span class="json-str">"object"</span>,
+    <span class="json-key">"properties"</span>: {
+      <span class="json-key">"file_path"</span>: {
+        <span class="json-key">"type"</span>: <span class="json-str">"string"</span>,
+        <span class="json-key">"description"</span>: <span class="json-str">"लक्षित फ़ाइल का सापेक्ष पथ।"</span>
+      },
+      <span class="json-key">"content"</span>: {
+        <span class="json-key">"type"</span>: <span class="json-str">"string"</span>,
+        <span class="json-key">"description"</span>: <span class="json-str">"लिखी जाने वाली सटीक UTF-8 एन्कोडेड टेक्स्ट सामग्री।"</span>
+      }
+    },
+    <span class="json-key">"required"</span>: [<span class="json-str">"file_path"</span>, <span class="json-str">"content"</span>]
+  }
+}</pre>
+                    </div>
+
+                    <h3>तर्क पार्सिंग और टाइप-सेफ्टी सीमा</h3>
+
+                    <p>जब मॉडल एक टूल कॉल उत्सर्जित करता है, तो एजेंट रनटाइम को <strong>कच्चे स्ट्रिंग तर्कों को सीधे निष्पादन कार्यों में पास नहीं करना चाहिए</strong>। प्रोडक्शन में, एक मध्यवर्ती सीरियलाइजेशन लेयर (जैसे पायथन में Pydantic या टाइपस्क्रिप्ट में Zod) सख्त रनटाइम वैलिडेशन करती है:</p>
+
+                    <div class="architecture-box">मॉडल आउटपुट (Raw String)
+        │
+        ▼
+JSON पार्सर (त्रुटिपूर्ण ब्रेसिज़/एस्केप का पता लगाता है)
+        │
+        ▼
+टाइप और सीमा वैलिडेटर (Zod / Pydantic)
+  ├── जाँचता है: क्या `file_path` जेल निर्देशिका के बाहर है?
+  ├── जाँचता है: क्या `content` आकार सीमा के भीतर है?
+        │
+        ├── [मान्य]   ──► OS फ़ाइल डिस्क्रिप्टर को आमंत्रित करता है
+        └── [अमान्य] ──► स्कीमा एरर पकड़ता है ──► संदर्भ में एरर ट्रेस लौटाता है</div>
+
+                    <p>यह प्रॉम्प्ट इंजेक्शन एस्केप, डायरेक्टरी ट्रैवर्सल कारनामों (उदा. <code>../../etc/passwd</code>), या अनहैंडल्ड रनटाइम अपवादों जैसी सामान्य सुरक्षा समस्याओं को रोकता है।</p>
+
+                    <hr>
+
+                    <h2>4. बहु-स्तरीय मेमोरी आर्किटेक्चर (Multi-Tiered Memory)</h2>
+
+                    <p>कंटेक्स्ट विंडो का नाटकीय रूप से विस्तार हुआ है, लेकिन इसे अपने एकमात्र मेमोरी तंत्र के रूप में मानना त्रुटिपूर्ण है। संदर्भ में मौजूद टोकन क्षणिक, महंगे और ध्यान क्षरण (<strong>"बीच में खो जाना" / Lost in the Middle सिंड्रोम</strong>) के अधीन होते हैं।</p>
+
+                    <p>प्रोडक्शन एजेंट फ्रेमवर्क एक खंडित मेमोरी पदानुक्रम तैनात करते हैं:</p>
+
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>मेमोरी स्तर</th>
+                                    <th>अंतर्निहित तंत्र</th>
+                                    <th>प्राथमिक विशेषताएं और दायरा</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1. वर्किंग मेमोरी</strong></td>
+                                    <td>इन-कंटेक्स्ट बफ़र और स्क्रैचपैड</td>
+                                    <td>उच्चतम निष्ठा, क्षणिक, कड़ाई से टोकन-बाउंड। तत्काल प्रॉम्प्ट और सक्रिय टूल पेलोड रखता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2. सिमेंटिक मेमोरी</strong></td>
+                                    <td>वेक्टर एम्बेडिंग (HNSW इंडेक्स)</td>
+                                    <td>विशाल डेटा संग्रह, तकनीकी दस्तावेज, कोडबेस और डोमेन मैनुअल पर अतुल्यकालिक खोज।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3. संरचित स्थिति (State)</strong></td>
+                                    <td>रिलेशनल DB / की-वैल्यू स्टोर (SQLite/PostgreSQL)</td>
+                                    <td>नियतात्मक तथ्य, सत्र फ़्लैग, कार्य स्थिति चर, लेनदेन चेकपॉइंट और उपयोगकर्ता प्राथमिकताएं।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4. प्रासंगिक मेमोरी (Episodic)</strong></td>
+                                    <td>अनुभव इतिहास और ट्रेस लॉग्स</td>
+                                    <td>पिछले निष्पादनों, सफल रणनीतियों और दर्ज विफलता मोड के दीर्घकालिक लॉग्स।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>कंटेक्स्ट कॉम्पैक्शन द्वारा वर्किंग मेमोरी का प्रबंधन</h3>
+
+                    <p>जैसे-जैसे एक एजेंट बहु-चरणीय निष्पादन के माध्यम से आगे बढ़ता है, बातचीत का इतिहास बढ़ता जाता है। जब टोकन संख्या एक महत्वपूर्ण सीमा (उदा. सीमा का 75%) तक पहुँच जाती है, तो रनटाइम को <strong>डिटरमिनिस्टिक स्टेट कॉम्पैक्शन</strong> करना चाहिए:</p>
+
+                    <ol>
+                        <li><strong>स्लाइडिंग विंडो:</strong> वर्तमान लक्ष्य को बनाए रखने के लिए प्रारंभिक सिस्टम निर्देश और सबसे हालिया <em>N</em> इंटरैक्शन को अक्षुण्ण रखें।</li>
+                        <li><strong>रिकर्सिव सारांशीकरण:</strong> मध्यवर्ती टूल चरणों (चरण 2 से <em>K</em>) को एक तेज़ मॉडल में इस प्रॉम्प्ट के साथ पास करें: <em>"इन मध्यवर्ती परिचालनों को निर्णयों, सत्यापित स्थिति और लंबित मुद्दों को सूचीबद्ध करने वाले एक संरचित निष्पादन लॉग में संपीड़ित करें।"</em></li>
+                        <li><strong>पेलोड प्रूनिंग:</strong> विस्तृत ऐतिहासिक पेलोड (उदा. चरण 3 से 10,000-पंक्ति का CSV आउटपुट) को एक हल्के पॉइंटर से बदलें: <code>[डेटा लोड किया गया: 10,000 पंक्तियाँ session_cache_id_948 में संग्रहीत]</code>.</li>
+                    </ol>
+
+                    <hr>
+
+                    <h2>5. मॉडल कंटेक्स्ट प्रोटोकॉल (MCP): एंटरप्राइज इंटीग्रेशन स्टैंडर्ड</h2>
+
+                    <p><strong>मॉडल कंटेक्स्ट प्रोटोकॉल (MCP)</strong> की शुरूआत से पहले, एक एजेंट को एंटरप्राइज डेटाबेस, आंतरिक प्रलेखन और बाहरी प्लेटफार्मों से जोड़ने के लिए प्रत्येक टूल और रनटाइम के लिए अलग कनेक्टर कोड लिखना पड़ता था।</p>
+
+                    <p>MCP मानक ट्रांसपोर्ट्स पर एक खुला, क्लाइंट-होस्ट-सर्वर विनिर्देश प्रदान करता है:</p>
+
+                    <div class="architecture-box">┌───────────────────────────────────────────────────────────┐
+│                     MCP होस्ट (क्लाइंट)                   │
+│               (एजेंट रनटाइम / डेवलपमेंट UI)                │
+└─────────────┬───────────────────────────────┬─────────────┘
+              │ JSON-RPC 2.0 (stdio/SSE)      │
+              ▼                               ▼
+  ┌───────────────────────┐       ┌───────────────────────┐
+  │    MCP सर्वर: Git     │       │ MCP सर्वर: Postgres   │
+  ├───────────────────────┤       ├───────────────────────┤
+  │ उपलब्ध कराता है:      │       │ उपलब्ध कराता है:      │
+  │ • टूल्स: commit, diff │       │ • टूल्स: run_query    │
+  │ • संसाधन: repos       │       │ • संसाधन: schemas     │
+  └───────────────────────┘       └───────────────────────┘</div>
+
+                    <h3>MCP के मूल तत्व:</h3>
+
+                    <ul>
+                        <li><strong>टूल्स (Tools):</strong> साइड इफेक्ट वाले कॉल करने योग्य रूटीन (उदा. रिकॉर्ड अपडेट करना, बिल्ड ट्रिगर करना, टेस्ट सुइट चलाना)।</li>
+                        <li><strong>संसाधन (Resources):</strong> केवल-पढ़ने योग्य डेटा पेलोड (उदा. फ़ाइल सामग्री, सिस्टम लॉग, डेटाबेस स्कीमा) जिन्हें मॉडल निष्पादन साइड इफेक्ट के बिना संदर्भ के रूप में संदर्भित कर सकता है।</li>
+                        <li><strong>प्रॉम्प्ट्स (Prompts):</strong> सर्वर द्वारा होस्ट किए गए प्री-पैकेज्ड टेम्प्लेट और सिस्टम व्यक्तित्व जो यह मार्गदर्शन करते हैं कि मॉडल को उस विशिष्ट संसाधन के साथ कैसे इंटरैक्ट करना चाहिए।</li>
+                    </ul>
+
+                    <p>विशिष्ट टूल API से रीजनिंग इंजन को अलग करके, संगठन अपने निजी बुनियादी ढांचे को एक बार MCP सर्वर के रूप में उजागर कर सकते हैं, जिससे किसी भी संगत एजेंट को कस्टम कनेक्टर लॉजिक के बिना इसके साथ सुरक्षित रूप से बातचीत करने की अनुमति मिलती है।</p>
+
+                    <hr>
+
+                    <h2>6. मल्टी-एजेंट ऑर्केस्ट्रेशन पैटर्न</h2>
+
+                    <p>जब वर्कफ़्लो जटिलता में बड़े होते हैं, तो एकल-एजेंट सिस्टम प्रदर्शन की सीमा का सामना करते हैं। यदि एक ही मॉडल आर्किटेक्ट बनने, साफ कोड लिखने, सुरक्षा बाधाओं का ऑडिट करने और दस्तावेज लिखने का प्रयास एक साथ करता है, तो ध्यान भटकता है और गुणवत्ता गिर जाती है।</p>
+
+                    <p>आधुनिक रूपरेखाएँ इसे <strong>मल्टी-एजेंट ऑर्केस्ट्रेशन (स्टेट ग्राफ्स)</strong> के माध्यम से हल करती हैं।</p>
+
+                    <div class="architecture-box">                                  ┌─────────────┐
+                                  │ START: लक्ष्य│
+                                  └──────┬──────┘
+                                         │
+                                         ▼
+                            ┌────────────────────────┐
+                            │ सुपरवाइजर / राउटर      │
+                            └──────────┬─────────────┘
+                                       │
+                    ┌──────────────────┴──────────────────┐
+                    ▼                                     ▼
+         ┌─────────────────────┐               ┌─────────────────────┐
+         │ सीनियर देव एजेंट    │               │ सुरक्षा QA एजेंट    │
+         │ (विशेषीकृत प्रॉम्प्ट) │               │ (विशेषीकृत प्रॉम्प्ट) │
+         └──────────┬──────────┘               └──────────┬──────────┘
+                    │                                     │
+                    └──────────────────┬──────────────────┘
+                                       │
+                                       ▼
+                            ┌────────────────────────┐
+                            │ कन्वर्जेंस / गेट चेक   │
+                            │ (स्टेट मशीन सत्यापन)   │
+                            └──────────┬─────────────┘
+                                       │
+                    ┌──────────────────┴──────────────────┐
+               [स्वीकृत]                             [अस्वीकृत]
+                    │                                     │
+                    ▼                                     ▼
+             ┌─────────────┐                      ┌─────────────┐
+             │ END: मर्ज   │                      │ रूट बैक     │
+             └─────────────┘                      └─────────────┘</div>
+
+                    <h3>नियतात्मक स्टेट ग्राफ डिजाइन (Deterministic State Graphs)</h3>
+
+                    <p>आधुनिक मल्टी-एजेंट आर्किटेक्चर एजेंटों को खुली संवादी थ्रेड्स के माध्यम से संचार करने की अनुमति देने से बचते हैं। इसके बजाय, वे सहयोग को <strong>Deterministic Finite Automata (DFA) / स्टेट ग्राफ्स</strong> के रूप में मॉडल करते हैं:</p>
+
+                    <ol>
+                        <li><strong>साझा स्थिति स्कीमा (Shared State Schema):</strong> एक एकल वैश्विक शब्दकोश या डेटाबेस मॉडल कार्य की स्थिति का प्रतिनिधित्व करता है (उदा. <code>{ "files_modified": [], "unit_test_status": "PENDING", "retry_count": 0 }</code>).</li>
+                        <li><strong>स्पष्ट संक्रमण (Explicit Transitions):</strong> सुपरवाइजर एजेंट स्वतंत्र रूप से नहीं बोलता; यह एक टाइप किया हुआ एज ट्रांज़िशन उत्सर्जित करता है (उदा. <code>NEXT -&gt; QA_NODE</code>).</li>
+                        <li><strong>गार्ड स्थितियां (Guard Conditions):</strong> हार्डकोडेड कोड गेट किसी एज ट्रांज़िशन की अनुमति देने से पहले invariants को सत्यापित करते हैं। यदि <code>unit_test_status != "PASSED"</code>, तो स्टेट ग्राफ <code>DEPLOY</code> नोड में जाने से रोकता है, भले ही एलएलएम कुछ भी सिफारिश करे।</li>
+                    </ol>
+
+                    <hr>
+
+                    <h2>7. प्रोडक्शन इंजीनियरिंग: गार्डरेल्स, सुरक्षा और ऑब्जर्वेबिलिटी</h2>
+
+                    <p>एक एजेंट प्रणाली को प्रयोगात्मक प्रोटोटाइप से प्रोडक्शन में ले जाने के लिए व्यापक परिचालन सुरक्षा उपायों की आवश्यकता होती है।</p>
+
+                    <h3>परिचालन गार्डरेल्स</h3>
+
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>जोखिम वेक्टर</th>
+                                    <th>विफलता मोड</th>
+                                    <th>शमन रणनीति</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>रिकर्सिव डेडलॉक</strong></td>
+                                    <td>एजेंट बार-बार उसी असफल कमांड का प्रयास करता रहता है।</td>
+                                    <td>एक्सपोनेंशियल बैकऑफ़, अधिकतम पुनरावृत्ति गहराई (<code>max_steps=15</code>), और नियतात्मक चक्र-पहचान स्टेट हैश।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>कंटेक्स्ट बॉम्बिंग</strong></td>
+                                    <td>एक API अप्रत्याशित रूप से बड़ा पेलोड (उदा. 50MB) लौटाता है, जिससे टोकन बजट समाप्त हो जाता है।</td>
+                                    <td>स्ट्रीम निरीक्षण, पेलोड ट्रंकेशन, और संदर्भ आईडी के साथ बाहरी ऑब्जेक्ट स्टोरेज में बड़ा डेटा सहेजना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>मनमाना कोड निष्पादन</strong></td>
+                                    <td>एजेंट विनाशकारी शेल कमांड उत्पन्न करता है (<code>rm -rf /</code> या अनधिकृत नेटवर्क इग्रेस)।</td>
+                                    <td>सैंडबॉक्स्ड वातावरण (Docker, Firecracker microVMs, WebAssembly), गैर-रूट विशेषाधिकार, और अल्पकालिक भंडारण।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>वित्तीय / संसाधन की बर्बादी</strong></td>
+                                    <td>एजेंट अनियंत्रित लूप में प्रवेश करता है, जिससे भारी API क्रेडिट खर्च होते हैं।</td>
+                                    <td>प्रति-रन निश्चित खर्च सीमा, आक्रामक टोकन बजट सीमा और सख्त निष्पादन टाइमआउट।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>ऑब्जर्वेबिलिटी और ट्रेसिंग (Observability &amp; Tracing)</h3>
+
+                    <p>पारंपरिक APM टूल्स एजेंटों की स्टोकेस्टिक प्रकृति को कैप्चर करने में विफल रहते हैं। प्रोडक्शन परिनियोजन के लिए समर्पित ट्रेसिंग टूल्स (उदा. OpenTelemetry-आधारित LLM ट्रेसर्स, Langfuse, Arize Phoenix) की आवश्यकता होती है जो लॉग करते हैं:</p>
+
+                    <ul>
+                        <li>तय किया गया सटीक ग्राफ पथ।</li>
+                        <li>प्रत्येक मध्यवर्ती चरण के लिए पूर्ण टोकन गणना और लागत।</li>
+                        <li>कच्चा इनपुट संदर्भ और मॉडल प्रतिक्रिया पेलोड।</li>
+                        <li>टूल निष्पादन विलंबता और पहली टोकन तक का समय (TTFT)।</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>8. सारांश: मानसिकता में बदलाव</h2>
+
+                    <p>प्रोडक्शन-रेडी AI एजेंटों के निर्माण के लिए <strong>प्रॉम्प्ट-केंद्रित दृष्टिकोण</strong> से <strong>सिस्टम-केंद्रित दृष्टिकोण</strong> पर स्थानांतरित होने की आवश्यकता है:</p>
+
+                    <ol>
+                        <li><strong>मॉडल एक घटक है, उत्पाद नहीं:</strong> फाउंडेशन मॉडल आपके एजेंट का केवल सीपीयू है। रनटाइम इंजन, मेमोरी पदानुक्रम, टाइप वैलिडेशन और ऑर्केस्ट्रेशन लेयर इसका ऑपरेटिंग सिस्टम बनाते हैं।</li>
+                        <li><strong>डिटरमिनिज्म के साथ एजेंसी को सीमित करें:</strong> उन क्षेत्रों में लैंग्वेज मॉडल्स का उपयोग करें जहां संभाव्य तर्क और असंरचित अनुवाद की आवश्यकता होती है; बाकी सभी जगह डिटरमिनिस्टिक कोड, टाइप किए गए स्कीमा और स्टेट ग्राफ्स का उपयोग करें।</li>
+                        <li><strong>मानकों के माध्यम से अलग करें:</strong> नाजुक, मालिकाना कनेक्टर कोड लिखने से बचने के लिए MCP और संरचित JSON इंटरफेस जैसे खुले मानकों को अपनाएं।</li>
+                        <li><strong>विफलता को ध्यान में रखकर निर्माण करें:</strong> प्रोडक्शन में, एजेंट भ्रमित होंगे, API टाइमआउट होंगे, और मॉडल विकृत JSON उत्सर्जित करेंगे। लचीले पुनः प्रयास लूप, सैंडबॉक्स और ह्यूमन-इन-द-लूप चेकपॉइंट्स को डिजाइन करना ही नाजुक प्रोटोटाइप को एंटरप्राइज-ग्रेड सिस्टम से अलग करता है।</li>
+                    </ol>
+
+                    <div class="callout-card" style="border-color: var(--color-yellow); background: rgba(255, 221, 0, 0.04);">
+                        <h4 style="color: var(--color-yellow); font-size: 1.25rem; margin-bottom: 1rem;">मुख्य आर्किटेक्चरल निष्कर्ष</h4>
+                        <ol style="margin-bottom: 0;">
+                            <li><strong>एजेंसी एक बाहरी लूप है:</strong> LLMs स्टेटलेस नेक्स्ट-टोकन प्रिडिक्टर हैं; सतत एजेंसी टूल कॉल्स को इंटरसेप्ट करने वाले होस्ट रनटाइम इंजन द्वारा संचालित होती है।</li>
+                            <li><strong>सीमाओं पर टाइप सुरक्षा:</strong> कच्चे स्ट्रिंग्स को सीधे निष्पादित न करें — OS प्रिमिटिव्स को छूने से पहले Pydantic या Zod स्कीमा के खिलाफ फ़ंक्शन कॉल को सत्यापित करें।</li>
+                            <li><strong>कंटेक्स्ट मेमोरी नहीं है:</strong> डिटरमिनिस्टिक कॉम्पैक्शन और पेलोड प्रूनिंग के साथ टियरड मेमोरी (वर्किंग, सिमेंटिक, स्ट्रक्चर्ड, एपिसोडिक) का उपयोग करके एजेंट की कार्य अवधि बढ़ाएं।</li>
+                            <li><strong>स्टेट ग्राफ्स के माध्यम से नियमों को लागू करें:</strong> अनियंत्रित एजेंट चैट को कोड-प्रवर्तित गार्ड गेट्स वाली नियतात्मक स्टेट मशीनों से बदलें।</li>
+                        </ol>
+                    </div>
+
+                    <hr>
+
+                    <!-- Authoritative References & Citations -->
+                    <div class="article-references" style="margin-top: 2.5rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--color-border); border-left: 3px solid var(--color-yellow);">
+                        <h4 style="color: var(--color-yellow); font-size: 1.15rem; margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.5px;">संदर्भ और प्रामाणिक स्रोत</h4>
+                        <ol style="font-size: 0.9rem; color: var(--color-grey-light); line-height: 1.7; padding-left: 1.25rem; margin-bottom: 0;">
+                            <li><strong>Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., &amp; Cao, Y. (2022):</strong> <em>ReAct: Synergizing Reasoning and Acting in Language Models</em>. International Conference on Learning Representations (ICLR 2023). arXiv:2210.03629. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2210.03629</a></li>
+                            <li><strong>Shinn, N., Cassano, F., Gopinath, A., Narasimhan, K., &amp; Yao, S. (2023):</strong> <em>Reflexion: Language Agents with Verbal Reinforcement Learning</em>. Advances in Neural Information Processing Systems (NeurIPS 2023). arXiv:2303.11366. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2303.11366" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2303.11366</a></li>
+                            <li><strong>Anthropic (2024):</strong> <em>The Model Context Protocol (MCP) Specification</em>. ओपन-सोर्स टूल और रिसोर्स कनेक्टिविटी मानक। उपलब्ध लिंक: <a href="https://modelcontextprotocol.io/" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://modelcontextprotocol.io/</a></li>
+                            <li><strong>Wang, L., Ma, C., Feng, X., Zhang, S., Yang, H., Zhang, J., Chen, Z., Tang, J., Chen, X., Lin, Y., Zhao, W. X., Wei, Z., &amp; Wen, J. R. (2024):</strong> <em>A Survey on Large Language Model based Autonomous Agents</em>. Frontiers of Computer Science. arXiv:2308.11432. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2308.11432" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2308.11432</a></li>
+                            <li><strong>OpenTelemetry (2024):</strong> <em>Semantic Conventions for Generative AI Operations and Spans</em>. Cloud Native Computing Foundation (CNCF). उपलब्ध लिंक: <a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://opentelemetry.io/docs/specs/semconv/gen-ai/</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <footer class="article-nav-bottom">
+                    <a href="../blog" class="btn btn-secondary">&larr; सभी ब्लॉग लेखों पर वापस जाएँ</a>
+                    <a href="../contact" class="btn">AI और सहयोग पर चर्चा करें</a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. सर्वाधिकार सुरक्षित।
+            </div>
+            <ul class="footer-links">
+                <li><a href="/hi/">होम</a></li>
+                <li><a href="../about">परिचय</a></li>
+                <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                <li><a href="../publications">पुस्तकें</a></li>
+                <li><a href="../blog">ब्लॉग</a></li>
+                <li><a href="../contact">संपर्क</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="../../script.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7651eb4980a4d819b94ab12839bc0a9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

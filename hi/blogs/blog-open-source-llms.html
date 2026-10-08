@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं | अतुल साह</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="जानिए कैसे Llama, DeepSeek-R1, Qwen और Mistral जैसे ओपन-वेट मॉडल्स AI का लोकतंत्रीकरण कर रहे हैं, विकास लागत कम कर रहे हैं, स्थानीय AI तैनाती सक्षम बना रहे हैं और डेटा गोपनीयता को बढ़ा रहे हैं।">
+    <meta name="keywords" content="Open-Source LLMs, DeepSeek R1, Llama 3, Local AI, AI Industry Trends 2026, Quantization, Fine-Tuning, AI Privacy, Atul Sah Blog, ओपन-सोर्स LLMs">
+    <meta name="author" content="Atul Sah">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://atulsah.in/hi/blogs/blog-open-source-llms">
+    <link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-open-source-llms">
+    <link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-open-source-llms">
+    <link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-open-source-llms">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://atulsah.in/hi/blogs/blog-open-source-llms">
+    <meta property="og:title" content="ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं | अतुल साह">
+    <meta property="og:description" content="ओपन-वेट AI मॉडल्स कैसे तकनीक का लोकतंत्रीकरण कर रहे हैं, स्थानीय AI तैनाती सक्षम बना रहे हैं और बाजार की दिशा बदल रहे हैं।">
+    <meta property="og:image" content="https://atulsah.in/avatar.jpg">
+    <meta property="og:site_name" content="Atul Sah Portfolio & Technical Blog">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://atulsah.in/hi/blogs/blog-open-source-llms">
+    <meta name="twitter:title" content="ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं">
+    <meta name="twitter:description" content="ओपन-वेट मॉडल्स कैसे AI पहुंच का लोकतंत्रीकरण कर रहे हैं और स्थानीय परिनियोजन को सक्षम बना रहे हैं।">
+    <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://atulsah.in/hi/blogs/blog-open-source-llms"
+      },
+      "headline": "ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं",
+      "description": "ओपन-वेट AI मॉडल्स (Llama, DeepSeek-R1, Qwen, Mistral) कैसे तकनीक का लोकतंत्रीकरण कर रहे हैं, स्थानीय AI तैनाती सक्षम बना रहे हैं और बाजार की दिशा बदल रहे हैं।",
+      "image": "https://atulsah.in/avatar.jpg",
+      "author": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah",
+        "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+        "url": "https://atulsah.in/hi/about",
+        "sameAs": [
+          "https://github.com/RealAtulSah",
+          "https://in.linkedin.com/in/realatulsah",
+          "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+          "https://store.pothi.com/",
+          "https://www.amazon.in/s?k=atul+sah"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah"
+      },
+      "datePublished": "2026-03-10",
+      "dateModified": "2026-09-25",
+      "keywords": ["Open-Source LLMs", "DeepSeek R1", "Local AI", "Quantization", "Fine-Tuning", "AI Privacy"]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "होम",
+          "item": "https://atulsah.in/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ब्लॉग",
+          "item": "https://atulsah.in/hi/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ओपन-सोर्स LLMs कैसे AI को बदल रहे हैं",
+          "item": "https://atulsah.in/hi/blogs/blog-open-source-llms"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
+        }
+
+        .article-header {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2rem;
+            scroll-margin-top: 6rem;
+            display: block;
+        }
+
+        .article-badge-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .article-main-title {
+            font-size: 2.8rem;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .article-author-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 0.85rem 1.25rem;
+            border-radius: 6px;
+            width: fit-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            margin-top: 1.5rem;
+        }
+
+        .article-author-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-yellow);
+            flex-shrink: 0;
+        }
+
+        .article-author-info {
+            font-size: 0.9rem;
+        }
+
+        .article-author-name {
+            color: var(--color-white);
+            font-weight: 700;
+            margin-bottom: 0.15rem;
+        }
+
+        .article-author-role {
+            color: var(--color-yellow);
+            font-size: 0.82rem;
+            font-family: var(--font-mono);
+        }
+
+        .article-content {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: var(--color-grey-light);
+            margin-top: 2rem;
+            clear: both;
+            position: relative;
+            z-index: 1;
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content h1, .article-content h2, .article-content h3 {
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.8rem;
+            font-size: 1.15rem;
+            line-height: 1.85;
+        }
+
+        .article-content h1 {
+            font-size: 2.2rem;
+            margin: 3.5rem 0 1.5rem;
+            color: var(--color-white);
+            border-bottom: 2px solid var(--color-yellow);
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.2rem;
+            color: var(--color-white);
+            border-left: 4px solid var(--color-yellow);
+            padding-left: 1rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            color: var(--color-yellow);
+        }
+
+        .article-content hr {
+            border: 0;
+            height: 1px;
+            background: var(--color-border);
+            margin: 3rem 0;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0 2rem 2rem;
+            color: var(--color-grey-light);
+        }
+
+        .article-content li {
+            margin-bottom: 0.6rem;
+            line-height: 1.7;
+        }
+
+        .article-content blockquote {
+            background: var(--bg-card);
+            border-left: 4px solid var(--color-yellow);
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--color-white);
+            box-shadow: 2px 2px 0px 0px rgba(255, 221, 0, 0.2);
+        }
+
+        .article-content pre {
+            background: var(--bg-secondary);
+            border: 1px solid var(--color-border);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            color: var(--color-yellow);
+            line-height: 1.5;
+        }
+
+        .article-nav-bottom {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-main-title {
+                font-size: 2rem;
+            }
+            .article-content h1 {
+                font-size: 1.7rem;
+            }
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/hi/" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="/hi/">होम</a></li>
+                    <li><a href="../about">परिचय</a></li>
+                    <li><a href="../skills">कौशल</a></li>
+                    <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                    <li><a href="../publications">पुस्तकें</a></li>
+                    <li><a href="../blog" class="active">ब्लॉग</a></li>
+                    <li><a href="../contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="/blogs/blog-open-source-llms" class="lang-switch-btn" title="View in English" aria-label="Switch to English"><span class="lang-text">Aअ</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main>
+        <div class="article-wrapper fade-in-section visible">
+            <div style="margin-bottom: 1.5rem;">
+                <a href="../blog" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">&larr; सभी लेखों पर वापस जाएँ</a>
+            </div>
+
+            <div class="article-header">
+                <div class="article-badge-row">
+                    <span class="badge badge-yellow">AI एवं Open-Source</span>
+                    <span class="mono" style="font-size: 0.85rem; color: var(--color-grey-muted);">10 मार्च, 2026 • 20 मिनट पठन</span>
+                </div>
+                
+                <h1 class="article-main-title">ओपन-सोर्स LLMs कैसे AI उद्योग को बदल रहे हैं</h1>
+                
+                <div class="article-author-card">
+                    <img src="../../avatar.jpg" alt="Atul Sah" class="article-author-img">
+                    <div class="article-author-info">
+                        <div class="article-author-name">Atul Sah</div>
+                        <div class="article-author-role">Computer Science प्राध्यापक, लेखक एवं Full-Stack Developer</div>
+                    </div>
+                </div>
+            </div>
+
+            <article class="article-content">
+                <p>
+                    आर्टिफिशियल इंटेलिजेंस कभी मुख्य रूप से भारी कंप्यूटिंग संसाधनों, विशेष शोधकर्ताओं और महंगे बुनियादी ढांचे तक पहुंच वाले बड़े संगठनों के लिए उपलब्ध तकनीक थी। एक शक्तिशाली लार्ज लैंग्वेज मॉडल (LLM) बनाने के लिए अरबों डॉलर के निवेश, हजारों GPU, विशाल डेटासेट और शोधकर्ताओं की टीमों की आवश्यकता होती थी।
+                </p>
+                <p>
+                    वह तस्वीर अब तेजी से बदल रही है।
+                </p>
+                <p>
+                    ओपन-सोर्स और ओपन-वेट लार्ज लैंग्वेज मॉडल्स का उदय डेवलपर्स, शोधकर्ताओं, स्टार्टअप्स, विश्वविद्यालयों, सरकारों और व्यक्तिगत उपयोगकर्ताओं के लिए तेजी से सक्षम मॉडल्स उपलब्ध कराकर AI उद्योग को नया रूप दे रहा है। Llama, Mistral, Qwen, Gemma और DeepSeek जैसे मॉडलों ने प्रदर्शित किया है कि AI का भविष्य आवश्यक रूप से केवल कुछ कंपनियों के बंद मॉडलों द्वारा नियंत्रित नहीं होना चाहिए।
+                </p>
+                <p>
+                    स्टैनफोर्ड के 2026 AI इंडेक्स के अनुसार, ओपन-सोर्स AI विकास में नाटकीय रूप से वृद्धि जारी है, जिसमें GitHub पर लगभग <strong>5.6 मिलियन AI प्रोजेक्ट्स</strong> हैं और Hugging Face पर अपलोड 2023 से तीन गुना हो गए हैं। साथ ही, अग्रणी ओपन और क्लोज्ड मॉडल्स के बीच प्रदर्शन का अंतर इतना कम हो गया है कि डेवलपर्स कई वास्तविक अनुप्रयोगों के लिए ओपन मॉडल्स को गंभीरता से चुन सकते हैं।
+                </p>
+                <p>
+                    यह केवल मुफ्त AI मॉडलों की कहानी नहीं है।
+                </p>
+                <p>
+                    यह एक मौलिक बदलाव है कि AI को कैसे विकसित, वितरित, अनुकूलित, तैनात और मुद्रीकृत किया जाता है।
+                </p>
+
+                <hr>
+
+                <h2>ओपन-सोर्स LLMs क्या हैं?</h2>
+                <p>
+                    उनके प्रभाव पर चर्चा करने से पहले, यह समझना महत्वपूर्ण है कि ओपन-सोर्स LLM का वास्तव में क्या अर्थ है।
+                </p>
+                <p>
+                    एक LLM एक मशीन-लर्निंग मॉडल है जिसे भारी मात्रा में टेक्स्ट और अन्य डेटा पर प्रशिक्षित किया जाता है। यह सांख्यिकीय पैटर्न सीखता है जो इसे टेक्स्ट उत्पन्न करने, सवालों के जवाब देने, कोड लिखने, जानकारी का सारांश बनाने, समस्याओं के बारे में सोचने और कई अन्य कार्य करने की अनुमति देता है।
+                </p>
+                <p>
+                    एक बंद (proprietary) मॉडल उसके निर्माता द्वारा नियंत्रित होता है। उपयोगकर्ता आम तौर पर API के माध्यम से इसके साथ बातचीत करते हैं, जबकि मॉडल वेट्स, ट्रेनिंग डेटा और कोड निजी रहते हैं।
+                </p>
+                <p>
+                    ओपन मॉडल एक अलग दृष्टिकोण अपनाते हैं। परियोजना के आधार पर, डेवलपर्स को मॉडल वेट्स, आर्किटेक्चर, इन्फरेंस कोड, ट्रेनिंग तकनीक और फाइन-ट्यूनिंग टूल्स तक पहुंच मिलती है।
+                </p>
+                <blockquote>
+                    <strong>ओपन-सोर्स सॉफ्टवेयर और ओपन-वेट AI मॉडल आवश्यक रूप से एक ही चीज़ नहीं हैं।</strong><br>
+                    एक मॉडल अपने ट्रेनिंग डेटा को बंद रखते हुए अपने वेट्स को सार्वजनिक कर सकता है। इसलिए, कई लोकप्रिय AI मॉडलों के लिए <strong>ओपन-वेट मॉडल (Open-Weight Model)</strong> शब्द तकनीकी रूप से अधिक सटीक है।
+                </blockquote>
+
+                <hr>
+
+                <h1>1. AI अधिक सुलभ हो रहा है (Accessibility)</h1>
+                <p>
+                    ओपन मॉडल्स का पहला बड़ा प्रभाव सुलभता है। पहले, किसी स्टार्टअप को AI उत्पाद बनाने के लिए किसी बाहरी API पर निर्भर रहना पड़ता था:
+                </p>
+<pre><code class="mono">Application ──► Company's API ──► Proprietary LLM</code></pre>
+                <p>
+                    यह सुविधाजनक है, लेकिन यह विक्रेता पर निर्भरता (vendor lock-in) बनाता है। यदि प्रदाता मूल्य बदलता है या उपयोग सीमित करता है, तो डेवलपर का नियंत्रण सीमित होता है। ओपन मॉडल एक स्वतंत्र विकल्प प्रदान करते हैं:
+                </p>
+<pre><code class="mono">Application ──► Your Infrastructure ──► Open LLM</code></pre>
+                <p>
+                    डेवलपर्स मॉडल डाउनलोड कर सकते हैं, इसे अपने बुनियादी ढांचे पर चला सकते हैं, और इसे पूरी तरह से अपनी शर्तों पर अनुकूलित कर सकते हैं।
+                </p>
+
+                <hr>
+
+                <h1>2. AI विकास की लागत घट रही है</h1>
+                <p>
+                    किसी फाउंडेशन मॉडल को स्क्रैच से प्रशिक्षित करना महंगा हो सकता है, लेकिन किसी मौजूदा ओपन मॉडल का उपयोग करना नाटकीय रूप से सस्ता है। कंपनियों को अरबों मापदंडों वाला मॉडल शून्य से बनाने की आवश्यकता नहीं है; वे ग्राहक सहायता, कानूनी दस्तावेजों, कोडिंग या क्षेत्रीय भाषाओं के लिए मौजूदा मॉडल को फाइन-ट्यून कर सकती हैं।
+                </p>
+                <blockquote>
+                    "क्या हम AI मॉडल बनाने का जोखिम उठा सकते हैं?" के बजाय कंपनियां पूछती हैं: "हमें किस मौजूदा मॉडल को कस्टमाइज़ करना चाहिए?"
+                </blockquote>
+
+                <hr>
+
+                <h1>3. स्थानीय AI (Local AI) व्यावहारिक बन रहा है</h1>
+                <p>
+                    ओपन LLMs के सबसे महत्वपूर्ण परिणामों में से एक <strong>स्थानीय AI</strong> का विकास है। मॉडल को हमेशा विशाल क्लाउड डेटा सेंटर में चलने की आवश्यकता नहीं होती। छोटे और क्वांटाइज्ड मॉडल व्यक्तिगत कंप्यूटर, वर्कस्टेशन, गेमिंग जीपीयू, मैक और एज डिवाइसेस पर चल सकते हैं।
+                </p>
+                <p>
+                    यह एक महत्वपूर्ण आर्किटेक्चरल बदलाव पैदा करता है: दूरदराज के प्रदाता को हर जानकारी भेजने के बजाय, संगठन अपने उपयोगकर्ताओं और डेटा के करीब मॉडल चला सकते हैं, जिससे डेटा पर अधिक नियंत्रण और शून्य टोकन लागत मिलती है।
+                </p>
+
+                <hr>
+
+                <h1>4. डेटा गोपनीयता सबसे बड़ा लाभ बन रही है</h1>
+                <p>
+                    अस्पताल, विश्वविद्यालय, बैंक या कानून फर्म नहीं चाहते कि संवेदनशील दस्तावेज उनके आंतरिक बुनियादी ढांचे से बाहर जाएं। एक स्थानीय रूप से तैनात मॉडल किसी बाहरी प्रदाता को डेटा भेजे बिना जानकारी को संसाधित कर सकता है।
+                </p>
+
+                <hr>
+
+                <h1>5. फाइन-ट्यूनिंग विशेष AI बना रही है</h1>
+                <p>
+                    सामान्य-उद्देश्यीय LLM किसी कंपनी की आंतरिक शब्दावली या व्यावसायिक नियमों को स्वाभाविक रूप से नहीं समझते हैं। सुपरवाइज्ड फाइन-ट्यूनिंग (SFT), LoRA, QLoRA और RAG जैसी तकनीकों के माध्यम से डेवलपर्स ओपन मॉडल को अत्यधिक विशिष्ट डोमेन असिस्टेंट में बदल रहे हैं।
+                </p>
+
+                <hr>
+
+                <h1>6. AI बुनियादी ढांचा (Infrastructure) बन रहा है</h1>
+                <p>
+                    जनरेटिव AI के शुरुआती दिनों में, मॉडल ही उत्पाद था। अब, मॉडल बिल्डिंग ब्लॉक्स बन रहे हैं। डेवलपर्स LLMs, विजन मॉडल, स्पीच मॉडल, वेक्टर डेटाबेस और एजेंट्स को मिलाकर संपूर्ण AI सिस्टम तैयार कर रहे हैं। जिस तरह कम्प्यूटिंग समय के साथ बुनियादी ढांचा बन गई, उसी तरह AI भी बुनियादी ढांचा बन रहा है।
+                </p>
+
+                <hr>
+
+                <h1>निष्कर्ष: व्यापक समुदाय के हाथों में भविष्य</h1>
+                <p>
+                    ओपन-सोर्स और ओपन-वेट LLMs का उदय AI उद्योग में सबसे महत्वपूर्ण बदलावों में से एक का प्रतिनिधित्व करता है। अब सवाल केवल यह नहीं है कि किस कंपनी के पास सबसे स्मार्ट AI है; बल्कि अधिक महत्वपूर्ण सवाल यह बन रहा है:
+                </p>
+                <blockquote>
+                    <strong>उपलब्ध AI के साथ कौन सबसे उपयोगी और विश्वसनीय प्रणाली का निर्माण कर सकता है?</strong>
+                </blockquote>
+                <p>
+                    AI का भविष्य पूरी तरह से खुला या पूरी तरह से बंद नहीं होगा। हम एक मिश्रित पारिस्थितिकी तंत्र की ओर बढ़ रहे हैं जहाँ मालिकाना फ्रंटियर मॉडल, ओपन-वेट मॉडल, स्थानीय AI और क्लाउड AI सह-अस्तित्व में होंगे।
+                </p>
+                <blockquote>
+                    <strong>AI कुछ मॉडल प्रदाताओं के नियंत्रण वाली तकनीक से हटकर एक ऐसे व्यापक पारिस्थितिकी तंत्र में बदल रहा है जहाँ लाखों डेवलपर्स भविष्य के निर्माण में भाग ले सकते हैं।</strong>
+                </blockquote>
+
+                <hr>
+
+                <!-- Authoritative References & Citations -->
+                <div class="article-references" style="margin-top: 2.5rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--color-border); border-left: 3px solid var(--color-yellow);">
+                    <h4 style="color: var(--color-yellow); font-size: 1.15rem; margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.5px;">संदर्भ और प्रामाणिक स्रोत</h4>
+                    <ol style="font-size: 0.9rem; color: var(--color-grey-light); line-height: 1.7; padding-left: 1.25rem; margin-bottom: 0;">
+                        <li><strong>Meta AI Research:</strong> Touvron et al. &amp; Dubey et al. (2023–2024). <em>Llama 2 &amp; Llama 3 Technical Reports: Open Foundation and Fine-Tuned Chat Models</em>. arXiv:2307.09288 &amp; arXiv:2407.21783. उपलब्ध लिंक: <a href="https://ai.meta.com/research/" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://ai.meta.com/research/</a></li>
+                        <li><strong>DeepSeek AI:</strong> DeepSeek-AI (2025). <em>DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</em>. arXiv:2501.12948. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2501.12948" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2501.12948</a></li>
+                        <li><strong>Mistral AI Team:</strong> Jiang et al. (2023). <em>Mistral 7B &amp; Mixtral of Experts</em>. arXiv:2310.06825 &amp; arXiv:2401.04088. उपलब्ध लिंक: <a href="https://mistral.ai/news/" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://mistral.ai/news/</a></li>
+                        <li><strong>Alibaba Cloud Qwen Team:</strong> Yang et al. (2024). <em>Qwen2.5 Technical Report</em>. arXiv:2412.15115. उपलब्ध लिंक: <a href="https://qwenlm.github.io/" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://qwenlm.github.io/</a></li>
+                        <li><strong>Hugging Face Research:</strong> <em>Open LLM Leaderboard v2: Open Evaluation and Reproducible Benchmarking</em>. उपलब्ध लिंक: <a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://huggingface.co/spaces/open-llm-leaderboard</a></li>
+                    </ol>
+                </div>
+            </article>
+
+            <footer class="article-nav-bottom">
+                <a href="../blog" class="btn btn-secondary">&larr; सभी ब्लॉग लेखों पर वापस जाएँ</a>
+                <a href="../contact" class="btn">AI एवं तकनीकी सहयोग पर चर्चा करें</a>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. सर्वाधिकार सुरक्षित।
+            </div>
+            <ul class="footer-links">
+                <li><a href="/hi/">होम</a></li>
+                <li><a href="../about">परिचय</a></li>
+                <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                <li><a href="../publications">पुस्तकें</a></li>
+                <li><a href="../blog">ब्लॉग</a></li>
+                <li><a href="../contact">संपर्क</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="../../script.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7651eb4980a4d819b94ab12839bc0a9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

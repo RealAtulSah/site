@@ -21,9 +21,10 @@
     --color-grey-dark: #2C2C2E;
     --color-border: #222222;
     
-    --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Space Grotesk', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'Space Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --font-devanagari: 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
     --transition-fast: 0.2s ease-in-out;
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -31,6 +32,11 @@
     --shadow-solid: 4px 4px 0px 0px var(--color-yellow);
     --shadow-solid-white: 4px 4px 0px 0px var(--color-white);
     --shadow-solid-hover: 8px 8px 0px 0px var(--color-yellow);
+}
+
+:lang(hi) {
+    --font-heading: 'Space Grotesk', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* --- Base Reset & Setup --- */
@@ -263,6 +269,50 @@ nav ul li a.active::after {
     width: 100%;
     background-color: var(--color-white);
     transition: var(--transition-fast);
+}
+
+/* --- Language Switcher & Nav Actions --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.lang-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-yellow);
+    border: 1px solid var(--color-yellow);
+    background-color: transparent;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    box-shadow: 2px 2px 0px 0px var(--color-white);
+    letter-spacing: 0.5px;
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.lang-switch-btn .lang-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.lang-switch-btn:hover {
+    background-color: var(--color-yellow);
+    color: #000000 !important;
+    box-shadow: 3px 3px 0px 0px var(--color-white);
+    transform: translate(-1px, -1px);
+}
+
+.lang-switch-btn:hover * {
+    color: #000000 !important;
 }
 
 /* --- Layout Container & Main Structure --- */

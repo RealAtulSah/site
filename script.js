@@ -200,7 +200,13 @@ function initTypingEffect() {
     const typingSpan = document.getElementById('typingText');
     if (!typingSpan) return;
     
-    const words = [
+    const isHindi = document.documentElement.lang === 'hi';
+    const words = isHindi ? [
+        "Full-Stack Developer.",
+        "AI एवं तकनीकी शिक्षक.",
+        "तकनीकी पुस्तक लेखक.",
+        "Computer Science प्राध्यापक."
+    ] : [
         "Full Stack Developer.",
         "AI & Tech Educator.",
         "Self-Published Author.",
@@ -290,10 +296,11 @@ function initContactForm() {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        const isHindi = document.documentElement.lang === 'hi';
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = 'SENDING MESSAGE...';
+        submitBtn.innerHTML = isHindi ? 'संदेश भेजा जा रहा है...' : 'SENDING MESSAGE...';
         submitBtn.disabled = true;
         
         // Get form data
@@ -316,14 +323,14 @@ function initContactForm() {
         .then(async (response) => {
             let res = await response.json();
             if (response.status == 200) {
-                showToast("SUCCESS! YOUR MESSAGE WAS SENT.");
+                showToast(isHindi ? "सफलता! आपका संदेश भेज दिया गया है।" : "SUCCESS! YOUR MESSAGE WAS SENT.");
                 contactForm.reset();
             } else {
-                showToast("ERROR! " + res.message);
+                showToast((isHindi ? "त्रुटि! " : "ERROR! ") + res.message);
             }
         })
         .catch(error => {
-            showToast("ERROR! SOMETHING WENT WRONG.");
+            showToast(isHindi ? "त्रुटि! कुछ गलत हुआ।" : "ERROR! SOMETHING WENT WRONG.");
         })
         .then(() => {
             submitBtn.innerHTML = originalText;

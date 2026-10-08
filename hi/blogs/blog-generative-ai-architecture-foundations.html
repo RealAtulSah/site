@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग | अतुल साह</title>
+    
+    <!-- SEO & Search Engine Optimization Metadata -->
+    <meta name="description" content="जनरेटिव AI का संपूर्ण तकनीकी विश्लेषण। डिस्क्रिमिनेटिव मॉडलिंग से गणितीय बदलाव, ट्रांसफॉर्मर और डिफ्यूजन कार्यप्रणाली, फाउंडेशन मॉडल ट्रेनिंग लाइफसाइकिल और प्रोडक्शन डिप्लॉयमेंट की चुनौतियां।">
+    <meta name="keywords" content="Generative AI Architecture, Foundations of Generative AI, Transformer Self-Attention, Diffusion Models, Latent Diffusion, LLM Training Lifecycle, SFT, RLHF, DPO, RAG vs Fine-Tuning, LoRA QLoRA, Production AI Engineering, Atul Sah Blog, जनरेटिव AI">
+    <meta name="author" content="Atul Sah">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations">
+    <link rel="alternate" hreflang="en" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations">
+    <link rel="alternate" hreflang="hi" href="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations">
+    <link rel="alternate" hreflang="x-default" href="https://atulsah.in/blogs/blog-generative-ai-architecture-foundations">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations">
+    <meta property="og:title" content="जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग | अतुल साह">
+    <meta property="og:description" content="जनरेटिव AI का संपूर्ण तकनीकी विश्लेषण। ट्रांसफॉर्मर, डिफ्यूजन मॉडल, RAG बनाम LoRA और प्रोडक्शन इंजीनियरिंग चुनौतियां।">
+    <meta property="og:image" content="https://atulsah.in/avatar.jpg">
+    <meta property="og:site_name" content="Atul Sah">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations">
+    <meta name="twitter:title" content="जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग">
+    <meta name="twitter:description" content="जनरेटिव AI का गहन तकनीकी विश्लेषण: ट्रांसफॉर्मर्स, डिफ्यूजन मॉडल्स, ट्रेनिंग पाइपलाइन्स और एंटरप्राइज आर्किटेक्चर।">
+    <meta name="twitter:image" content="https://atulsah.in/avatar.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD): BlogPosting -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations"
+      },
+      "headline": "जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग",
+      "description": "जनरेटिव AI का संपूर्ण तकनीकी विश्लेषण। डिस्क्रिमिनेटिव मॉडलिंग से गणितीय बदलाव, ट्रांसफॉर्मर और डिफ्यूजन कार्यप्रणाली, फाउंडेशन मॉडल ट्रेनिंग लाइफसाइकिल और प्रोडक्शन डिप्लॉयमेंट की चुनौतियां।",
+      "image": "https://atulsah.in/avatar.jpg",
+      "author": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah",
+        "jobTitle": ["Computer Science Educator", "Technical Author", "Full-Stack Developer"],
+        "url": "https://atulsah.in/hi/about",
+        "sameAs": [
+          "https://github.com/RealAtulSah",
+          "https://in.linkedin.com/in/realatulsah",
+          "https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ",
+          "https://store.pothi.com/",
+          "https://www.amazon.in/s?k=atul+sah"
+        ]
+      },
+      "publisher": {
+        "@type": "Person",
+        "@id": "https://atulsah.in/#person",
+        "name": "Atul Sah"
+      },
+      "datePublished": "2026-09-25",
+      "dateModified": "2026-09-25",
+      "keywords": [
+        "Generative AI Architecture",
+        "Foundations of Generative AI",
+        "Transformer Self-Attention",
+        "Diffusion Models",
+        "Latent Diffusion Models",
+        "Foundation Model Lifecycle",
+        "RLHF and DPO",
+        "RAG vs Fine-Tuning",
+        "LoRA Adaptation",
+        "Production AI Engineering"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "होम",
+          "item": "https://atulsah.in/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ब्लॉग",
+          "item": "https://atulsah.in/hi/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "जनरेटिव AI: आर्किटेक्चर और सिद्धांत",
+          "item": "https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for Scientific & Mathematical Typesetting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}], throwOnError: false});"></script>
+    
+    <style>
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem 6rem;
+        }
+        
+        .article-header {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2rem;
+            scroll-margin-top: 6rem;
+            display: block;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: rgba(255, 221, 0, 0.1);
+            color: var(--color-yellow);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 221, 0, 0.3);
+        }
+
+        .article-title {
+            font-size: 2.35rem;
+            line-height: 1.25;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-author-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--color-border);
+            padding: 0.85rem 1.25rem;
+            border-radius: 6px;
+            width: fit-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .author-avatar-img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--color-yellow);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .author-info-text h4 {
+            font-size: 1.05rem;
+            color: var(--color-white);
+            font-weight: 700;
+            margin: 0 0 0.15rem 0;
+        }
+
+        .author-role {
+            font-size: 0.82rem;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info-text p {
+            font-size: 0.8rem;
+            color: #d0d0d0;
+            margin: 0;
+        }
+
+        .article-content {
+            color: #d1d5db;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-top: 2rem;
+            clear: both;
+            position: relative;
+            z-index: 1;
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.6rem;
+        }
+
+        .article-content h2, .article-content h3 {
+            scroll-margin-top: 6rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            color: var(--color-yellow);
+            margin-top: 3.5rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            color: var(--color-white);
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 1.8rem;
+            padding-left: 1.8rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.6rem;
+        }
+
+        .article-content blockquote {
+            background: rgba(18, 18, 18, 0.8);
+            border-left: 4px solid var(--color-yellow);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #e5e7eb;
+        }
+
+        .architecture-box {
+            background: #0d1117;
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-yellow);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #58a6ff;
+            overflow-x: auto;
+            white-space: pre;
+            border-radius: 4px;
+        }
+
+        .math-block {
+            background: #11141a;
+            border: 1px solid rgba(255, 221, 0, 0.2);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+
+        .data-table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .data-table th, .data-table td {
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--color-border);
+            text-align: left;
+        }
+
+        .data-table th {
+            background-color: #161b22;
+            color: var(--color-yellow);
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .article-nav-bottom {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.75rem;
+            }
+            .article-wrapper {
+                padding: 2.5rem 1rem 4rem;
+            }
+            .architecture-box {
+                font-size: 0.76rem;
+            }
+            .math-block {
+                font-size: 0.88rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="/hi/" class="logo">&lt;<span>Atul Sah</span> /&gt;</a>
+            <nav>
+                <ul>
+                    <li><a href="/hi/">होम</a></li>
+                    <li><a href="../about">परिचय</a></li>
+                    <li><a href="../skills">कौशल</a></li>
+                    <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                    <li><a href="../publications">पुस्तकें</a></li>
+                    <li><a href="../blog" class="active">ब्लॉग</a></li>
+                    <li><a href="../contact">संपर्क</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="/blogs/blog-generative-ai-architecture-foundations" class="lang-switch-btn" title="View in English" aria-label="Switch to English"><span class="lang-text">Aअ</span></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main>
+        <div class="article-wrapper">
+            <article>
+                <div class="article-header">
+                    <span class="article-category">Generative AI एवं Machine Learning</span>
+                    <h1 class="article-title">जनरेटिव AI: आर्किटेक्चर, आधारभूत सिद्धांत और प्रोडक्शन इंजीनियरिंग</h1>
+                    
+                    <div class="article-author-bar">
+                        <img src="../../avatar.jpg" alt="Atul Sah" class="author-avatar-img">
+                        <div class="author-info-text">
+                            <h4>Atul Sah</h4>
+                            <div class="author-role">Computer Science प्राध्यापक, लेखक एवं Full-Stack Developer</div>
+                            <p>प्रकाशित: 25 सितंबर, 2026 • 20 मिनट पठन</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <p>दशकों तक, आधुनिक मशीन लर्निंग मुख्य रूप से <strong>डिस्क्रिमिनेटिव (भेदभावपूर्ण / वर्गीकरण आधारित)</strong> थी।</p>
+
+                    <p>हम डेटा को वर्गीकृत करने, पहचानने, अनुमान लगाने या फ़िल्टर करने के लिए एल्गोरिदम बनाते थे। दिए गए इनपुट $X$ के लिए, एक डिस्क्रिमिनेटिव मॉडल सशर्त संभाव्यता वितरण (conditional probability distribution) $P(Y \mid X)$ का अनुमान लगाता है:</p>
+
+                    <ul>
+                        <li><em>"क्या यह ईमेल स्पैम है या नहीं?"</em></li>
+                        <li><em>"क्या इस मेडिकल स्कैन में फ्रैक्चर दिखाई दे रहा है?"</em></li>
+                        <li><em>"क्या संभावना है कि यह क्रेडिट कार्ड लेनदेन धोखाधड़ी है?"</em></li>
+                    </ul>
+
+                    <p>इसके विपरीत, <strong>जनरेटिव AI (Generative AI)</strong> स्वयं डेटा के संयुक्त संभाव्यता वितरण $P(X, Y)$ या सीमांत वितरण $P(X)$ को मॉडल करता है। विभिन्न वर्गों को अलग करने के लिए सीमा रेखा खींचने के बजाय, एक जनरेटिव मॉडल यह सीखता है कि उच्च-आयामी लेटेंट स्पेस (latent space) में अंतर्निहित डेटा वास्तव में कैसे वितरित हुआ था।</p>
+
+                    <p>एक बार जब सिस्टम उस वितरण की संरचना, संबंधों और विविधताओं को समझ लेता है, तो वह उसमें से नमूने लेकर <strong>पूरी तरह से नए, पहले कभी न देखे गए आर्टिफैक्ट्स</strong> संश्लेषित कर सकता है — चाहे वह त्रुटिहीन जावा कोड हो, उच्च-रिज़ॉल्यूशन छवियां हों, आणविक संरचनाएं हों या यथार्थवादी ऑडियो।</p>
+
+                    <div class="architecture-box">Discriminative Model:   Input (X) ──────────► [ Decision Boundary ] ──► Class Label (Y)
+                                                   (P(Y|X))
+
+Generative Model:       Noise / Prompt (z) ─► [ Data Distribution ] ──► Novel Data Sample (X̂)
+                                                   (P(X))</div>
+
+                    <hr>
+
+                    <h2>1. मुख्य प्रतिमान बदलाव: डिस्क्रिमिनेटिव बनाम जनरेटिव</h2>
+
+                    <p>जनरेटिव AI की कम्प्यूटेशनल जटिलता को समझने के लिए, हमें यह देखना होगा कि मॉडल्स से क्या कैप्चर करने की अपेक्षा की जाती है:</p>
+
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>आयाम</th>
+                                    <th>डिस्क्रिमिनेटिव AI</th>
+                                    <th>जनरेटिव AI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>गणितीय लक्ष्य</strong></td>
+                                    <td>सशर्त सीमा $P(Y \mid X)$ को सीखना।</td>
+                                    <td>डेटा वितरण $P(X)$ या $P(X, Y)$ को सीखना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>उद्देश्य</strong></td>
+                                    <td>मौजूदा लक्ष्य लेबल को वर्गीकृत या भविष्यवाणी करना।</td>
+                                    <td>ट्रेनिंग वितरण की नकल करने वाले नए, यथार्थवादी डेटा पॉइंट्स उत्पन्न करना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>आउटपुट का प्रकार</strong></td>
+                                    <td>असतत लेबल, संभाव्यताएं, रिग्रेशन मान।</td>
+                                    <td>उच्च-आयामी डेटा: प्राकृतिक भाषा पाठ, स्रोत कोड, चित्र, ऑडियो, वीडियो।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>डेटा आवश्यकता</strong></td>
+                                    <td>सुपरवाइज्ड डेटासेट्स (लेबल के साथ युग्मित फीचर्स)।</td>
+                                    <td>विशाल स्व-पर्यवेक्षित (Self-supervised) संग्रह (अनलेबल टेक्स्ट, चित्र, कोडबेस)।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>विफलता के रूप</strong></td>
+                                    <td>गलत वर्गीकरण, फॉल्स पॉजिटिव/नेगेटिव, एडवरसैरियल ड्रिफ्ट।</td>
+                                    <td>हैलुसिनेशन (Hallucination), मोड कोलैप्स, रिवॉर्ड हैकिंग, डिस्ट्रीब्यूशनल ड्रिफ्ट।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+
+                    <h2>2. जनरेटिव AI को शक्ति प्रदान करने वाले आधारभूत आर्किटेक्चर</h2>
+
+                    <p>जनरेटिव मॉडल्स मुख्य रूप से चार बुनियादी आर्किटेक्चरल परिवारों पर निर्भर करते हैं, जिनमें से प्रत्येक की विशिष्ट गणितीय नींव और निष्पादन ट्रेड-ऑफ हैं:</p>
+
+                    <div class="architecture-box">                                  ┌── 1. ट्रांसफॉर्मर्स (टेक्स्ट/कोड के लिए ऑटोरिग्रेसिव सेल्फ-अटेंशन)
+                                  │
+       जनरेटिव आर्किटेक्चर ───────┼── 2. डिफ्यूजन मॉडल्स (इमेजिस/वीडियो के लिए इटरेटिव स्टोकेस्टिक डिनॉइज़िंग)
+                                  │
+                                  ├── 3. वेरिएशनल ऑटोएनकोडर्स (VAEs) (लेटेंट स्पेस कम्प्रेशन)
+                                  │
+                                  └── 4. जनरेटिव एडवरसैरियल नेटवर्क्स (GANs) (मिनीमैक्स गेम डायनेमिक्स)</div>
+
+                    <h3>A. ट्रांसफॉर्मर्स (LLMs और कोड संश्लेषण का मुख्य इंजन)</h3>
+
+                    <p>2017 में पेश किए गए ट्रांसफॉर्मर ने पुनरावृत्ति (RNNs/LSTMs) को <strong>सेल्फ-अटेंशन (Self-Attention)</strong> से बदल दिया। चूंकि यह ट्रेनिंग के दौरान पूरे टोकन अनुक्रमों को समानांतर (parallel) में संसाधित करता है, यह वितरित जीपीयू क्लस्टर पर अत्यधिक कुशलता से स्केल करता है।</p>
+
+                    <div class="architecture-box">Token Embeddings + Positional Encodings
+                  │
+                  ▼
+      ┌───────────────────────┐
+      │ Multi-Head Attention  │ ◄─── Computes: Softmax(Q · Kᵀ / √dₖ) · V
+      └───────────┬───────────┘
+                  ▼
+         [ Layer Normalization ]
+                  │
+                  ▼
+      ┌───────────────────────┐
+      │ Feed-Forward Network  │
+      └───────────┬───────────┘
+                  ▼
+         [ Output Distribution ]</div>
+
+                    <p><strong>स्केल्ड डॉट-प्रोडक्ट अटेंशन फॉर्मूला:</strong></p>
+
+                    <div class="math-block">
+                        $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+                    </div>
+
+                    <p>यहाँ:</p>
+                    <ul>
+                        <li><strong>$Q$ (क्वेरी / Query):</strong> वर्तमान टोकन प्रतिनिधित्व क्या खोज रहा है।</li>
+                        <li><strong>$K$ (की / Key):</strong> अनुक्रम में अन्य टोकन कौन सी प्रासंगिक संदर्भ जानकारी प्रदान करते हैं।</li>
+                        <li><strong>$V$ (वैल्यू / Value):</strong> प्रत्येक टोकन का वास्तविक सामग्री या प्रासंगिक फीचर प्रतिनिधित्व।</li>
+                        <li><strong>$\sqrt{d_k}$:</strong> एक स्केलिंग कारक जो आंतरिक उत्पादों (inner products) को उच्च आयामों में अत्यधिक बड़ा होने से रोकता है, जिससे सॉफ्टमैक्स ग्रेडिएंट्स शून्य के निकट संतृप्ति में नहीं जाते।</li>
+                    </ul>
+
+                    <p><strong>ऑटोरिग्रेसिव डिकोडिंग (Autoregressive Decoding):</strong></p>
+                    <p>टेक्स्ट जेनरेशन के दौरान, मॉडल ऑटोरिग्रेसिव रूप से काम करते हैं: दिए गए टोकन $(x_1, x_2, \dots, x_t)$ के आधार पर, मॉडल शब्दावली $V$ पर अगले टोकन $x_{t+1}$ की संभावनाओं की गणना करता है:</p>
+
+                    <div class="math-block">
+                        $$P(x_1, x_2, \dots, x_T) = \prod_{t=1}^T P(x_t \mid x_1, \dots, x_{t-1})$$
+                    </div>
+
+                    <h3>B. डिफ्यूजन मॉडल्स (विजुअल और मीडिया संश्लेषण का मानक)</h3>
+
+                    <p>जबकि पहले विजुअल जेनरेशन में GANs का प्रभुत्व था, अब <strong>डिनॉइज़िंग डिफ्यूजन प्रोबेबिलिस्टिक मॉडल्स (DDPMs)</strong> और <strong>लेटेंट डिफ्यूजन मॉडल्स (LDMs)</strong> छवियों और वीडियो के लिए उद्योग मानक बन गए हैं।</p>
+
+                    <div class="architecture-box">Forward Process (Diffusion):    Clean Image (x₀) ──► [+ Noise] ──► [+ Noise] ──► Pure Gaussian Noise (x_T)
+                                                  (Fixed Markov Chain)
+
+Reverse Process (Generation):   Pure Noise (x_T) ──► [- Noise] ──► [- Noise] ──► Synthesized Image (x̂₀)
+                                                  (Learned Neural Network / U-Net)</div>
+
+                    <ol>
+                        <li><strong>फॉरवर्ड प्रोसेस (शोर जोड़ना):</strong> एक स्पष्ट छवि $x_0$ को $T$ टाइमस्टेप्स पर व्यवस्थित रूप से गॉसियन शोर जोड़कर दूषित किया जाता है जब तक कि यह पूरी तरह से शुद्ध नॉइज़ न बन जाए।</li>
+                        <li><strong>रिवर्स प्रोसेस (डिनॉइज़िंग):</strong> एक न्यूरल नेटवर्क (अक्सर U-Net या डिफ्यूजन ट्रांसफॉर्मर/DiT) को टाइमस्टेप $t$ पर जोड़े गए सटीक शोर $\epsilon_\theta(x_t, t)$ का अनुमान लगाने के लिए प्रशिक्षित किया जाता है।</li>
+                        <li><strong>लेटेंट डिफ्यूजन:</strong> उच्च-रिज़ॉल्यूशन पिक्सेल स्पेस में डिनॉइज़िंग चलाना कम्प्यूटेशनल रूप से अत्यधिक महंगा है। आधुनिक सिस्टम पहले ऑटोएनकोडर का उपयोग करके छवियों को कम-आयामी लेटेंट स्पेस में संपीड़ित करते हैं, उस लेटेंट मैनिफोल्ड के भीतर डिफ्यूजन निष्पादित करते हैं, और परिणाम को वापस पिक्सेल में डिकोड करते हैं।</li>
+                    </ol>
+
+                    <h3>C. वेरिएशनल ऑटोएनकोडर्स (VAEs)</h3>
+
+                    <p>एक VAE उच्च-आयामी इनपुट $X$ को एक सुचारू, संभाव्य लेटेंट स्पेस में मैप करता है जो माध्य ($\mu$) और प्रसरण ($\sigma$) द्वारा विशेषता रखता है, फिर उसका पुनर्निर्माण करता है।</p>
+
+                    <ul>
+                        <li>एक नियमित लेटेंट स्पेस को लागू करके (कुलबैक-लीबलर डाइवर्जेंस के माध्यम से), हम यादृच्छिक बिंदुओं $z \sim \mathcal{N}(0, I)$ का नमूना ले सकते हैं और मान्य, नए डेटा नमूनों को उत्पन्न करने के लिए उन्हें डिकोडर के माध्यम से पारित कर सकते हैं।</li>
+                        <li>आज, VAEs मुख्य रूप से डिफ्यूजन पाइपलाइनों और विसंगति का पता लगाने (anomaly detection) के लिए अवधारणात्मक संपीड़न रीढ़ के रूप में काम करते हैं।</li>
+                    </ul>
+
+                    <h3>D. जनरेटिव एडवरसैरियल नेटवर्क्स (GANs)</h3>
+
+                    <p>दो नेटवर्कों के बीच एक शून्य-योग मिनीमैक्स गेम:</p>
+
+                    <ul>
+                        <li><strong>द जनरेटर ($G$):</strong> ऐसा नकली डेटा बनाने का प्रयास करता है जिसे वास्तविक ट्रेनिंग डेटा से अलग नहीं किया जा सकता।</li>
+                        <li><strong>द डिस्क्रिमिनेटर ($D$):</strong> यह वर्गीकृत करने का प्रयास करता है कि दिया गया नमूना वास्तविक है या सिंथेटिक।</li>
+                    </ul>
+
+                    <div class="math-block">
+                        $$\min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]$$
+                    </div>
+
+                    <p>हालांकि GANs अनुमान (inference) के दौरान कम विलंबता प्रदान करते हैं, मोड पतन (mode collapse) और लुप्त होते ग्रेडिएंट्स के कारण उन्हें प्रशिक्षित करना कुख्यात रूप से कठिन है, जिसके परिणामस्वरूप डिफ्यूजन मॉडल्स रचनात्मक क्षेत्र में आगे निकल गए हैं।</p>
+
+                    <hr>
+
+                    <h2>3. एक फाउंडेशन मॉडल का संपूर्ण जीवन चक्र</h2>
+
+                    <p>एक अत्याधुनिक जनरेटिव मॉडल का निर्माण एक बहु-चरणीय इंजीनियरिंग पाइपलाइन है जिसके लिए भारी डेटासेट, पेटाफ्लॉप्स कम्प्यूट और मानवीय संरेखण की आवश्यकता होती है:</p>
+
+                    <div class="architecture-box"> ┌────────────────────────────────────────────────────────────────────────┐
+ │                    फाउंडेशन मॉडल प्रशिक्षण पाइपलाइन                    │
+ ├────────────────────────────────────────────────────────────────────────┤
+ │                                                                        │
+ │  1. प्री-ट्रेनिंग (Pre-Training - Self-Supervised)                     │
+ │     • वेब संग्रह, पुस्तकें, कोड रिपोजिटरीज़, सिंथेटिक टेक्स्ट          │
+ │     • अगले टोकन का अनुमान लगाना / नॉइज़ हटाना                          │
+ │     • आउटपुट: बेस मॉडल (भाषा, पैटर्न, विश्व मॉडल को समझता है)          │
+ │                                                                        │
+ │                                  │                                     │
+ │                                  ▼                                     │
+ │  2. सुपरवाइज्ड फाइन-ट्यूनिंग (SFT / Instruction Tuning)                │
+ │     • चयनित प्रॉम्प्ट-प्रतिक्रिया जोड़े ("गोल्ड स्टैंडर्ड" प्रदर्शन) │
+ │     • मॉडल को निर्देशों का पालन करना और सहायक के रूप में कार्य सिखाना │
+ │     • आउटपुट: इंस्ट्रक्ट-ट्यून्ड मॉडल                                  │
+ │                                                                        │
+ │                                  │                                     │
+ │                                  ▼                                     │
+ │  3. वरीयता संरेखण (Preference Alignment - RLHF / DPO)                  │
+ │     • मानव / AI मूल्यांकनकर्ता मॉडल की प्रतिक्रियाओं को रैंक करते हैं  │
+ │     • उपयोगिता, ईमानदारी और सुरक्षा को पुरस्कृत किया जाता है            │
+ │     • आउटपुट: प्रोडक्शन-रेडी अलाइंड मॉडल                              │
+ │                                                                        │
+ └────────────────────────────────────────────────────────────────────────┘</div>
+
+                    <ol>
+                        <li><strong>प्री-ट्रेनिंग (Pre-Training):</strong> कम्प्यूट का विशाल बहुमत (हजारों GPU हफ्तों या महीनों तक चलते हैं) इसी चरण में खर्च होता है। मॉडल ट्रिलियन टोकन को संपीड़ित करता है, अर्थपूर्ण प्रतिनिधित्व, तार्किक तर्क और विश्व ज्ञान विकसित करता है।</li>
+                        <li><strong>सुपरवाइज्ड फाइन-ट्यूनिंग (SFT):</strong> बेस मॉडल केवल पाठ को आगे बढ़ाने वाला होता है; वह सवाल के जवाब में दूसरा सवाल भी लिख सकता है। SFT उच्च-गुणवत्ता वाले प्रदर्शन प्रदान करता है कि एक सहायक को कैसे जवाब देना चाहिए।</li>
+                        <li><strong>वरीयता संरेखण (RLHF / DPO):</strong>
+                            <ul>
+                                <li><strong>RLHF (ह्यूमन फीडबैक से रीइन्फोर्समेंट लर्निंग):</strong> मानव प्राथमिकताओं पर एक अलग रिवॉर्ड मॉडल को प्रशिक्षित करता है, फिर PPO (प्रॉक्सिमल पॉलिसी ऑप्टिमाइज़ेशन) के माध्यम से पॉलिसी मॉडल को अनुकूलित करता है।</li>
+                                <li><strong>DPO (डायरेक्ट प्रेफरेंस ऑप्टिमाइज़ेशन):</strong> एक अंतर्निहित इनाम फ़ंक्शन का उपयोग करके युग्मित वरीयता डेटा पर सीधे नीति को अनुकूलित करता है, जिससे अलग रिवॉर्ड मॉडल को बनाए रखने की परिचालन अस्थिरता समाप्त हो जाती है।</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <hr>
+
+                    <h2>4. मल्टीमॉडल स्पेक्ट्रम</h2>
+
+                    <p>जनरेटिव AI स्वाभाविक रूप से मल्टीमॉडल है। वही मुख्य अवधारणाएं — लेटेंट स्पेस, सीक्वेंस-टू-सीक्वेंस ट्रांसफॉर्मर और डिफ्यूजन गतिशीलता — विभिन्न मीडिया प्रकारों में अनुकूलित की जाती हैं:</p>
+
+                    <div class="architecture-box">                            ┌── टेक्स्ट और प्राकृतिक भाषा (GPT, Claude, Gemini, LLaMA)
+                            ├── कोड और औपचारिक सिंटैक्स (Claude Code, GitHub Copilot)
+   मोडैलिटी परिदृश्य ───────┼── छवि संश्लेषण (Stable Diffusion, FLUX, Midjourney)
+                            ├── ऑडियो और स्पीच (Whisper, ElevenLabs, MusicLM)
+                            └── वीडियो और वर्ल्ड मॉडल्स (Sora, Runway Gen-3, Movie Gen)</div>
+
+                    <ul>
+                        <li><strong>कोड जेनरेशन:</strong> कोड प्राकृतिक भाषा की तुलना में अधिक संरचित और नियतात्मक (deterministic) होता है। मॉडल्स को एब्सट्रैक्ट सिंटैक्स ट्रीज (ASTs), कमिट इतिहास और रिपोजिटरी संदर्भों पर प्रशिक्षित किया जाता है, जिसके लिए सटीक टोकन-स्तरीय सटीकता की आवश्यकता होती है।</li>
+                        <li><strong>ऑडियो और स्पीच संश्लेषण:</strong> न्यूरल ऑडियो कोडेक्स (उदा. EnCodec) का उपयोग करके वेवफॉर्म्स को असतत अभ्यावेदन में परिवर्तित करता है और ऑटोरिग्रेसिव रूप से या डिफ्यूजन वोकोडर के माध्यम से स्पीच टोकन उत्पन्न करता है।</li>
+                        <li><strong>वीडियो जेनरेशन:</strong> 2D छवि डिफ्यूजन को तीसरे अस्थायी अक्ष (स्पेस-टाइम पैच) के साथ विस्तारित करता है। मॉडल स्थानिक स्थिरता (वस्तुएं कैसी दिखती हैं) को समय के साथ 3D भौतिकी के माध्यम से वस्तुएं कैसे चलती हैं (अस्थायी स्थिरता) के साथ सीखते हैं।</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>5. एंटरप्राइज अनुकूलन: RAG बनाम फाइन-ट्यूनिंग</h2>
+
+                    <p>एंटरप्राइज वातावरण में जनरेटिव मॉडल तैनात करने के लिए मालिकाना डेटा के साथ बेस नॉलेज को संवर्धित करने की आवश्यकता होती है। संगठन दो प्राथमिक दृष्टिकोणों में से चुनते हैं:</p>
+
+                    <div class="architecture-box">                            [ मालिकाना एंटरप्राइज डेटा ]
+                                           │
+                    ┌──────────────────────┴──────────────────────┐
+                    ▼                                             ▼
+     [ रिट्रीवल-ऑगमेंटेड जेनरेशन (RAG) ]               [ फाइन-ट्यूनिंग (LoRA / QLoRA) ]
+     • एक्सटर्नल वेक्टर स्टोर + हाइब्रिड सर्च           • आंतरिक वेट्स (weights) को संशोधित करता है
+     • डायनेमिक संदर्भ में तथ्यों को इंजेक्ट करता है    • शैली, सिंटैक्स और विशिष्ट कार्य सिखाता है
+     • शून्य पुनःप्रशिक्षण आवश्यक                      • मापदंडों को अपडेट करने के लिए GPU कम्प्यूट चाहिए
+     • ऑडिट करने योग्य, स्रोत संदर्भ                   • विनाशकारी विस्मरण (Catastrophic forgetting) का जोखिम</div>
+
+                    <h3>रिट्रीवल-ऑगमेंटेड जेनरेशन (RAG)</h3>
+                    <ul>
+                        <li><strong>यह कैसे काम करता है:</strong> जब कोई उपयोगकर्ता क्वेरी करता है, तो वेक्टर डेटाबेस (घने एम्बेडिंग का उपयोग करके) और कीवर्ड इंडेक्स (BM25) से प्रासंगिक दस्तावेज के अंश निकाले जाते हैं, फिर सीधे एलएलएम के प्रॉम्प्ट में आधारभूत संदर्भ सामग्री के रूप में भेजे जाते हैं।</li>
+                        <li><strong>इसके लिए सर्वोत्तम:</strong> गतिशील, तेजी से अपडेट होने वाले ज्ञान आधार, ग्राहक सहायता मैनुअल और कानूनी अनुबंध जहां तथ्यात्मक सत्यापन और स्रोत संदर्भ अनिवार्य हैं।</li>
+                    </ul>
+
+                    <h3>पैरामीटर-कुशल फाइन-ट्यूनिंग (PEFT / LoRA)</h3>
+                    <p>अरबों वजन (weights) को फिर से प्रशिक्षित करने के बजाय, <strong>लो-रैंक अडैप्टेशन (LoRA)</strong> बेस मॉडल वेट्स $W_0$ को फ्रीज करता है और ट्रेन करने योग्य रैंक-डिकम्पोज़िशन मैट्रिस $A$ और $B$ को इंजेक्ट करता है:</p>
+
+                    <div class="math-block">
+                        $$W = W_0 + \Delta W = W_0 + B \cdot A$$
+                    </div>
+
+                    <p>जहाँ $B \in \mathbb{R}^{d \times r}$ और $A \in \mathbb{R}^{r \times k}$, रैंक $r \ll \min(d, k)$ के साथ।</p>
+                    <ul>
+                        <li><strong>इसके लिए सर्वोत्तम:</strong> किसी मॉडल को मालिकाना कोडिंग फ्रेमवर्क में ढालना, एक विशिष्ट ब्रांड आवाज़ अपनाना, या अत्यधिक संकुचित JSON/XML स्कीमा आउटपुट करना।</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>6. प्रोडक्शन में महत्वपूर्ण इंजीनियरिंग बाधाएं</h2>
+
+                    <p>जनरेटिव AI को प्रूफ-ऑफ-कॉन्सेप्ट से उच्च-उपलब्धता उत्पादन परिवेश में ले जाने से मुख्य इंजीनियरिंग सीमाएं सामने आती हैं:</p>
+
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>परिचालन बाधा</th>
+                                    <th>मूल कारण</th>
+                                    <th>इंजीनियरिंग समाधान</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>हैलुसिनेशन (Hallucination)</strong></td>
+                                    <td>जनरेटिव मॉडल्स संभावित सांख्यिकीय निरंतरता उत्पन्न करते हैं, सत्यापित जमीनी तथ्य नहीं।</td>
+                                    <td>RAG के साथ ग्राउंडिंग, संरचित सत्यापन लूप और लॉगिट-बायस प्रतिबंध।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>मेमोरी / VRAM दीवार</strong></td>
+                                    <td>लंबे अनुक्रमों के लिए वेट्स और KV (Key-Value) कैश लोड करने में दसियों गीगाबाइट VRAM की खपत होती है।</td>
+                                    <td>4-बिट/8-बिट क्वांटाइजेशन (GGUF, AWQ, FP8), FlashAttention, और vLLM (PagedAttention)।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>लेटेंसी और TTFT</strong></td>
+                                    <td>ऑटोरिग्रेसिव जनरेशन टोकन को एक-एक करके उत्पन्न करता है, जिससे हाई Time-to-First-Token (TTFT) और धीमी गति होती है।</td>
+                                    <td>स्पेकुलेटिव डिकोडिंग, कंटीन्यूअस बैचिंग और सरल कार्यों को स्मॉल लैंग्वेज मॉडल्स (SLMs) पर रूट करना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>प्रॉम्प्ट इंजेक्शन और जेलब्रेक</strong></td>
+                                    <td>दुर्भावनापूर्ण उपयोगकर्ता ऐसे निर्देश इंजेक्ट करते हैं जो सिस्टम गार्डरेल्स को ओवरराइड करते हैं।</td>
+                                    <td>सिमेंटिक इनपुट फायरवॉल, डुअल-LLM मध्यस्थ और सख्त इनपुट/आउटपुट सैनिटाइजेशन लेयर्स।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <hr>
+
+                    <h2>7. विकास यात्रा: स्थिर सामग्री से एजेंटिक निष्पादन तक</h2>
+
+                    <p>जनरेटिव AI कोई स्थिर अंतिम बिंदु नहीं है। इसका विकास स्पष्ट पीढ़ीगत बदलावों से चिह्नित है:</p>
+
+                    <div class="architecture-box">Gen-1: भविष्य कहनेवाला (2010–2020)   ──► वर्गीकृत करना, लेबल लगाना, पहचानना (स्पैम, इमेजनेट)
+                  │
+Gen-2: उत्पादक / जनरेटिव (2020–2024)  ──► संश्लेषित करना, ड्राफ्ट बनाना, संवाद (ChatGPT, Midjourney)
+                  │
+Gen-3: एजेंटिक (2025–आगे)              ──► योजना बनाना, टूल्स का उपयोग, स्व-सुधार, मल्टी-स्टेप वर्कफ़्लो निष्पादन</div>
+
+                    <p>जनरेटिव मॉडल्स केवल आदेश पर टेक्स्ट लिखने वाले इंटरैक्टिव टूल्स से आगे बढ़कर <strong>ऑटोनॉमस एजेंटिक सिस्टम्स के रीजनिंग इंजन (reasoning engines)</strong> के रूप में कार्य कर रहे हैं। वे अब चैट विंडो के भीतर गद्य लिखने तक सीमित नहीं हैं; वे API अनुरोध तैयार कर रहे हैं, डायनेमिक SQL लिख रहे हैं, रनटाइम लॉग्स का निरीक्षण कर रहे हैं, और संपूर्ण सॉफ्टवेयर डिलीवरी पाइपलाइनों को स्वचालित रूप से संचालित कर रहे हैं।</p>
+
+                    <div class="callout-card" style="border-color: var(--color-yellow); background: rgba(255, 221, 0, 0.04);">
+                        <h4 style="color: var(--color-yellow); font-size: 1.25rem; margin-bottom: 1rem;">मुख्य आर्किटेक्चरल निष्कर्ष</h4>
+                        <ol style="margin-bottom: 0;">
+                            <li><strong>जनरेटिव मॉडलिंग घनत्व अनुमान (Density Estimation) है:</strong> विभिन्न वर्गों के बीच निर्णय सीमाएं सीखने वाले डिस्क्रिमिनेटिव मॉडल्स के विपरीत, जनरेटिव मॉडल्स अंतर्निहित डेटा वितरण <em>P(X)</em> को कैप्चर और पुनर्निर्मित करना सीखते हैं।</li>
+                            <li><strong>ट्रांसफॉर्मर्स और डिफ्यूजन अग्रणी हैं:</strong> अटेंशन मैकेनिज्म टेक्स्ट और कोड के लिए ऑटोरिग्रेसिव अनुक्रम उत्पादन को संभालते हैं, जबकि डिफ्यूजन प्रक्रियाएं निरंतर, उच्च-निष्ठा मीडिया संश्लेषण को नियंत्रित करती हैं।</li>
+                            <li><strong>आर्किटेक्चर एंटरप्राइज रणनीति तय करता है:</strong> सफल उत्पादन प्रणालियां केवल कच्चे प्रॉम्प्ट्स पर निर्भर नहीं करती हैं; वे फाउंडेशन मॉडल को संरचित RAG पाइपलाइनों, फाइन-ट्यून किए गए एडेप्टर (LoRA) और डिटरमिनिस्टिक सत्यापन फाटकों के साथ जोड़ती हैं।</li>
+                        </ol>
+                    </div>
+
+                    <hr>
+
+                    <!-- Authoritative References & Citations -->
+                    <div class="article-references" style="margin-top: 2.5rem; padding: 2rem; background: var(--bg-card); border: 1px solid var(--color-border); border-left: 3px solid var(--color-yellow);">
+                        <h4 style="color: var(--color-yellow); font-size: 1.15rem; margin-bottom: 1rem; font-family: var(--font-heading); text-transform: uppercase; letter-spacing: 0.5px;">संदर्भ और प्रामाणिक स्रोत</h4>
+                        <ol style="font-size: 0.9rem; color: var(--color-grey-light); line-height: 1.7; padding-left: 1.25rem; margin-bottom: 0;">
+                            <li><strong>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017):</strong> <em>Attention Is All You Need</em>. Advances in Neural Information Processing Systems (NeurIPS 2017). arXiv:1706.03762. उपलब्ध लिंक: <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/1706.03762</a></li>
+                            <li><strong>Ho, J., Jain, A., &amp; Abbeel, P. (2020):</strong> <em>Denoising Diffusion Probabilistic Models</em>. Advances in Neural Information Processing Systems (NeurIPS 2020). arXiv:2006.11239. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2006.11239" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2006.11239</a></li>
+                            <li><strong>Rombach, R., Blattmann, A., Lorenz, D., Esser, P., &amp; Ommer, B. (2022):</strong> <em>High-Resolution Image Synthesis with Latent Diffusion Models</em>. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022). arXiv:2112.10752. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2112.10752" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2112.10752</a></li>
+                            <li><strong>Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., &amp; Chen, W. (2021):</strong> <em>LoRA: Low-Rank Adaptation of Large Language Models</em>. International Conference on Learning Representations (ICLR 2022). arXiv:2106.09685. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2106.09685" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2106.09685</a></li>
+                            <li><strong>Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C. D., &amp; Finn, C. (2023):</strong> <em>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</em>. Advances in Neural Information Processing Systems (NeurIPS 2023). arXiv:2305.18290. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2305.18290" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2305.18290</a></li>
+                            <li><strong>Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W., Rocktäschel, T., Riedel, S., &amp; Kiela, D. (2020):</strong> <em>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</em>. NeurIPS 2020. arXiv:2005.11401. उपलब्ध लिंक: <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener" style="color: var(--color-yellow); text-decoration: underline;">https://arxiv.org/abs/2005.11401</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <footer class="article-nav-bottom">
+                    <a href="../blog" class="btn btn-secondary">&larr; सभी ब्लॉग लेखों पर वापस जाएँ</a>
+                    <a href="../contact" class="btn">AI और सहयोग पर चर्चा करें</a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copy">
+                &copy; 2026 Atul Sah. सर्वाधिकार सुरक्षित।
+            </div>
+            <ul class="footer-links">
+                <li><a href="/hi/">होम</a></li>
+                <li><a href="../about">परिचय</a></li>
+                <li><a href="../projects">प्रोजेक्ट्स</a></li>
+                <li><a href="../publications">पुस्तकें</a></li>
+                <li><a href="../blog">ब्लॉग</a></li>
+                <li><a href="../contact">संपर्क</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="../../script.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e7651eb4980a4d819b94ab12839bc0a9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

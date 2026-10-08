@@ -1,10 +1,10 @@
 # Atul Sah
 
-> Official portfolio, published technical books, enterprise software projects, and AI articles by Atul Sah — Computer Science Educator at B.N. College and Full-Stack Software Developer.
+> Official portfolio, published technical books, enterprise software projects, and AI articles by Atul Sah — Computer Science Educator at B.N. College and Full-Stack Software Developer. Available in English and Hindi (हिन्दी).
 
 Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master of Computer Applications (MCA) from Patna University. He serves as Faculty of Computer Science at B.N. College (Department of Computer Application) and has published 8 technical books on Amazon covering Agentic AI, Java Programming, Machine Learning, Generative AI, and Cybersecurity.
 
-## Core Pages
+## Core Pages (English)
 
 - [Home](https://atulsah.in/): Professional portfolio overview, featured enterprise projects, and technical biography.
 - [About](https://atulsah.in/about): Detailed academic credentials (MCA, BCA), faculty position at B.N. College, and professional timeline.
@@ -14,7 +14,17 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 - [Blog](https://atulsah.in/blog): In-depth technical articles on Artificial Intelligence, Edge Computing, and Multi-Agent Systems.
 - [Contact](https://atulsah.in/contact): Direct contact channels for software consulting, educational workshops, and collaborations.
 
-## Technical Articles
+## मुख्य पृष्ठ (Hindi Portal)
+
+- [होम (Home - Hindi)](https://atulsah.in/hi/): अतुल साह का आधिकारिक पोर्टफोलियो, एंटरप्राइज प्रोजेक्ट्स और तकनीकी परिचय।
+- [परिचय (About - Hindi)](https://atulsah.in/hi/about): शैक्षणिक योग्यता (MCA, BCA), बी.एन. कॉलेज संकाय स्थिति और करियर टाइमलाइन।
+- [कौशल (Skills - Hindi)](https://atulsah.in/hi/skills): वेब डेवलपमेंट (React, Node.js), डेटाबेस (PostgreSQL, MongoDB) और AI/ML क्षमताएं।
+- [प्रोजेक्ट्स (Projects - Hindi)](https://atulsah.in/hi/projects): हाइफनेट पोर्टल, कैम्पसपल्स एलएमएस और मशीन लर्निंग समाधानों सहित 10 प्रोजेक्ट्स।
+- [पुस्तकें (Publications - Hindi)](https://atulsah.in/hi/publications): अमेज़न पर उपलब्ध 8 स्व-प्रकाशित तकनीकी पुस्तकों की सूची।
+- [ब्लॉग (Blog - Hindi)](https://atulsah.in/hi/blog): कृत्रिम बुद्धिमत्ता, एज कंप्यूटिंग और मल्टी-एजेंट सिस्टम्स पर तकनीकी आलेख।
+- [संपर्क (Contact - Hindi)](https://atulsah.in/hi/contact): सॉफ्टवेयर परामर्श, कार्यशालाओं और सहयोग के लिए संपर्क सूत्र।
+
+## Technical Articles (English)
 
 - [Generative AI: Architecture, Foundations, and Production Engineering](https://atulsah.in/blogs/blog-generative-ai-architecture-foundations): Comprehensive breakdown of Transformer self-attention, Diffusion mechanics, foundation training pipelines (SFT, RLHF, DPO), RAG vs. LoRA, and production KV cache bottlenecks.
 - [The Engineering Anatomy of AI Agents](https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents): Deep-dive architectural handbook deconstructing agent runtime control loops, function calling JSON schemas, memory hierarchies, MCP, and deterministic state graphs.
@@ -23,6 +33,16 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 - [Multi-Agent Systems (MAS)](https://atulsah.in/blogs/blog-multi-agent-systems): How teams of specialised AI agents collaborating via Model Context Protocol (MCP) are replacing monolithic models.
 - [AI Agents Are Becoming Autonomous](https://atulsah.in/blogs/blog-ai-agents-autonomous): Evolution from reactive chatbots to goal-driven digital workers with tools and memory.
 - [How Open-Source LLMs Are Changing the AI Industry](https://atulsah.in/blogs/blog-open-source-llms): Analysis of open-weight models (Llama, DeepSeek, Qwen) democratizing private local deployment.
+
+## तकनीकी लेख (Hindi Articles)
+
+- [जेनेरेटिव एआई: आर्किटेक्चर, आधार और प्रोडक्शन इंजीनियरिंग](https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations): ट्रांसफार्मर सेल्फ-अटेंशन, डिफ्यूजन मॉडल, फाउंडेशन ट्रेनिंग पाइपलाइन और आरएजी का तकनीकी विश्लेषण।
+- [एआई एजेंट्स की इंजीनियरिंग एनाटॉमी](https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents): एजेंट रनटाइम लूप्स, फंक्शन कॉलिंग स्कीमा, मेमोरी पदानुक्रम और एमसीपी स्पेसिफिकेशन।
+- [कंप्यूटर साइंस में रिसर्च गैप कैसे खोजें](https://atulsah.in/hi/blogs/blog-research-gap-computer-science): लिटरेचर रिव्यू मैट्रिक्स, बेंचमार्क टियरडाउन और शोध प्रस्ताव तैयार करने की व्यवस्थित गाइड।
+- [स्मॉल लैंग्वेज मॉडल्स (SLMs) और एज एआई](https://atulsah.in/hi/blogs/blog-small-language-models): लोकल हार्डवेयर पर चलने वाले 1B-8B डोमेन-विशिष्ट मॉडलों के लाभ और क्वांटाइजेशन।
+- [मल्टी-एजेंट सिस्टम्स (MAS)](https://atulsah.in/hi/blogs/blog-multi-agent-systems): मॉडल कॉन्टेक्स्ट प्रोटोकॉल (MCP) और स्वायत्त एजेंटों के सहयोगी आर्किटेक्चर।
+- [स्वायत्त हो रहे हैं एआई एजेंट्स](https://atulsah.in/hi/blogs/blog-ai-agents-autonomous): चैटबॉट्स से स्वायत्त डिजिटल वर्कर्स की दिशा में विकास, सुरक्षा और लीस्ट-प्रिविलेज मॉडल।
+- [ओपन-सोर्स LLMs का प्रभाव](https://atulsah.in/hi/blogs/blog-open-source-llms): लामा, डीपसीक-R1 और क्वेन मॉडल्स, लोकल डिप्लॉयमेंट और एआई इकोनॉमिक्स।
 
 ## Published Books
 
