@@ -178,7 +178,6 @@ Atul Sah is the author of eight published technical books distributed internatio
 
 #### **1. Hyphenet Enterprise Portal (Featured Project)**
 - **Domain**: Enterprise IT & Mobility Rentals Platform, 5-Role Support Helpdesk & HRMS
-- **Scale**: Operating across 6 regional corporate hubs (Delhi NCR HQ, Gurugram, Noida, Mumbai, Bengaluru, Hyderabad).
 - **Official Portal**: `https://hyphenet.net` (Hyphenet Enterprises, Est. 2019, Nehru Place, New Delhi).
 - **Architecture**: Unified Express 4.x REST backend on Node.js paired with a self-healing MySQL / MariaDB relational database (runtime schema integrity checks, composite indexes, and utf8mb4 collation). Pure Web Standards frontend (Semantic HTML5, CSS3 design tokens, modular Vanilla JavaScript ES6+, Progressive Web App) deployed on Hostinger Cloud with LiteSpeed/Apache `.htaccess`, PM2, and a 50-category defensive security posture.
 - **Key Features**:
@@ -186,7 +185,7 @@ Atul Sah is the author of eight published technical books distributed internatio
   - **Real-Time Event Streaming**: Native browser `EventSource` on `/api/realtime/stream` (Server-Sent Events) for zero-latency dashboard queue updates with 20-second keep-alive heartbeats.
   - **Automated SLA Tracking & Escalation**: Dynamic countdown timer honoring client-specific SLA windows, 24-hour hardware replacement shifts, and background Team Lead email alerts.
   - **Staff HRMS & Automated Payroll Engine**: Integrated employee attendance tracking, multi-tier leave approval workflows, dynamic tax/deduction calculations, and automated downloadable PDF salary slip generation.
-  - **Multi-Hub Warehouse Inventory Tracking**: Comprehensive asset lifecycle tracking across 6 regional warehouses managing enterprise servers, laptops, and networking hardware with condition logs.
+  - **Multi-Hub Warehouse Inventory Tracking**: Comprehensive asset lifecycle tracking managing enterprise servers, laptops, and networking hardware with condition logs and hardware replacement workflows.
   - **Google Workspace Service Account API**: Direct RFC 2822 transactional email dispatch via Gmail REST API v1 using domain-wide delegation (`support@hyphenet.net`).
   - **ExcelJS Bulk Incident Stream**: Batch processing for hundreds of spreadsheet rows with external ticket ID duplicate detection.
   - **PWA & Statutory DPDP Act 2023 Compliance**: Service Worker offline caching (`portal/sw.js`), mobile bottom navigation, and autonomous granular cookie consent management.

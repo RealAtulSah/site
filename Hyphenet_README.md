@@ -36,7 +36,6 @@ The platform unites an **18-page public commercial catalog & solutions showcase*
 - **Operational Support**: `+91 9354045878`
 - **Support Desk Email**: `support@hyphenet.net`
 - **Official Portal**: `https://hyphenet.net`
-- **Regional Hubs**: Delhi NCR (HQ), Gurugram, Noida, Mumbai, Bengaluru, Hyderabad
 
 ---
 
@@ -96,7 +95,7 @@ The platform unites an **18-page public commercial catalog & solutions showcase*
 - **Automated SLA Tracking & Escalation Engine**: Dynamic timer calculation honoring client-specific SLA windows, supporting pause states, 24-hour hardware replacement shifts, and automated Team Lead email escalations upon breach risk.
 - **Google Workspace Service Account Integration**: Direct RFC 2822 email generation and dispatch using official Google APIs with domain-wide delegation, originating from `support@hyphenet.net`.
 - **Staff HRMS & Automated Payroll Engine**: Integrated employee attendance tracking, multi-tier leave approval workflows, dynamic tax/deduction calculations, and automated downloadable PDF salary slip generation.
-- **Multi-Hub Warehouse Inventory Tracking**: Centralized asset lifecycle tracking across 6 regional warehouses (Delhi NCR, Gurugram, Noida, Mumbai, Bengaluru, Hyderabad) managing servers, laptops, networking kits, and hardware maintenance status.
+- **Multi-Hub Warehouse Inventory Tracking**: Centralized asset lifecycle tracking managing enterprise servers, laptops, networking kits, and hardware maintenance status with cross-hub dispatch.
 - **Progressive Web App (PWA)**: Mobile-optimized experience with Service Worker offline caching (`portal/sw.js`), web app manifest (`portal/manifest.json`), touch-friendly bottom navigation, and zero iOS auto-zoom form inputs.
 - **Statutory DPDP Act 2023 Compliance**: Autonomous cookie consent modal with granular preference switches, persistent storage, unbundled communication consent, and audit logging.
 
@@ -109,7 +108,7 @@ The Hyphenet IT Support Desk (`/portal`) provides dedicated operational workspac
 ### 1. Enterprise Admin Command Center (`/portal/admin`)
 - **Executive Metrics Strip**: 4 compact KPI cards displayed in a single line (Total Tickets, Active In-Progress, Pending SLA, Resolved/Closed).
 - **Master Enterprise Ticket Stream**: 1-line horizontal filter bar with real-time text search, status dropdown, date range picker (`All Time`, `Today`, `This Week`, `This Month`, `Custom Range`), and column sorting.
-- **Staff HRMS & Attendance Management**: Employee records, leave requests, attendance logs, and appraisal workflows across regional hubs.
+- **Staff HRMS & Attendance Management**: Employee records, leave requests, attendance logs, and appraisal workflows across office branches.
 - **Automated Payroll Processing Engine**: Dynamic tax rules, gross-to-net salary computation, and bulk payslip dispatch.
 - **Multi-Hub Warehouse & Inventory Command**: Cross-hub equipment stock transfers, vendor purchase orders, and asset retirement logs.
 - **Authorized Client Domains Management**: Provision corporate clients, specify primary and secondary servicing locations, configure dedicated company group emails (`group_email`) for ticket notifications, and manage individual users.
@@ -166,13 +165,13 @@ Powered by `src/services/realtimeService.js` and `portal/js/realtime.js`:
 - In-progress modal forms are protected from background re-render interruptions.
 
 ### Staff HRMS & Automated Payroll Engine
-- **Attendance & Biometric Sync**: Daily check-in/out tracking with geolocation tagging and late arrival/overtime thresholds across 6 regional office hubs.
+- **Attendance & Biometric Sync**: Daily check-in/out tracking with geolocation tagging and late arrival/overtime thresholds across office locations.
 - **Multi-Tier Leave Workflow**: Self-service employee leave applications with automated manager routing, balance recalculation, and emergency leave policies.
 - **Automated Payroll Computation**: Configurable base salary rules, statutory PF and ESI calculations, TDS deduction tiers, and variable allowances.
 - **Automated Salary Slip Generation**: Batch generation of PDF salary slips with RFC 2822 email dispatch directly to employees.
 
 ### Multi-Hub Warehouse Inventory Tracking
-- **6 Regional Warehouse Nodes**: Centralized inventory tracking across Delhi NCR (HQ), Gurugram, Noida, Mumbai, Bengaluru, and Hyderabad hubs.
+- **Warehouse Inventory Nodes**: Centralized equipment tracking across inventory depots with serial number auditing.
 - **Asset Lifecycle States**: Comprehensive status tracking (`Available`, `Rented`, `In-Transit`, `Under Maintenance`, `Retired`) with serial number auditing.
 - **Hardware Fault & 24h Replacement Flow**: Tight coupling with the Field Engineer helpdesk workflow to dispatch replacement equipment within the 24-hour SLA window.
 - **Cross-Hub Dispatch & Transfers**: Inter-hub asset movement tracking with digital gate-pass generation and transit status logs.
@@ -196,7 +195,7 @@ Powered by `src/services/realtimeService.js` and `portal/js/realtime.js`:
 12. `exam-center-solutions.html` — Computer-Based Test (CBT) examination center infrastructure (100 to 5,000+ nodes).
 13. `managed-it-services.html` — Enterprise managed IT support and on-site resident engineer programs.
 14. `careers.html` — Career opportunities, corporate culture, active job openings, and online application form.
-15. `contact-us.html` — Central contact hub with interactive quote form and 6 regional office directories.
+15. `contact-us.html` — Central contact hub with interactive quote form and corporate branch directories.
 16. `blog.html` — Enterprise IT knowledge center, industry insights, and infrastructure whitepapers.
 17. `legal.html` — Central statutory compliance and policy hub.
 18. `404.html` — Context-aware branded 404 error page.
@@ -443,7 +442,7 @@ All backend API routes are mounted under the `/api/` prefix and protected by rat
 ### Multi-Hub Warehouse & Inventory (`/api/inventory`)
 | Method | Endpoint | Description | Access |
 |---|---|---|---|
-| `GET` | `/api/inventory/hubs` | List 6 regional warehouse nodes and stock summaries | `ADMIN`, `COORDINATOR` |
+| `GET` | `/api/inventory/hubs` | List warehouse inventory nodes and stock summaries | `ADMIN`, `COORDINATOR` |
 | `GET` | `/api/inventory/items` | Query IT equipment catalog with hub & condition filters | `ADMIN`, `COORDINATOR`, `ENGINEER` |
 | `POST` | `/api/inventory/dispatch` | Initiate cross-hub equipment transfer or client delivery | `ADMIN`, `COORDINATOR` |
 | `POST` | `/api/inventory/maintenance` | Log hardware replacement status under 24h SLA | `ENGINEER`, `ADMIN` |
@@ -531,7 +530,7 @@ ALLOWED_ORIGINS=https://hyphenet.net,https://www.hyphenet.net,http://localhost:3
    ```bash
    npm run db:init
    ```
-   *This seeds core roles, regional hubs, the primary admin account, and default configurations.*
+   *This seeds core roles, warehouse hubs, the primary admin account, and default configurations.*
 
 5. **Start the development server**:
    ```bash
