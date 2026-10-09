@@ -177,17 +177,20 @@ Atul Sah is the author of eight published technical books distributed internatio
 ### **Enterprise & Freelance Projects**
 
 #### **1. Hyphenet Enterprise Portal (Featured Project)**
-- **Domain**: Enterprise IT Hardware Rentals, Staff HRMS & Inventory Platform
-- **Scale**: Operating across 6 regional corporate hubs (Delhi, Gurugram, Noida, Mumbai, Bengaluru, Hyderabad).
-- **Architecture**: React SPA frontend with Tailwind CSS integrated with a Node.js & Express.js REST API. Relational PostgreSQL database managed via Prisma ORM, JWT authentication, and server-side RBAC.
+- **Domain**: Enterprise IT & Mobility Rentals Platform, 5-Role Support Helpdesk & HRMS
+- **Scale**: Operating across 6 regional corporate hubs (Delhi NCR HQ, Gurugram, Noida, Mumbai, Bengaluru, Hyderabad).
+- **Official Portal**: `https://hyphenet.net` (Hyphenet Enterprises, Est. 2019, Nehru Place, New Delhi).
+- **Architecture**: Unified Express 4.x REST backend on Node.js paired with a self-healing MySQL / MariaDB relational database (runtime schema integrity checks, composite indexes, and utf8mb4 collation). Pure Web Standards frontend (Semantic HTML5, CSS3 design tokens, modular Vanilla JavaScript ES6+, Progressive Web App) deployed on Hostinger Cloud with LiteSpeed/Apache `.htaccess`, PM2, and a 50-category defensive security posture.
 - **Key Features**:
-  - Admin-provisioned client portal with support ticket submission and real-time resolution logs.
-  - Razorpay online payment integration with webhook verification for automated rental invoicing.
-  - Staff HRMS module with leave workflows, attendance logs, and performance tracking.
-  - Automated payroll processing engine with customizable tax/deduction formulas and PDF payslip generation.
-  - Multi-warehouse inventory tracking for enterprise servers, laptops, and networking hardware.
-  - Multi-channel notification pipeline via Nodemailer SMTP and Twilio WhatsApp API.
-- **Tech Stack**: `Node.js`, `Express.js`, `React`, `PostgreSQL`, `Prisma ORM`, `Tailwind CSS`, `Razorpay`, `Twilio API`, `JWT`.
+  - **Multi-Role IT Service Desk (`/portal`)**: Five dedicated operational consoles tailored for Enterprise Admin, Service Coordinator, Field Engineer, Client IT Support, and Individual Clients.
+  - **Real-Time Event Streaming**: Native browser `EventSource` on `/api/realtime/stream` (Server-Sent Events) for zero-latency dashboard queue updates with 20-second keep-alive heartbeats.
+  - **Automated SLA Tracking & Escalation**: Dynamic countdown timer honoring client-specific SLA windows, 24-hour hardware replacement shifts, and background Team Lead email alerts.
+  - **Staff HRMS & Automated Payroll Engine**: Integrated employee attendance tracking, multi-tier leave approval workflows, dynamic tax/deduction calculations, and automated downloadable PDF salary slip generation.
+  - **Multi-Hub Warehouse Inventory Tracking**: Comprehensive asset lifecycle tracking across 6 regional warehouses managing enterprise servers, laptops, and networking hardware with condition logs.
+  - **Google Workspace Service Account API**: Direct RFC 2822 transactional email dispatch via Gmail REST API v1 using domain-wide delegation (`support@hyphenet.net`).
+  - **ExcelJS Bulk Incident Stream**: Batch processing for hundreds of spreadsheet rows with external ticket ID duplicate detection.
+  - **PWA & Statutory DPDP Act 2023 Compliance**: Service Worker offline caching (`portal/sw.js`), mobile bottom navigation, and autonomous granular cookie consent management.
+- **Tech Stack**: `Node.js`, `Express.js`, `MySQL / MariaDB`, `Server-Sent Events (SSE)`, `Progressive Web App (PWA)`, `Google Workspace API`, `Hostinger Cloud`, `ExcelJS`, `JWT`.
 
 #### **2. Fluxify Media Platform**
 - **Domain**: Agency CMS & Showcase Engine
