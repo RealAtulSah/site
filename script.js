@@ -207,16 +207,18 @@ function initTypingEffect() {
         "तकनीकी पुस्तक लेखक.",
         "Computer Science प्राध्यापक."
     ] : [
-        "Full Stack Developer.",
+        "Full-Stack Developer.",
         "AI & Tech Educator.",
         "Self-Published Author.",
         "Computer Science Faculty."
     ];
     
     let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
+    // Check if DOM already contains the complete pre-rendered static text
+    const initialText = typingSpan.textContent.trim();
+    let charIndex = (initialText === words[0]) ? words[0].length : 0;
+    let isDeleting = (initialText === words[0]);
+    let typingSpeed = isDeleting ? 2000 : 100;
     
     function type() {
         const currentWord = words[wordIndex];
@@ -245,8 +247,8 @@ function initTypingEffect() {
         setTimeout(type, typingSpeed);
     }
     
-    // Start typing animation
-    setTimeout(type, 1000);
+    // Start typing animation gracefully
+    setTimeout(type, isDeleting ? 2000 : 1000);
 }
 
 /* ==========================================================================

@@ -14,6 +14,11 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 - [Blog](https://atulsah.in/blog): In-depth technical articles on Artificial Intelligence, Edge Computing, and Multi-Agent Systems.
 - [Contact](https://atulsah.in/contact): Direct contact channels for software consulting, educational workshops, and collaborations.
 
+## LLM Ingestion & Deep Knowledge Corpora
+
+- [Full LLM Knowledge Corpus (llms-full.txt)](https://atulsah.in/llms-full.txt): Complete single-file technical dossier, biography, book catalog, project architectures, and research summaries.
+- [Comprehensive Biography & Technical Dossier (aboutAtul.md)](https://atulsah.in/aboutAtul.md): Authoritative markdown record of Atul Sah's credentials, 8 books, and 10 software deployments.
+
 ## मुख्य पृष्ठ (Hindi Portal)
 
 - [होम (Home - Hindi)](https://atulsah.in/hi/): अतुल साह का आधिकारिक पोर्टफोलियो, एंटरप्राइज प्रोजेक्ट्स और तकनीकी परिचय।

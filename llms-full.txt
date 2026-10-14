@@ -1,0 +1,489 @@
+# Atul Sah — Comprehensive Professional Biography & Technical Dossier
+
+> **Computer Science Educator | Full-Stack Software Engineer | Technical Author | AI & Systems Researcher**  
+> *Patna, Bihar, India* • [Official Website (EN)](https://atulsah.in/) • [आधिकारिक वेबसाइट (HI)](https://atulsah.in/hi/) • [GitHub](https://github.com/RealAtulSah) • [LinkedIn](https://in.linkedin.com/in/realatulsah/) • [Amazon Author](https://www.amazon.in/s?k=atul+sah)
+
+---
+
+## 1. Executive Summary & Identity
+
+**Atul Sah** is a computer science educator, published technical author, and full-stack software engineer based in Patna, India. He currently serves as **Faculty of Computer Science in the Department of Computer Applications at B. N. College (Patna University)**. 
+
+Holding both a **Master of Computer Applications (MCA)** and a **Bachelor of Computer Applications (BCA)** from Patna University, his professional work bridges academic theoretical rigor with production-grade software engineering. He has authored and published **8 comprehensive technical books** available on Amazon India, Google Books, and Pothi, spanning Agentic AI Systems, Core Java, Machine Learning, Generative AI, and Cybersecurity.
+
+As an engineer, Atul designs and builds resilient, accessible, high-performance web systems and AI applications—including enterprise inventory and HRMS portals operating across six metropolitan hubs, custom institutional learning management systems (LMS), client-side privacy-first browser utilities, and deep learning classification systems.
+
+### Core Philosophy
+> *"Teaching forces me to master technologies down to their fundamental mathematical, algorithmic, and architectural layers. Building production systems ensures that my students, readers, and clients receive battle-tested, contemporary knowledge."*
+
+---
+
+## 2. Personal & Professional Information
+
+| Attribute | Details |
+| :--- | :--- |
+| **Full Name** | Atul Sah |
+| **Current Designation** | Faculty – Department of Computer Applications |
+| **Institution** | B. N. College, Patna University |
+| **Location** | Patna, Bihar, India |
+| **Primary Specializations** | Computer Science Pedagogy, Full-Stack Web Architecture, Agentic AI, Database Systems |
+| **Academic Qualifications** | MCA (Patna University), BCA (Patna University) |
+| **Books Published** | 8 Volumes (Cataloged on Amazon, Google Books, Pothi) |
+| **Production Software Deployments** | 10+ Applications (Enterprise, Academic, Open-Source) |
+| **Primary Email** | `atulsah8873@gmail.com` |
+| **Author / Publications Email** | `author.atulsah@gmail.com` |
+| **Languages Spoken / Written** | English, Hindi (हिन्दी) |
+
+---
+
+## 3. Academic Credentials
+
+### **Master of Computer Applications (MCA)**
+- **Institution**: Patna University
+- **Duration**: 2023 – 2025
+- **Focus Areas**:
+  - Advanced Software Engineering Methodologies & Design Patterns
+  - Distributed Systems & Network Protocols
+  - Relational & NoSQL Database Architectures
+  - Computational Complexity & Advanced Algorithms
+  - Machine Learning & Applied Artificial Intelligence
+
+### **Bachelor of Computer Applications (BCA)**
+- **Institution**: Patna University
+- **Duration**: 2020 – 2023
+- **Focus Areas**:
+  - Object-Oriented Programming (OOP) in Java & C++
+  - Data Structures and Algorithms (Arrays, Linked Lists, Trees, Graphs, Sorting/Searching)
+  - Database Management Systems (Relational Algebra, SQL, Normalization)
+  - Computer Organization & Architecture
+  - Operating Systems & System Programming
+  - Discrete Mathematics & Numerical Methods
+
+---
+
+## 4. Professional Career & Pedagogy
+
+### **1. Faculty – Computer Science**
+- **Organization**: B. N. College (Department of Computer Applications), Patna University
+- **Tenure**: July 2025 – Present
+- **Responsibilities & Contributions**:
+  - Instructing undergraduate BCA students in core computing, Database Management Systems (DBMS), Structured & Object-Oriented Programming, and Software Engineering.
+  - Designing contemporary academic curricula that connect foundational theory with current software development practices.
+  - Mentoring final-year capstone software projects, instilling clean code principles, version control workflows (Git), and deployment pipelines.
+  - Conducting practical hands-on laboratory sessions covering database schema design, SQL query optimization, and full-stack development.
+
+### **2. Freelance Full-Stack Developer**
+- **Tenure**: February 2025 – Present
+- **Focus**: Remote / Independent Software Consulting
+- **Responsibilities & Contributions**:
+  - Architecting single-page and multi-page web applications for commercial clients using modern JavaScript (React.js, Node.js, Express.js) and PHP/MySQL stacks.
+  - Implementing end-to-end payment workflows (Razorpay integration with webhook signature verification), role-based access control (RBAC), and transactional notification systems (SMTP/WhatsApp).
+  - Designing database schemas in PostgreSQL (with Prisma ORM) and MongoDB Atlas with high performance and indexing.
+
+### **3. Teaching Assistant**
+- **Organization**: Commerce Insights
+- **Tenure**: February 2024 – November 2024
+- **Responsibilities & Contributions**:
+  - Delivered digital literacy, IT fundamentals, and computer systems training to Chartered Accountancy (CA) aspirants.
+  - Guided non-technical students through relational database concepts, internet protocols, spreadsheet automations, and enterprise software tools.
+
+---
+
+## 5. Technical Skill Inventory
+
+### **A. Frontend Development**
+- **Languages**: HTML5 (Semantic Structure, Accessibility, Schema.org Microdata), CSS3 (Vanilla Custom Properties, Flexbox, Grid, Animations), JavaScript (ES6+, DOM Manipulation, Async/Await, Canvas API).
+- **Frameworks & Libraries**: React.js, Next.js, Tailwind CSS.
+- **PWA & Offline Technologies**: Progressive Web Apps (PWA), Service Workers, Web Push Notifications (VAPID), Cache API, LocalStorage/IndexedDB.
+- **UI Design System**: Cyber-Minimalist aesthetics, high-contrast usability (solid black on yellow accents, dark mode), responsive layouts across mobile, tablet, and ultra-wide displays.
+
+### **B. Backend & Database Architecture**
+- **Runtime & Servers**: Node.js, Express.js, PHP 8.2, Apache (`.htaccess` URL rewriting, Gzip compression, browser caching).
+- **Databases**: PostgreSQL, MySQL 8, MongoDB Atlas, Firebase Firestore.
+- **ORMs & Database Tooling**: Prisma ORM, Mongoose ODM, MySQLi prepared statements.
+- **Authentication & Security**: JSON Web Tokens (JWT), HTTPOnly cookies, bcrypt password hashing, RBAC (Role-Based Access Control), rate limiting, CSRF/XSS protection, DOMPurify sanitization.
+- **APIs & Webhooks**: RESTful API design, Razorpay checkout & webhook verification, Twilio WhatsApp API, Brevo HTTP Email API, Nodemailer, PHPMailer.
+
+### **C. Core Computing, AI & Machine Learning**
+- **Core Languages**: Java (Core, OOP, Collections, Multithreading), Python (Data Analysis, Modeling, Scripting), C Programming.
+- **Machine Learning & Deep Learning**: TensorFlow, Keras, TensorFlow.js (browser inference), Scikit-Learn, Convolutional Neural Networks (CNN), Sentence-Transformers (`all-MiniLM-L6-v2`).
+- **Natural Language Processing (NLP)**: Semantic embedding extraction, text classification, dense vector search, prompt engineering frameworks.
+- **Generative AI & LLMs**: Google Gemini AI API integration, Model Context Protocol (MCP), Agentic control loops, Retrieval-Augmented Generation (RAG), SLM deployment (1B–8B models on edge hardware).
+
+### **D. Tooling, DevOps & Publishing**
+- **Version Control**: Git, GitHub (repository management, GitHub Pages, version tracking).
+- **Mathematical Typesetting**: KaTeX auto-rendering for complex mathematical notation.
+- **Publishing & Editorial**: Technical writing, instructional curriculum development, Amazon KDP publishing, Pothi print-on-demand publishing, Google Books indexing.
+- **Media & Asset Optimization**: Python Pillow image processing, `rembg` AI background removal, SVG vector asset creation.
+
+---
+
+## 6. Published Technical Books (8 Volumes)
+
+Atul Sah is the author of eight published technical books distributed internationally on **Amazon**, **Google Books**, and **Pothi**. His publications are crafted to demystify complex theoretical topics through clear pedagogical frameworks and code examples.
+
+### 1. *Agentic AI Systems & Autonomous Agents*
+- **ASIN**: `B0H8FP3VGX`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: Autonomous AI agent architectures, deterministic control loops, multi-agent collaboration frameworks, Model Context Protocol (MCP), Retrieval-Augmented Generation (RAG), memory tiers, and production safety guardrails.
+- **Target Audience**: AI engineers, software architects, and advanced computer science students.
+
+### 2. *Introduction to Java Programming*
+- **ASIN**: `B0GHXRBLZD`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: Core Java syntax, Object-Oriented Programming (Encapsulation, Inheritance, Polymorphism, Abstraction), Exception Handling, Collections Framework, Multithreading, and undergraduate lab practicals.
+- **Target Audience**: Undergraduate computer science students (BCA, B.Tech, B.Sc. IT) and programming beginners.
+
+### 3. *Generative AI: An Introduction*
+- **ASIN**: `B0GL26R2XR`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: History and foundational principles of generative models, Transformer attention mechanisms, diffusion processes, multimodal systems, and real-world implementation workflows.
+- **Target Audience**: Students, developers, and technology enthusiasts seeking a clear conceptual and practical foundation in Generative AI.
+
+### 4. *Machine Learning: From Basics to Advance*
+- **ASIN**: `B0GBWYHLDC`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: Mathematical foundations of ML (Linear Algebra, Calculus, Probability), supervised vs. unsupervised algorithms, gradient descent, model evaluation metrics, deep neural network fundamentals, and hands-on Scikit-Learn roadmaps.
+- **Target Audience**: Data science aspirants, undergraduate engineers, and self-taught developers.
+
+### 5. *The Unseen Battlefield: Revolutionizing Cybersecurity and Cybercrime*
+- **ASIN**: `B0G3XG55HX`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: How AI and machine learning are transforming offensive cybercrime and defensive security strategies; automated intrusion detection, malware analysis, adversarial attacks, and modern threat intelligence.
+- **Target Audience**: Cybersecurity students, network administrators, and IT professionals.
+
+### 6. *The AI Product Manager: From Prompt to Production*
+- **ASIN**: `B0FXWL4CXT`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: The lifecycle of deploying AI products into production environments; evaluation frameworks, latency vs. cost trade-offs, fine-tuning economics, prompt design systems, user feedback loops, and compliance.
+- **Target Audience**: Product managers, engineering leads, and technical founders.
+
+### 7. *The Promptcrafter's Handbook: From First Prompt to Advanced AI Dialogue*
+- **ASIN**: `B0G5262DT1`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: Systematic frameworks for engineering resilient, structured, and repeatable prompts for Large Language Models; Chain-of-Thought (CoT), few-shot prompting, JSON output enforcement, and conversational state management.
+- **Target Audience**: Developers, prompt engineers, content strategists, and researchers.
+
+### 8. *The AI-Powered Shield: A Guide to Modern Cybersecurity*
+- **ASIN**: `B0FYGZ95DB`
+- **Format**: Kindle eBook & Print
+- **Core Themes**: Practical application of machine learning algorithms in enterprise defense configurations, automated security auditing, vulnerability discovery, and incident response pipelines.
+- **Target Audience**: Security analysts, systems engineers, and technical researchers.
+
+---
+
+## 7. Software Engineering Portfolio (10 Verified Deployments)
+
+### **Enterprise & Freelance Projects**
+
+#### **1. Hyphenet Enterprise Portal (Featured Project)**
+- **Domain**: Enterprise IT & Mobility Rentals Platform, 5-Role Support Helpdesk & HRMS
+- **Official Portal**: `https://hyphenet.net` (Hyphenet Enterprises, Est. 2019, Nehru Place, New Delhi).
+- **Architecture**: Unified Express 4.x REST backend on Node.js paired with a self-healing MySQL / MariaDB relational database (runtime schema integrity checks, composite indexes, and utf8mb4 collation). Pure Web Standards frontend (Semantic HTML5, CSS3 design tokens, modular Vanilla JavaScript ES6+, Progressive Web App) deployed on Hostinger Cloud with LiteSpeed/Apache `.htaccess`, PM2, and a 50-category defensive security posture.
+- **Key Features**:
+  - **Multi-Role IT Service Desk (`/portal`)**: Five dedicated operational consoles tailored for Enterprise Admin, Service Coordinator, Field Engineer, Client IT Support, and Individual Clients.
+  - **Real-Time Event Streaming**: Native browser `EventSource` on `/api/realtime/stream` (Server-Sent Events) for zero-latency dashboard queue updates with 20-second keep-alive heartbeats.
+  - **Automated SLA Tracking & Escalation**: Dynamic countdown timer honoring client-specific SLA windows, 24-hour hardware replacement shifts, and background Team Lead email alerts.
+  - **Staff HRMS & Automated Payroll Engine**: Integrated employee attendance tracking, multi-tier leave approval workflows, dynamic tax/deduction calculations, and automated downloadable PDF salary slip generation.
+  - **Multi-Hub Warehouse Inventory Tracking**: Comprehensive asset lifecycle tracking managing enterprise servers, laptops, and networking hardware with condition logs and hardware replacement workflows.
+  - **Google Workspace Service Account API**: Direct RFC 2822 transactional email dispatch via Gmail REST API v1 using domain-wide delegation (`support@hyphenet.net`).
+  - **ExcelJS Bulk Incident Stream**: Batch processing for hundreds of spreadsheet rows with external ticket ID duplicate detection.
+  - **PWA & Statutory DPDP Act 2023 Compliance**: Service Worker offline caching (`portal/sw.js`), mobile bottom navigation, and autonomous granular cookie consent management.
+- **Tech Stack**: `Node.js`, `Express.js`, `MySQL / MariaDB`, `Server-Sent Events (SSE)`, `Progressive Web App (PWA)`, `Google Workspace API`, `Hostinger Cloud`, `ExcelJS`, `JWT`.
+
+#### **2. Fluxify Media Platform**
+- **Domain**: Agency CMS & Showcase Engine
+- **Architecture**: PHP 8.2 backend with MySQLi prepared statements and MySQL 8 database. Frontend with Tailwind CSS, AOS scroll animations, and Quill rich-text editor.
+- **Key Features**:
+  - Custom administrative control panel (`/admin/*`) with session management.
+  - Dynamic client case studies, portfolio entries, and verified testimonials management.
+  - PHPMailer Gmail SMTP engine with routed inquiry notifications.
+  - Production deployment configured for Apache/cPanel environments.
+- **Tech Stack**: `PHP 8.2`, `MySQL 8`, `PHPMailer`, `Tailwind CSS`, `JavaScript ES6`, `Quill Editor`, `DataTables`.
+
+#### **3. CampusPulse LMS**
+- **Domain**: Academic Learning Management System for B. N. College BCA Department
+- **Architecture**: Node.js & Express.js REST API with MongoDB Atlas and Mongoose ODM. HTTPOnly JWT cookies, bcryptjs password hashing, and express-rate-limit protection.
+- **Key Features**:
+  - Student self-registration with OTP verification via Brevo HTTP Email API.
+  - Mandatory profile picture square-cropping via Cropper.js with teacher approval queue.
+  - Semester-wise courseware catalog and lecture note distribution.
+  - Timed online MCQ examination engine with automatic evaluation and ranking.
+  - Daily attendance tracking with automated 75% statutory threshold alert warnings.
+  - Progressive Web App (PWA) with VAPID Web Push Notifications via Service Workers.
+- **Tech Stack**: `Node.js`, `Express.js`, `MongoDB Atlas`, `Brevo API`, `Cropper.js`, `PWA`, `JavaScript ES6`.
+
+#### **4. Vistredge Corporate Site**
+- **Domain**: Corporate Web Presence & Services Showcase
+- **Architecture**: Semantic HTML5 and modular responsive CSS3 with vanilla JavaScript DOM interactions.
+- **Key Features**:
+  - Clean multi-page architecture (Home, Services, Testimonials, Contact).
+  - High-accessibility standards, optimized loading speeds, and smooth mobile UX.
+- **Tech Stack**: `HTML5`, `CSS3`, `JavaScript ES6`, `PHP`, `Responsive UI`.
+
+---
+
+### **Independent Tools & Creative Applications**
+
+#### **5. StrengthFuel**
+- **Domain**: AI Sports Nutrition & Recovery Platform for Weightlifters & Athletes
+- **Architecture**: Client-side single/multi-page web application powered by Firebase Cloud Functions (Node.js) invoking Google Gemini AI API with sports-science calculation fallbacks and Firestore caching.
+- **Key Features**:
+  - Natural Language Indian Food Parser supporting local staples (roti, dal, paneer, eggs, rice) with macro breakdown.
+  - "Analyse My Meal" tool evaluating Muscle Protein Synthesis (MPS) thresholds.
+  - 4-Layer Anti-Doping Supplement Inspector checking substances against banned lists (WADA/NADA standards).
+  - Body weight and recovery trend tracking with dynamic SVG moving average charts.
+  - Personalized AI Coach chatbot grounded in athlete daily metrics.
+- **Tech Stack**: `JavaScript ES6`, `Firebase Functions`, `Google Gemini AI`, `Firestore`, `HTML5`, `CSS3`, `PWA`.
+
+#### **6. mdtopdf | Markdown Studio**
+- **Domain**: 100% Client-Side Markdown to Vector PDF & Word Converter
+- **Architecture**: Zero-server-upload architecture using Marked.js, DOMPurify, Highlight.js, html2pdf.js, and html-docx-js.
+- **Key Features**:
+  - Split-pane editor with synchronized scrolling and line number gutters.
+  - 4 styling presets: Dark Yellow Obsidian, GitHub Classic, Academic Serif, and Minimalist.
+  - Real-time word count, character count, and estimated reading time.
+  - Instant vector PDF and native `.docx` export without privacy leaks.
+  - LocalStorage auto-save and drag-and-drop file support.
+- **Tech Stack**: `HTML5`, `CSS3 Glassmorphic`, `JavaScript ES6`, `Marked.js`, `DOMPurify`, `html2pdf.js`, `html-docx-js`.
+
+#### **7. ToolHub Pro**
+- **Domain**: 100% Client-Side Privacy Web Utilities Suite (120+ Tools)
+- **Architecture**: Browser memory sandbox utilizing native Canvas API, Web Workers, File API, and PWA Service Worker offline caching.
+- **Key Features**:
+  - Complete data privacy: all file conversions and edits execute in local memory; zero server uploads.
+  - Full PWA offline execution: works completely without internet connectivity once cached.
+  - Image tools (resize, compress, crop, OCR, filters), PDF tools (merge, split, protect, sign), encoders/decoders (Base64, Hex, Hash, JSON/XML).
+- **Tech Stack**: `JavaScript ES6`, `PWA`, `Service Worker`, `LocalStorage`, `HTML5`, `CSS3`.
+
+#### **8. Expenses Tracker App**
+- **Domain**: Personalized Mobile Finance Management Application
+- **Architecture**: Cross-platform mobile client built using React Native with offline-first local database persistence.
+- **Key Features**:
+  - Multi-source income logging (Salary, Freelance, Consulting, Investments).
+  - Categorized expense tracking with custom tagging and receipts notes.
+  - Weekly and monthly visual expense breakdown reports.
+  - Complete local offline data security.
+- **Tech Stack**: `React Native`, `JavaScript ES6`, `Android Studio`, `Local DB`, `Mobile UI`.
+
+---
+
+### **Academic Machine Learning & Deep Learning Systems**
+
+#### **9. Plant Diseases Detector**
+- **Domain**: Deep Learning Agricultural Crop Disease Classification
+- **Architecture**: Convolutional Neural Network (CNN) trained with Python, TensorFlow, and Keras on crop leaf disease image datasets, converted to TensorFlow.js graph models for client-side browser execution.
+- **Key Features**:
+  - Instant disease classification directly inside the web browser with zero server latency.
+  - Class confidence probability outputs and crop remedy guidance.
+  - Multi-crop coverage: Tomatoes, Potatoes, Corn, Apples, and more.
+  - Designed for lightweight execution on mobile devices in low-bandwidth rural regions.
+- **Tech Stack**: `Python`, `TensorFlow`, `TensorFlow.js`, `Keras`, `CNN`, `JavaScript ES6`, `HTML5/CSS3`.
+
+#### **10. Fake News Detector**
+- **Domain**: NLP Semantic Embedding Classification System
+- **Architecture**: Python NLP pipeline leveraging Sentence-Transformers (`all-MiniLM-L6-v2`) for dense vector representations, trained Scikit-Learn classifiers on the 72,000+ article WELFake dataset, and a Streamlit web interface.
+- **Key Features**:
+  - Dense semantic vectorization capturing nuanced journalistic tone and syntax.
+  - Real-time classification confidence probability breakdown.
+  - Interactive Streamlit web interface (`app.py`) for live article analysis.
+  - Jupyter notebook research and semantic exploratory data analysis pipelines.
+- **Tech Stack**: `Python`, `Sentence-Transformers`, `Scikit-Learn`, `Streamlit`, `Joblib`, `NumPy`, `NLP`.
+
+---
+
+## 8. Technical Research & In-Depth Writing
+
+Atul Sah actively publishes authoritative, peer-reviewed-standard technical monographs and whitepapers on modern computing paradigms:
+
+1. **Generative AI: Architecture, Foundations, and Production Engineering**
+   - Deconstructs Transformer self-attention mathematics ($\text{Attention}(Q,K,V) = \text{softmax}(QK^T/\sqrt{d_k})V$), Diffusion forward/reverse Markov chains, foundation model lifecycles (Pre-Training, SFT, RLHF, DPO), RAG vs. LoRA parameter-efficient fine-tuning, and production KV cache bottlenecks. Rendered with KaTeX formulas.
+2. **The Engineering Anatomy of AI Agents**
+   - Architectural handbook deconstructing agent runtime control loops, function calling OpenAPI/JSON schemas, graph-based deterministic execution (LangGraph/DAGs), memory hierarchies (short-term, episodic, semantic vector memory), Model Context Protocol (MCP), and production guardrails.
+3. **How to Find a Research Gap in Computer Science**
+   - Systematic methodology guide for postgraduate students and researchers. Details a 4-tier search funnel, lit-review matrices, benchmark teardowns, methodology conflict identification, and formal research proposal formulas.
+4. **Small Language Models (SLMs) & Edge AI**
+   - Architectural evaluation of 1B–8B parameter models (Phi-3, Gemma 2, Llama 3.2), post-training quantization (GGUF, AWQ, GPTQ), edge hardware inference, privacy preservation, and compound AI systems.
+5. **Multi-Agent Systems (MAS)**
+   - Analysis of collaborative multi-agent architectures (hierarchical, sequential, and debate patterns), Model Context Protocol (MCP) tool sharing, automated software engineering pipelines, and failure recovery.
+6. **AI Agents Are Becoming Autonomous**
+   - Critical evaluation of the shift from prompt-response chatbots to autonomous digital workers; examines least-privilege security, prompt injection defenses, execution boundaries, and human-in-the-loop oversight.
+7. **How Open-Source LLMs Are Changing the AI Industry**
+   - Industry analysis of open-weight models (Llama, DeepSeek-R1, Qwen), private local infrastructure economics, democratization of fine-tuning, and enterprise sovereignty.
+
+---
+
+## 9. Multilingual Portfolio Architecture
+
+To ensure accessibility to both English and Hindi-speaking audiences across India and globally, Atul Sah developed a fully synchronized bilingual web presence:
+
+- **English Portal**: `https://atulsah.in/` (14 pages: 7 core pages + 7 technical articles).
+- **Hindi Portal (हिन्दी संस्करण)**: `https://atulsah.in/hi/` (14 matching pages in the `/hi/` subfolder).
+- **Features of Bilingual Implementation**:
+  - Header-level **`Aअ`** language switcher button with 100% symmetrical bi-directional navigation.
+  - Typography powered by Google Font **`Noto Sans Devanagari`** with tailored CSS font-fallback cascades.
+  - Bilingual JavaScript engine providing dynamic Hindi typewriter animations and form notifications.
+  - Symmetrical `hreflang` alternate annotations, comprehensive `sitemap.xml`, and structured `llms.txt` discovery files.
+  - Strict adherence to the Cyber-Minimalist aesthetic (pure `#000000` text on `#FFDD00` yellow accents, dark mode glassmorphism) and the Global UI Icon Rule (zero representative emojis in UI elements; SVG icons exclusively).
+
+---
+
+## 10. Online Presence & Authoritative Links
+
+- **Official Portfolio (English)**: [https://atulsah.in/](https://atulsah.in/)
+- **Official Portfolio (Hindi)**: [https://atulsah.in/hi/](https://atulsah.in/hi/)
+- **GitHub**: [https://github.com/RealAtulSah](https://github.com/RealAtulSah)
+- **LinkedIn**: [https://in.linkedin.com/in/realatulsah/](https://in.linkedin.com/in/realatulsah/)
+- **Amazon Author Central**: [https://www.amazon.in/s?k=atul+sah](https://www.amazon.in/s?k=atul+sah)
+- **Google Books Author Page**: [Google Books Record](https://books.google.com/books/about/Machine_Learning.html?id=fhSg0QEACAAJ)
+- **Pothi Author Catalog**: [https://store.pothi.com/](https://store.pothi.com/)
+- **Telegram Channel**: [https://t.me/realatulsah](https://t.me/realatulsah)
+- **Instagram**: [https://www.instagram.com/realatulsah/](https://www.instagram.com/realatulsah/)
+
+### Contact Channels
+- **General Inquiries & Software Consulting**: `atulsah8873@gmail.com`
+- **Book Publishing, Co-Authoring & Academic Inquiries**: `author.atulsah@gmail.com`
+- **Institutional Address**: Department of Computer Applications, B. N. College, Patna University, Patna, Bihar, India - 800004.
+
+---
+
+*Document compiled and maintained as an authoritative record of Atul Sah's academic credentials, technical publications, software architecture portfolio, and professional contributions.*
+
+
+---
+
+## 11. Comprehensive Architectural Dossiers of Technical Research Articles
+
+### Article 1: Generative AI — Architecture, Foundations, and Production Engineering
+- **URL**: https://atulsah.in/blogs/blog-generative-ai-architecture-foundations
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-generative-ai-architecture-foundations
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Mathematical Foundations**:
+  - Scaled Dot-Product Attention: $\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V$
+  - Multi-Head Attention: $\\text{MHA}(Q, K, V) = \\text{Concat}(\\text{head}_1, \\dots, \\text{head}_h)W^O$ where $\\text{head}_i = \\text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$
+  - Diffusion Forward Process: (x_t | x_{t-1}) = \\mathcal{N}(x_t; \\sqrt{1 - \\beta_t}x_{t-1}, \\beta_t I)$
+  - Diffusion Reverse Denoising: \\theta(x_{t-1} | x_t) = \\mathcal{N}(x_{t-1}; \\mu_\\theta(x_t, t), \\Sigma_\\theta(x_t, t))$
+- **Key Architectural Concepts**:
+  - Density Estimation Paradigm: Contrast between discriminative models learning (Y|X)$ and generative models learning joint distribution (X)$.
+  - Transformer Decoder Blocks: Autoregressive next-token prediction, Rotary Position Embeddings (RoPE), SwiGLU activations, and RMSNorm stability.
+  - Three-Stage Foundation Training Pipeline:
+    1. Unsupervised Pre-training on trillions of tokens optimizing autoregressive cross-entropy loss.
+    2. Supervised Fine-Tuning (SFT) over curated instructional dialogue datasets.
+    3. Alignment via Reinforcement Learning from Human Feedback (RLHF with PPO) and Direct Preference Optimization (DPO) eliminating separate reward model instability.
+  - Production Deployment & Inference Optimization:
+    - Low-Rank Adaptation (LoRA): Freezing pre-trained weight matrix  \\in \\mathbb{R}^{d \\times k}$ and learning rank decomposition $\\Delta W = B \\cdot A$ where  \\in \\mathbb{R}^{d \\times r}$,  \\in \\mathbb{R}^{r \\times k}$, with  \\ll \\min(d, k)$.
+    - Key-Value (KV) Cache Bottleneck: Overcoming memory growth per token during auto-regressive decoding via PagedAttention and vLLM memory block virtualization.
+
+---
+
+### Article 2: The Engineering Anatomy of AI Agents
+- **URL**: https://atulsah.in/blogs/blog-engineering-anatomy-ai-agents
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-engineering-anatomy-ai-agents
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Architectural Concepts**:
+  - Tripartite Agent Foundation: Core Reasoning Engine (LLM), Memory Architecture (Working, Episodic, Vector Semantic), and Tool Schema Execution Sandbox.
+  - Agent Control Loops:
+    - ReAct (Reasoning + Acting): Interleaved Thought, Action, and Observation cycles.
+    - Plan-and-Solve: Decoupled initial global plan decomposition followed by step-by-step subtask execution and dynamic re-planning upon environmental exceptions.
+    - Reflexion: Verbal self-reflection reinforcement loops evaluating past trajectories to update episodic memory without parameter updates.
+  - Tool Invocation Specifications: OpenAPI and JSON Schema structured function call serialization with strict type enforcement and deterministic response parsing.
+  - Memory Hierarchy:
+    - In-Context Working Memory: Active prompt context window managed with sliding token budgets.
+    - Episodic Memory: Structured session logs, user history, and past execution reflections.
+    - Semantic Memory: Dense vector embeddings indexed in vector databases (HNSW, pgvector) queried via cosine similarity.
+  - Model Context Protocol (MCP): Open standard unifying tool definitions, contextual prompts, and data resources between LLM clients and isolated host servers.
+  - Deterministic Execution Graphs: Directed Acyclic Graphs (DAGs) and LangGraph finite state machines enforcing deterministic transitions, loop bounds, and validation gates.
+
+---
+
+### Article 3: How to Find a Research Gap in Computer Science
+- **URL**: https://atulsah.in/blogs/blog-research-gap-computer-science
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-research-gap-computer-science
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Methodological Concepts**:
+  - The 4-Tier Systematic Literature Funnel:
+    1. Macro-Level Reconnaissance: High-impact conference proceedings (NeurIPS, ICML, ICLR, CVPR, ACM SIGCOMM, IEEE S&P) and survey papers.
+    2. Micro-Taxonomy Construction: Synthesizing a structured matrix categorizing contemporary approaches by objective, assumptions, dataset, and metric.
+    3. Benchmark & Metric Teardown: Dissecting established benchmarks (e.g., ImageNet, GLUE, MMLU, HumanEval) to expose evaluation biases and shortcut learning.
+    4. Methodological Stress-Testing: Evaluating existing algorithms under extreme distribution shift, adversarial noise, and constrained edge hardware.
+  - Five Defensible Research Gap Typologies:
+    1. Computational Complexity & Scaling Walls: Algorithms with super-linear complexity failing in real-time or low-power contexts.
+    2. Out-of-Distribution & Robustness Deficits: Models overfitted to benchmark distributions collapsing under edge cases.
+    3. Inductive Bias Incompatibility: Architectures lacking domain-specific relational inductive biases (e.g., standard CNNs vs. SE(3)-equivariant networks).
+    4. Domain Transfer Breakdowns: Solutions succeeding in simulated or synthetic environments failing in noisy real-world enterprise deployments.
+    5. Evaluation & Verification Deficits: Insufficient empirical metrics obscuring safety, privacy, or alignment vulnerabilities.
+
+---
+
+### Article 4: Small Language Models (SLMs) & Edge AI
+- **URL**: https://atulsah.in/blogs/blog-small-language-models
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-small-language-models
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Architectural Concepts**:
+  - The 1B–8B Parameter Shift: Specialized compact architectures (Microsoft Phi-3/Phi-4, Google Gemma 2 2B/9B, Meta Llama 3.2 1B/3B) achieving frontier-level benchmark scores in specific tasks through extreme synthetic training data curation ('Textbooks Are All You Need').
+  - Quantization Mechanics:
+    - Post-Training Quantization (PTQ) converting 16-bit floating-point weights (FP16/BF16) to 4-bit/8-bit integer representations (INT4/INT8).
+    - Activation-Aware Weight Quantization (AWQ) preserving salient weight channels (top 1% sensitive weights).
+    - GPTQ second-order Taylor expansion inverse Hessian error compensation.
+    - GGUF unified binary format for local CPU/GPU/NPU inference with llama.cpp.
+  - Edge Inference Engines: Apple Silicon Neural Engine (NPU), Qualcomm Snapdragon NPU, and ONNX Runtime executing localized models at sub-20ms per token latency.
+  - Compound Hybrid AI Systems: Architectural routing layers dispatching routine, privacy-sensitive queries to local edge SLMs while delegating complex reasoning tasks to frontier cloud models.
+
+---
+
+### Article 5: Multi-Agent Systems (MAS) — Collaborative Intelligence
+- **URL**: https://atulsah.in/blogs/blog-multi-agent-systems
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-multi-agent-systems
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Architectural Concepts**:
+  - Architectural Topologies:
+    - Hierarchical Supervisor-Worker: Central orchestrator agent decomposes instructions, dispatches tasks to specialized subordinate agents, and synthesizes outputs.
+    - Sequential Pipeline: Output of predecessor agent feeds as typed input to successor agent with intermediate schema validation.
+    - Collaborative Debate / Consensus Topology: Multiple agents with contrasting system prompts and roles debate solutions to eliminate hallucinations and converge on verified answers.
+  - Model Context Protocol (MCP) in MAS: Standardized JSON-RPC 2.0 tool and resource sharing across heterogeneous agent processes.
+  - Software Engineering MAS Pipeline: Fully autonomous workflow uniting Product Manager Agent, Systems Architect Agent, Code Generation Agent, Test Verification Agent, and Security Audit Agent.
+  - Fault Tolerance & State Management: Event-sourced state stores, checkpoint snapshots, message queue backpressure, and automatic loop-breaking mechanisms to prevent infinite chatter.
+
+---
+
+### Article 6: AI Agents Are Becoming Autonomous — Paradigms & Safety
+- **URL**: https://atulsah.in/blogs/blog-ai-agents-autonomous
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-ai-agents-autonomous
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Architectural Concepts**:
+  - The Autonomous Paradigm Shift: Progression from reactive user-prompted text generators to proactive, goal-driven agents with environmental agency, self-directed tool use, and stateful persistence.
+  - Threat Modeling in Autonomous Execution:
+    - Direct & Indirect Prompt Injection: Attack payloads embedded in external web data, PDFs, or API responses hijacking agent instructions.
+    - Tool Invocation Exploitation: Malicious exploitation of database write, email dispatch, or command execution tools without authorization.
+    - Goal Hijacking & Infinite Resource Consumption: Adversarial loops exhausting API budgets or compute cycles.
+  - Defense-in-Depth Architecture:
+    - Least-Privilege Sandboxing: Ephemeral, isolated Docker/WASM runtimes for code execution with no external network access.
+    - Dual LLM Verification: Untrusted data processed by an isolated, non-tool-bearing LLM before being passed to privileged execution agents.
+    - Human-in-the-Loop (HITL) Checkpoints: Mandatory explicit human cryptographic or session approval for irreversible actions (e.g., payments, database deletes, public dispatches).
+    - Deterministic Safety Guardrails: Pre-execution regex, semantic policy validators (NeMo Guardrails), and schema filters inspecting all generated tool parameters.
+
+---
+
+### Article 7: How Open-Source LLMs Are Changing the AI Industry
+- **URL**: https://atulsah.in/blogs/blog-open-source-llms
+- **Hindi URL**: https://atulsah.in/hi/blogs/blog-open-source-llms
+- **Author**: Atul Sah
+- **Published**: October 2026
+- **Key Architectural Concepts**:
+  - The Open-Weight Revolution: High-performance open models (Meta Llama 3/3.1/3.2, DeepSeek-R1 / DeepSeek-V3, Alibaba Qwen 2.5, Mistral Large) matching closed frontier capabilities.
+  - Architectural Innovations:
+    - Mixture-of-Experts (MoE): Activating sparse subnetworks per token (e.g., DeepSeek-V3 routing 37B active parameters out of 671B total), drastically lowering FLOPs and inference costs.
+    - Multi-Head Latent Attention (MLA): Compressing KV cache representations into low-dimensional latent vectors to achieve 5x–10x memory efficiency.
+    - Native Reinforcement Learning Reasoning: DeepSeek-R1 pure RL emergence of Chain-of-Thought reflection without human SFT warmups.
+  - Enterprise Infrastructure Economics:
+    - TCO Analysis: Comparing multi-million dollar annual token API bills against on-premise Kubernetes clusters running optimized vLLM or TensorRT-LLM inference nodes.
+    - Data Sovereignty & Regulatory Compliance: Complete retention of customer data, IP, and proprietary code on air-gapped private hardware, fulfilling GDPR, EU AI Act, and statutory DPDP Act 2023 mandates.
+    - Domain Adaptation via Continuous Pre-training & LoRA: Tailoring open weights to proprietary corporate corpora and clinical/legal dialects.
+
+---

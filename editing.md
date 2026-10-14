@@ -71,6 +71,18 @@ Completed full bilingual English and Hindi architecture across the portfolio wit
 
 - **Comprehensive Modernization of README.md**: Completely synchronized and expanded [readme.md](file:///e:/professional%20code/site-main/readme.md) into 10 structured sections reflecting the full production platform: full bilingual dual-portal architecture (28 HTML pages: 14 English + 14 Hindi), 10 categorized software deployments with interactive modal specs, 8 published technical books on Amazon, 7 standalone research articles with KaTeX typesetting, Core Web Vitals speed optimizations, Cloudflare Web Analytics, and full repository file map.
 
+- **Phase-2 Advanced SEO & GEO (Generative Engine Optimization) Upgrades**:
+  - **Full LLM Ingestion Corpus (`llms-full.txt`)**: Created authoritative single-file markdown knowledge base (36.9 KB) aggregating all 10 sections of `aboutAtul.md` (credentials, 8 books with ASINs, 10 software deployments with Hyphenet HRMS & Inventory modules) plus Section 11 detailing comprehensive architectural monographs for all 7 research publications.
+  - **Updated `llms.txt`**: Added dedicated deep knowledge corpus links pointing directly to `llms-full.txt` and `aboutAtul.md`.
+  - **Static Crawler Fallback for Project Modals (`projects.html` & `hi/projects.html`)**: Added `.sr-only` CSS utility to `style.css`. Injected `<div class="sr-only project-seo-dossier">` containing complete overview, architecture, key features, and tech stack tags into each of the 10 `.project-card` elements in both English and Hindi DOMs.
+  - **Expanded Project JSON-LD**: Expanded `<head>` Schema.org `ItemList` from 4 to all 10 `SoftwareApplication` entities in both `projects.html` and `hi/projects.html`.
+  - **Amazon ASIN Identifiers & bookFormat**: Updated all 8 Schema.org `Book` entities in `publications.html`, `hi/publications.html`, `index.html`, and `hi/index.html` with explicit ASIN `PropertyValue` identifiers and `bookFormat: "https://schema.org/EBook"`.
+  - **GEO-Optimized FAQPage Schemas**: Injected valid `FAQPage` JSON-LD blocks into `about.html`, `hi/about.html`, `publications.html`, and `hi/publications.html` answering high-intent entity queries.
+  - **Hero Typewriter Static Crawl Fallback**: Statically pre-rendered `Full-Stack Developer.` in `#typingText` on `index.html` and `hi/index.html` to eliminate empty initial crawl DOM snapshots and eradicate CLS, with `script.js` seamlessly initializing from the pre-rendered string.
+  - **Internal Link Silos & Contextual Book Callouts**: Injected styled Cyber-Minimalist "Related Technical Book & Further Reading" callouts and 2-article related reading silos across all 14 blog articles (7 `blogs/*` + 7 `hi/blogs/*`).
+  - **Mandatory Footer Attribution**: Integrated `Developed by Atul Sah` linking to `https://atulsah.in` across all 28 HTML pages with high-contrast styling in `style.css`.
+  - **Sitemap & Automated Verification**: Updated all 28 `<lastmod>` timestamps in `sitemap.xml` to `2026-10-14`. Verified 75 JSON-LD blocks, 28/28 Cloudflare beacons, 0 emojis, and 100% link integrity via automated test suite.
+
 ### In Progress
 None.
 
@@ -81,17 +93,19 @@ None.
 
 - **Session Status**: Completed
 - **Started**: 2026-10-14
-- **Current Task**: Synchronizing and modernizing `readme.md`
-- **Current Objective**: Bring `readme.md` into 100% alignment with the actual production codebase, architecture, publications, projects, performance features, and repository structure.
+- **Current Task**: Implementing Phase-2 Advanced SEO & GEO Upgrades across bilingual portfolio
+- **Current Objective**: Deliver all 7 Phase-2 SEO/GEO enhancements across the bilingual portfolio obeying all project constraints.
 - **Completed In This Session**:
-  - Fully rewrote and expanded [readme.md](file:///e:/professional%20code/site-main/readme.md) into 10 structured, comprehensive sections.
-  - Documented bilingual architecture (`en` and `hi`), language switcher (`Aअ`), and strict linguistic standards.
-  - Documented all 10 projects across Freelancing, Fun/Tools, and Academic/AI categories, prominently highlighting Hyphenet Enterprise Portal (with Staff HRMS & Automated Payroll Engine and Multi-Hub Warehouse Inventory Tracking).
-  - Cataloged all 8 published volumes with ASINs and direct Amazon channels.
-  - Documented all 7 research articles with KaTeX mathematical typesetting and ASCII system diagrams.
-  - Documented Core Web Vitals engineering (no render-blocking `@import`, 0ms above-the-fold delays, `defer`, Gzip, asset optimization).
-  - Added full repository directory tree, technology stack specifications, and local/production deployment guidelines.
-  - Validated 0 UI emojis and 100% link integrity via automated scripts.
+  - Created `llms-full.txt` (36,988 bytes) combining complete technical biography, credentials, 10 deployments, and 7 article architectural dossiers.
+  - Updated `llms.txt` with direct links to `llms-full.txt` and `aboutAtul.md`.
+  - Added `.sr-only` utility to `style.css`.
+  - Injected accessible static SEO dossiers into all 10 project cards and expanded Schema.org `ItemList` to all 10 `SoftwareApplication` entities across `projects.html` and `hi/projects.html`.
+  - Added Amazon ASIN identifiers and `bookFormat: "https://schema.org/EBook"` across `publications.html`, `hi/publications.html`, `index.html`, and `hi/index.html`.
+  - Added `FAQPage` JSON-LD schemas answering core entity queries to `about.html`, `hi/about.html`, `publications.html`, and `hi/publications.html`.
+  - Set static `Full-Stack Developer.` crawl fallback in `index.html` and `hi/index.html` and synchronized `script.js`.
+  - Added contextual book callouts and internal link silos to all 14 technical blog posts.
+  - Updated `<lastmod>` to `2026-10-14` in `sitemap.xml` and enforced `Developed by Atul Sah` footer attribution across all 28 HTML files.
+  - Executed automated Python verification suite passing all 11 integrity tests (75 JSON-LD blocks, 0 emojis, 28/28 Cloudflare beacons, 0 broken links).
 - **Still Outstanding In This Session**:
   - None.
 
@@ -108,13 +122,36 @@ None.
 - **Font & LCP Performance Rule**: Do not use CSS `@import` for fonts in `style.css`. Always use `<link rel="preconnect">` and `<link rel="stylesheet">` in `<head>`, and never attach `.fade-in-section` opacity transitions to above-the-fold hero containers.
 - **Bilingual Symmetry Rule**: The header `Aअ` switcher button must link symmetrically between English and Hindi counterparts for every page without exception.
 - **Hyphenet Preserved Features Rule**: Retain `Staff HRMS & Automated Payroll Engine` and `Multi-Hub Warehouse Inventory Tracking` in all Hyphenet project dossiers and documentation.
+- **Footer Attribution Rule**: Retain `Developed by Atul Sah` linking to `https://atulsah.in` across all 28 pages.
 
 ### Recommended Next Step
-Deploy the updated bilingual site and documentation to production.
+Push verified Phase-2 SEO & GEO updates to GitHub remote repository.
 
 ---
 
 ## Development History
+
+## 2026-10-14 — Phase-2 Advanced SEO & GEO (Generative Engine Optimization) Upgrades
+- **User Request**: Implement Phase-2 Advanced SEO & GEO enhancements across both English and Hindi editions of the portfolio.
+- **Work Completed**:
+  - Generated `llms-full.txt` (36.9 KB) aggregating `aboutAtul.md` (all 10 sections) + Section 11 comprehensive architectural dossiers for all 7 technical articles.
+  - Updated `llms.txt` with direct markdown links to `llms-full.txt` and `aboutAtul.md`.
+  - Added accessible `.sr-only` CSS class to `style.css`.
+  - Embedded static `.sr-only project-seo-dossier` blocks containing full overview, features, architecture, and tech stack inside each of the 10 project cards in `projects.html` and `hi/projects.html`.
+  - Expanded JSON-LD in `projects.html` and `hi/projects.html` to cover all 10 `SoftwareApplication` entities in `ItemList`.
+  - Added official Amazon ASIN `PropertyValue` identifiers and `bookFormat: "https://schema.org/EBook"` to all 8 books in `publications.html`, `hi/publications.html`, `index.html`, and `hi/index.html`.
+  - Injected `FAQPage` JSON-LD schemas answering core entity questions into `about.html`, `hi/about.html`, `publications.html`, and `hi/publications.html`.
+  - Statically populated `Full-Stack Developer.` in `#typingText` span on `index.html` and `hi/index.html`, and updated `script.js` to cycle smoothly without CLS.
+  - Injected Cyber-Minimalist "Related Technical Book & Further Reading" callouts and 2-article related reading silos across all 14 blog articles (7 English + 7 Hindi).
+  - Updated all `<lastmod>` timestamps in `sitemap.xml` to `2026-10-14`.
+  - Verified mandatory `Developed by Atul Sah` link to `https://atulsah.in` across all 28 HTML footers.
+  - Ran comprehensive automated verification test checking 75 JSON-LD blocks, 28/28 Cloudflare beacons, 0 emojis, 100% link integrity, and Hyphenet feature constraints.
+- **Files Created**: `llms-full.txt`
+- **Files Modified**: `style.css`, `script.js`, `llms.txt`, `sitemap.xml`, `projects.html`, `hi/projects.html`, `publications.html`, `hi/publications.html`, `about.html`, `hi/about.html`, `index.html`, `hi/index.html`, 7 `blogs/*.html`, 7 `hi/blogs/*.html`, `editing.md`.
+- **Verification Status**:
+  - Implementation: Verified
+  - Testing: 11/11 automated checks passed (0 errors)
+  - Documentation: Updated
 
 ## 2026-10-14 — Synchronized and Modernized readme.md Documentation
 
