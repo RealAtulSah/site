@@ -1754,16 +1754,6 @@ footer {
     color: var(--color-grey-muted);
 }
 
-.footer-copy a {
-    color: var(--color-grey-light);
-    text-decoration: underline;
-    transition: color var(--transition-fast);
-}
-
-.footer-copy a:hover {
-    color: var(--color-yellow);
-}
-
 
 .footer-links {
     display: flex;

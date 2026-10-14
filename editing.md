@@ -122,14 +122,23 @@ None.
 - **Font & LCP Performance Rule**: Do not use CSS `@import` for fonts in `style.css`. Always use `<link rel="preconnect">` and `<link rel="stylesheet">` in `<head>`, and never attach `.fade-in-section` opacity transitions to above-the-fold hero containers.
 - **Bilingual Symmetry Rule**: The header `Aअ` switcher button must link symmetrically between English and Hindi counterparts for every page without exception.
 - **Hyphenet Preserved Features Rule**: Retain `Staff HRMS & Automated Payroll Engine` and `Multi-Hub Warehouse Inventory Tracking` in all Hyphenet project dossiers and documentation.
-- **Footer Attribution Rule**: Retain `Developed by Atul Sah` linking to `https://atulsah.in` across all 28 pages.
+- **Footer Attribution Rule**: Per explicit user directive on 2026-10-14, redundant 'Developed by Atul Sah' attribution link was removed across all 28 HTML pages to keep the footer clean and focused on the standard copyright notice (&copy; 2026 Atul Sah. All Rights Reserved. / &copy; 2026 अतुल साह। सर्वाधिकार सुरक्षित।).
 
 ### Recommended Next Step
-Maintain and monitor production deployment and analytics.
+Push footer cleanup to GitHub remote repository.
 
 ---
 
 ## Development History
+
+## 2026-10-14 — Removed Footer Attribution Per User Directive
+- **User Request**: "footer se [Developed by Atul Sah](https://atulsah.in/) hata do"
+- **Work Completed**:
+  - Removed ` &bull; <a href="https://atulsah.in" target="_blank" rel="noopener noreferrer">Developed by Atul Sah</a>` across all 28 HTML pages (7 English core + 7 Hindi core + 7 English blogs + 7 Hindi blogs).
+  - Cleaned up unused `.footer-copy a` CSS rules from `style.css`.
+  - Retained standard clean copyright notices: `&copy; 2026 Atul Sah. All Rights Reserved.` on English pages and `&copy; 2026 अतुल साह। सर्वाधिकार सुरक्षित।` on Hindi pages.
+- **Files Modified**: 28 HTML files, `style.css`, `editing.md`.
+- **Verification Status**: Verified across all 28 files (0 instances remaining in HTML).
 
 ## 2026-10-14 — Phase-2 Advanced SEO & GEO (Generative Engine Optimization) Upgrades
 - **User Request**: Implement Phase-2 Advanced SEO & GEO enhancements across both English and Hindi editions of the portfolio.
