@@ -26,7 +26,7 @@ Completed full bilingual English and Hindi architecture across the portfolio wit
   - `hi/index.html`: Complete Hindi homepage with Devanagari typography, dynamic typing animation ("फुल-स्टैक डेवलपर.", "सीनियर सॉफ्टवेयर इंजीनियर.", "कंप्यूटर साइंस शिक्षक.", "तकनीकी पुस्तक लेखक."), featured Hyphenet case study, books showcase, and stats.
   - `hi/about.html`: Complete Hindi biography, education timeline (MCA, BCA), faculty position at B.N. College, and engineering philosophy.
   - `hi/skills.html`: Complete Hindi skills inventory across 4 categories and empirical proof cards (8 प्रकाशित पुस्तकें, 10+ प्रोडक्शन डिप्लॉयमेंट्स).
-  - `hi/projects.html`: 10 software projects with category filters and interactive client-side JavaScript detail modal translated into Hindi.
+  - `hi/projects.html`: 11 software projects with category filters and interactive client-side JavaScript detail modal translated into Hindi.
   - `hi/publications.html`: 8 published technical books with Hindi descriptions and direct Amazon purchase links.
   - `hi/blog.html`: 7 technical article cards and full in-page preview modal with Hindi content.
   - `hi/contact.html`: Functional bilingual Web3Forms contact form with Hindi placeholders, labels, and anti-spam honeypot.
@@ -44,12 +44,12 @@ Completed full bilingual English and Hindi architecture across the portfolio wit
   - Updated `llms.txt` with dedicated "मुख्य पृष्ठ (Hindi Portal)" and "तकनीकी लेख (Hindi Articles)" sections.
 - **Multi-page responsive portfolio layout (English - 14 Pages)**.
 - **Featured Project Showcase**: Exclusively highlighted **Hyphenet Enterprise Portal** on `projects.html` and `index.html`.
-- **Categorized Project Structure (3 Sections, 10 Projects)**:
+- **Categorized Project Structure (3 Sections, 11 Projects)**:
   - **1. Freelancing Projects (4)**: `Hyphenet Enterprise Portal` (Featured), `Fluxify Media Platform` (Agency CMS), `CampusPulse LMS`, `Vistredge Site`.
-  - **2. Fun Projects (4)**: `StrengthFuel` (AI Sports Nutrition), `mdtopdf | Markdown Studio`, `ToolHub Pro`, `Expenses Tracker App`.
+  - **2. Tools & Apps (5)**: `StrengthFuel` (AI Sports Nutrition), `mdtopdf | Markdown Studio`, `ToolHub Pro`, `DB File Explorer` (SQLite WASM), `Expenses Tracker App`.
   - **3. Academic Projects (2)**: `Plant Diseases Detector`, `Fake News Detector`.
-- **Interactive Project Detail Modal**: Custom glassmorphic popup modal on `projects.html` displaying verified overview, key features with SVG checkmark icons, architecture summary, and tech stack tags across all 10 projects.
-- **Category Filter Tabs**: Quick filtering across `All Projects`, `Freelancing Projects`, `Fun Projects`, and `Academic Projects`.
+- **Interactive Project Detail Modal**: Custom glassmorphic popup modal on `projects.html` displaying verified overview, key features with SVG checkmark icons, architecture summary, and tech stack tags across all 11 projects.
+- **Category Filter Tabs**: Quick filtering across `All Projects`, `Freelancing Projects`, `Tools & Apps`, and `Academic Projects`.
 - **Git & `.gitignore`**: Created `.gitignore` ignoring `editing.md` and committed/pushed all changes to remote GitHub repository.
 - **SEO Blog Posts 1 to 7** in `blogs/` folder.
 - **Clean URLs Across Site**: Created `.htaccess` for automatic `.html` URL rewriting and updated navigation, hero, and footer links across all site pages.
@@ -1451,3 +1451,49 @@ Testing: Verified (Checked CSS hierarchy, hover rules, and specificity)
 Git Security Gate: Passed (Clean diff, zero secrets, zero regressions)
 Push Status: Synced to https://github.com/RealAtulSah/site.git (commit `026958f`).
 Documentation: Updated
+
+---
+
+## 2026-10-14 | Integrated DB File Explorer into Tools & Apps
+
+### User Request
+"@[e:\professional code\site-main\db-readme.md] add in Tools and Apps"
+
+### Work Completed
+- Inspected `db-readme.md`, `projects.html`, `hi/projects.html`, and `editing.md` to design and execute a comprehensive integration of **DB File Explorer** (100% client-side in-browser SQLite WebAssembly database manager and SQL engine).
+- Prepared and obtained user approval on `implementation.md` per the Multi-Change Planning Rule.
+- **English Showcase (`projects.html`)**:
+  - Aligned Section 2 title and filter button to **Tools & Apps** (`<button class="filter-btn" data-filter="fun">Tools & Apps</button>`, `<h2 class="project-section-title">Tools & <span class="yellow-accent">Apps</span></h2>`).
+  - Incremented Section 2 badge count from 4 to 5 Applications.
+  - Added Cyber-Minimalist card for **DB File Explorer** (`data-project-id="db-explorer"`) with database cylinder SVG icon, badges (`SQLite WASM`, `SQL.js`, `JavaScript ES6`, `SheetJS`), and hidden `.sr-only project-seo-dossier`.
+  - Populated `projectsData["db-explorer"]` in JavaScript modal controller with verified overview, 8 key capabilities, architecture summary, and tech stack tags.
+  - Updated Schema.org JSON-LD `ItemList` `numberOfItems` to 11 and added `SoftwareApplication` entity at position 8 in sequential order.
+- **Hindi Showcase (`hi/projects.html`)**:
+  - Incremented Section 2 badge count (`Tools एवं Apps`) from 4 to 5 Applications.
+  - Added Hindi Cyber-Minimalist card for **DB File Explorer** adhering to linguistic standards (technical proper nouns in clean Latin script: `SQLite WebAssembly`, `SQL.js`, `SheetJS`; all descriptive UI copy in authentic, natural Hindi).
+  - Populated pure Hindi dataset in `projectsData["db-explorer"]` with overview, 8 detailed Hindi feature points, architecture, and tech tags.
+  - Updated Hindi Schema.org JSON-LD `ItemList` `numberOfItems` to 11 and added `SoftwareApplication` entity at position 8 in sequential order.
+- **Synchronized Documentation & Knowledge Corpora**:
+  - Updated `aboutAtul.md`: Added DB File Explorer as Project #8 under Independent Tools & Creative Applications; renumbered subsequent projects to 11 total.
+  - Updated `llms-full.txt`: Added DB File Explorer specification and updated portfolio count to 11.
+  - Updated `llms.txt`: Synchronized project count and descriptions to 11 across English and Hindi sections.
+  - Updated `readme.md`: Added DB File Explorer to Category 2: Fun & Developer Tools; renumbered subsequent projects; updated file tree annotations.
+- **Punctuation Audit**: Replaced all em dashes in modified files with vertical bars (|), colons (:), or normal hyphens (-).
+
+### Files Created
+- [implementation.md](file:///e:/professional%20code/site-main/implementation.md)
+
+### Files Modified
+- [projects.html](file:///e:/professional%20code/site-main/projects.html)
+- [hi/projects.html](file:///e:/professional%20code/site-main/hi/projects.html)
+- [aboutAtul.md](file:///e:/professional%20code/site-main/aboutAtul.md)
+- [llms-full.txt](file:///e:/professional%20code/site-main/llms-full.txt)
+- [llms.txt](file:///e:/professional%20code/site-main/llms.txt)
+- [readme.md](file:///e:/professional%20code/site-main/readme.md)
+- [editing.md](file:///e:/professional%20code/site-main/editing.md)
+
+### Verification Status
+- Implementation: Verified
+- Testing: Passed (JSON-LD validation via Python, JS projectsData evaluation via Node.js, DOM card IDs check, Section 2 badge count check, zero em dashes verified)
+- Documentation: Updated
+

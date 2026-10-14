@@ -1,4 +1,4 @@
-# Atul Sah — Official Portfolio & Academic Systems Repository
+# Atul Sah | Official Portfolio & Academic Systems Repository
 
 > **Cyber-Minimalist Bilingual Web Platform, Enterprise Software Architecture Showcase, Technical Publications & Applied AI Research**  
 > *Patna, Bihar, India* • [Official Website (EN)](https://atulsah.in/) • [आधिकारिक वेबसाइट (HI)](https://atulsah.in/hi/) • [GitHub](https://github.com/RealAtulSah) • [LinkedIn](https://in.linkedin.com/in/realatulsah/) • [Amazon Author Page](https://www.amazon.in/s?k=atul+sah)
@@ -7,7 +7,7 @@
 
 ## 1. Executive Summary
 
-This repository contains the complete production source code for the official personal portfolio and academic web portal of **Atul Sah** — Computer Science Educator (Faculty, Department of Computer Applications, B.N. College, Patna University), Published Technical Author (8 published volumes), Full-Stack Software Engineer, and Applied AI Researcher.
+This repository contains the complete production source code for the official personal portfolio and academic web portal of **Atul Sah** | Computer Science Educator (Faculty, Department of Computer Applications, B.N. College, Patna University), Published Technical Author (8 published volumes), Full-Stack Software Engineer, and Applied AI Researcher.
 
 The platform is engineered from the ground up utilizing pure semantic web standards (HTML5, Vanilla CSS3, ES6+ JavaScript) without heavy runtime frameworks or external component libraries. It delivers sub-second load times, instant Core Web Vitals painting, full bilingual accessibility (English and Hindi across 28 standalone HTML pages), an interactive Cyber-Minimalist visual identity, and integrated Cloudflare Web Analytics.
 
@@ -36,7 +36,7 @@ The visual presentation utilizes a high-contrast brutalist design language:
 *   **Interactive Canvas Particle Network**: Lightweight HTML5 Canvas particle system drawing dynamic floating nodes and proximity connection webs in cyber yellow (`#FFDD00`).
 *   **Magnetic Trailing Ring Cursor**: Trailing cursor ring with acceleration physics that snaps, contracts, and expands upon hovering interactive anchors, buttons, and card elements.
 *   **Dynamic Hero Typewriter Carousel**: Automated cycling text typewriter animation presenting professional designations in both English and Hindi.
-*   **Interactive Project Detail Modal**: Client-side JavaScript modal engine on `projects.html` and `hi/projects.html` rendering verified architectural overviews, feature breakdowns with SVG icons, and tech stack tags for all 10 projects.
+*   **Interactive Project Detail Modal**: Client-side JavaScript modal engine on `projects.html` and `hi/projects.html` rendering verified architectural overviews, feature breakdowns with SVG icons, and tech stack tags for all 11 projects.
 *   **In-Page Article Preview Modal**: Quick-read modal container on `blog.html` and `hi/blog.html` allowing instant article scanning alongside links to dedicated deep-dive pages.
 *   **Mathematical Typesetting & ASCII Architecture**: Technical blog articles incorporate CDN-delivered KaTeX LaTeX mathematics and structured ASCII system flow diagrams.
 
@@ -120,17 +120,21 @@ The portfolio categorizes 10 production software deployments, client solutions, 
     *   *Domain*: Web Utility Suite.
     *   *Stack*: Vanilla JavaScript, HTML5 Canvas API, Web Cryptography API.
     *   *Highlights*: Modular Swiss-army-knife browser toolkit providing client-side image compression, format converters, hash generators, and text utilities without server transmissions.
-8.  **Expenses Tracker App**:
+8.  **DB File Explorer**:
+    *   *Domain*: In-Browser SQLite WebAssembly Database Manager & SQL Query Engine.
+    *   *Stack*: SQLite WebAssembly (SQL.js), JavaScript ES6, SheetJS (xlsx), HTML5, CSS3.
+    *   *Highlights*: Modern, 100% client-side database exploration tool. Ingests native SQLite files and .sql dumps with MySQL dialect cleanup, executes custom SQL queries, provides interactive data grids, dynamic CRUD modals, and multi-sheet Excel/CSV/JSON exports without server roundtrips.
+9.  **Expenses Tracker App**:
     *   *Domain*: Personal Financial Management.
     *   *Stack*: JavaScript (ES6+), HTML5 LocalStorage, SVG Charting.
     *   *Highlights*: Lightweight, privacy-first personal finance tracking utility featuring offline persistence, category breakdowns, and SVG budget charts.
 
 ### Category 3: Academic & Applied Artificial Intelligence
-9.  **Plant Diseases Detector**:
+10. **Plant Diseases Detector**:
     *   *Domain*: Computer Vision & Precision Agriculture.
     *   *Stack*: Python, TensorFlow, Keras, OpenCV, Flask.
     *   *Highlights*: Deep convolutional neural network (CNN) trained on plant leaf datasets to diagnose crop pathologies with confidence ratings and treatment guidance.
-10. **Fake News Detector**:
+11. **Fake News Detector**:
     *   *Domain*: Natural Language Processing & Media Credibility.
     *   *Stack*: Python, Scikit-Learn, NLTK, TF-IDF Vectorization, Flask.
     *   *Highlights*: Text classification machine learning pipeline analyzing linguistic patterns and credibility markers to determine the authenticity of news headlines and articles.
@@ -178,7 +182,7 @@ site-main/
 ├── index.html                # English Homepage (Hero, metrics, Hyphenet teaser, books)
 ├── about.html                # English About (Bio, Patna University MCA/BCA, B.N. College faculty role)
 ├── skills.html               # English Skills (Categorized competencies & milestone metrics)
-├── projects.html             # English Projects (10 categorized projects with interactive detail modal)
+├── projects.html             # English Projects (11 categorized projects with interactive detail modal)
 ├── publications.html         # English Publications (8 published technical books with Amazon channels)
 ├── blog.html                 # English Blog Index (Quick-preview modal & article listings)
 ├── contact.html              # English Contact (Web3Forms asynchronous transmission)
@@ -196,7 +200,7 @@ site-main/
 │   ├── index.html            # Hindi Homepage (Devanagari typography, dynamic typing, featured showcase)
 │   ├── about.html            # Hindi About (Academic journey, faculty role at B.N. College, philosophy)
 │   ├── skills.html           # Hindi Skills (4 competency categories, empirical proof cards)
-│   ├── projects.html         # Hindi Projects (10 projects with pure Hindi descriptions & detail modal)
+│   ├── projects.html         # Hindi Projects (11 projects with pure Hindi descriptions & detail modal)
 │   ├── publications.html     # Hindi Publications (8 technical books with direct Amazon links)
 │   ├── blog.html             # Hindi Blog Index (Devanagari preview modal & technical articles)
 │   ├── contact.html          # Hindi Contact (Bilingual Web3Forms contact form with anti-spam)

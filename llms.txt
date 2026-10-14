@@ -1,6 +1,6 @@
 # Atul Sah
 
-> Official portfolio, published technical books, enterprise software projects, and AI articles by Atul Sah — Computer Science Educator at B.N. College and Full-Stack Software Developer. Available in English and Hindi (हिन्दी).
+> Official portfolio, published technical books, enterprise software projects, and AI articles by Atul Sah | Computer Science Educator at B.N. College and Full-Stack Software Developer. Available in English and Hindi (हिन्दी).
 
 Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master of Computer Applications (MCA) from Patna University. He serves as Faculty of Computer Science at B.N. College (Department of Computer Application) and has published 8 technical books on Amazon covering Agentic AI, Java Programming, Machine Learning, Generative AI, and Cybersecurity.
 
@@ -9,7 +9,7 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 - [Home](https://atulsah.in/): Professional portfolio overview, featured enterprise projects, and technical biography.
 - [About](https://atulsah.in/about): Detailed academic credentials (MCA, BCA), faculty position at B.N. College, and professional timeline.
 - [Skills](https://atulsah.in/skills): Technical competencies across Web Development (React, Node.js, Express), Databases (PostgreSQL, MongoDB), and AI/ML (TensorFlow.js, Scikit-Learn, Gemini AI).
-- [Projects](https://atulsah.in/projects): Portfolio of 10 software projects including Hyphenet Enterprise Portal, CampusPulse LMS, and machine learning models.
+- [Projects](https://atulsah.in/projects): Portfolio of 11 software projects including Hyphenet Enterprise Portal, DB File Explorer, CampusPulse LMS, and machine learning models.
 - [Publications](https://atulsah.in/publications): Complete catalogue of 8 self-published technical books available on Amazon India.
 - [Blog](https://atulsah.in/blog): In-depth technical articles on Artificial Intelligence, Edge Computing, and Multi-Agent Systems.
 - [Contact](https://atulsah.in/contact): Direct contact channels for software consulting, educational workshops, and collaborations.
@@ -17,14 +17,14 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 ## LLM Ingestion & Deep Knowledge Corpora
 
 - [Full LLM Knowledge Corpus (llms-full.txt)](https://atulsah.in/llms-full.txt): Complete single-file technical dossier, biography, book catalog, project architectures, and research summaries.
-- [Comprehensive Biography & Technical Dossier (aboutAtul.md)](https://atulsah.in/aboutAtul.md): Authoritative markdown record of Atul Sah's credentials, 8 books, and 10 software deployments.
+- [Comprehensive Biography & Technical Dossier (aboutAtul.md)](https://atulsah.in/aboutAtul.md): Authoritative markdown record of Atul Sah's credentials, 8 books, and 11 software deployments.
 
 ## मुख्य पृष्ठ (Hindi Portal)
 
 - [होम (Home - Hindi)](https://atulsah.in/hi/): अतुल साह का आधिकारिक पोर्टफोलियो, एंटरप्राइज प्रोजेक्ट्स और तकनीकी परिचय।
 - [परिचय (About - Hindi)](https://atulsah.in/hi/about): शैक्षणिक योग्यता (MCA, BCA), बी.एन. कॉलेज संकाय स्थिति और करियर टाइमलाइन।
 - [कौशल (Skills - Hindi)](https://atulsah.in/hi/skills): वेब डेवलपमेंट (React, Node.js), डेटाबेस (PostgreSQL, MongoDB) और AI/ML क्षमताएं।
-- [प्रोजेक्ट्स (Projects - Hindi)](https://atulsah.in/hi/projects): हाइफनेट पोर्टल, कैम्पसपल्स एलएमएस और मशीन लर्निंग समाधानों सहित 10 प्रोजेक्ट्स।
+- [प्रोजेक्ट्स (Projects - Hindi)](https://atulsah.in/hi/projects): हाइफनेट पोर्टल, DB File Explorer, कैम्पसपल्स एलएमएस और मशीन लर्निंग समाधानों सहित 11 प्रोजेक्ट्स।
 - [पुस्तकें (Publications - Hindi)](https://atulsah.in/hi/publications): अमेज़न पर उपलब्ध 8 स्व-प्रकाशित तकनीकी पुस्तकों की सूची।
 - [ब्लॉग (Blog - Hindi)](https://atulsah.in/hi/blog): कृत्रिम बुद्धिमत्ता, एज कंप्यूटिंग और मल्टी-एजेंट सिस्टम्स पर तकनीकी आलेख।
 - [संपर्क (Contact - Hindi)](https://atulsah.in/hi/contact): सॉफ्टवेयर परामर्श, कार्यशालाओं और सहयोग के लिए संपर्क सूत्र।

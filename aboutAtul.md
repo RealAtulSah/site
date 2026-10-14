@@ -1,4 +1,4 @@
-# Atul Sah — Comprehensive Professional Biography & Technical Dossier
+# Atul Sah | Comprehensive Professional Biography & Technical Dossier
 
 > **Computer Science Educator | Full-Stack Software Engineer | Technical Author | AI & Systems Researcher**  
 > *Patna, Bihar, India* • [Official Website (EN)](https://atulsah.in/) • [आधिकारिक वेबसाइट (HI)](https://atulsah.in/hi/) • [GitHub](https://github.com/RealAtulSah) • [LinkedIn](https://in.linkedin.com/in/realatulsah/) • [Amazon Author](https://www.amazon.in/s?k=atul+sah)
@@ -11,7 +11,7 @@
 
 Holding both a **Master of Computer Applications (MCA)** and a **Bachelor of Computer Applications (BCA)** from Patna University, his professional work bridges academic theoretical rigor with production-grade software engineering. He has authored and published **8 comprehensive technical books** available on Amazon India, Google Books, and Pothi, spanning Agentic AI Systems, Core Java, Machine Learning, Generative AI, and Cybersecurity.
 
-As an engineer, Atul designs and builds resilient, accessible, high-performance web systems and AI applications—including enterprise inventory and HRMS portals operating across six metropolitan hubs, custom institutional learning management systems (LMS), client-side privacy-first browser utilities, and deep learning classification systems.
+As an engineer, Atul designs and builds resilient, accessible, high-performance web systems and AI applications, including enterprise inventory and HRMS portals operating across six metropolitan hubs, custom institutional learning management systems (LMS), client-side privacy-first browser utilities, and deep learning classification systems.
 
 ### Core Philosophy
 > *"Teaching forces me to master technologies down to their fundamental mathematical, algorithmic, and architectural layers. Building production systems ensures that my students, readers, and clients receive battle-tested, contemporary knowledge."*
@@ -29,7 +29,7 @@ As an engineer, Atul designs and builds resilient, accessible, high-performance 
 | **Primary Specializations** | Computer Science Pedagogy, Full-Stack Web Architecture, Agentic AI, Database Systems |
 | **Academic Qualifications** | MCA (Patna University), BCA (Patna University) |
 | **Books Published** | 8 Volumes (Cataloged on Amazon, Google Books, Pothi) |
-| **Production Software Deployments** | 10+ Applications (Enterprise, Academic, Open-Source) |
+| **Production Software Deployments** | 11 Applications (Enterprise, Academic, Open-Source) |
 | **Primary Email** | `atulsah8873@gmail.com` |
 | **Author / Publications Email** | `author.atulsah@gmail.com` |
 | **Languages Spoken / Written** | English, Hindi (हिन्दी) |
@@ -172,7 +172,7 @@ Atul Sah is the author of eight published technical books distributed internatio
 
 ---
 
-## 7. Software Engineering Portfolio (10 Verified Deployments)
+## 7. Software Engineering Portfolio (11 Verified Deployments)
 
 ### **Enterprise & Freelance Projects**
 
@@ -256,7 +256,21 @@ Atul Sah is the author of eight published technical books distributed internatio
   - Image tools (resize, compress, crop, OCR, filters), PDF tools (merge, split, protect, sign), encoders/decoders (Base64, Hex, Hash, JSON/XML).
 - **Tech Stack**: `JavaScript ES6`, `PWA`, `Service Worker`, `LocalStorage`, `HTML5`, `CSS3`.
 
-#### **8. Expenses Tracker App**
+#### **8. DB File Explorer**
+- **Domain**: 100% Client-Side In-Browser SQLite WebAssembly Database Manager & SQL Query Engine
+- **Architecture**: Zero-build static web application built with Vanilla HTML5, CSS3, and ES6 JavaScript. Ingests databases via FileReader and Uint8Array into an in-memory SQLite 3 WebAssembly engine (SQL.js), rendering reactive tabular data grids with SheetJS spreadsheet generation and zero server-side infrastructure.
+- **Key Features**:
+  - In-Browser SQLite WebAssembly Engine: Full SQLite 3 SQL query execution powered by SQL.js running entirely in local browser memory.
+  - Comprehensive File Support: Ingests native SQLite databases (`.db`, `.sqlite`, `.sqlite3`, `.db3`) with magic header checks and executes `.sql` dumps with automated MySQL/MariaDB dialect cleanup.
+  - Database Schema & Structure Inspector: Visual breakdown of tables, columns, data types, primary keys, foreign key constraints, indexes, views, and live row counts.
+  - Interactive Tabular Data Grid: Paginated record browsing with custom page sizes (10, 25, 50, 100), column sorting, column visibility toggles, and BLOB/NULL indicators.
+  - Multi-Column Filter System: Multi-condition filtering supporting text operators (Contains, Starts with, Exact) and numeric operators (=, >, <, Between, NULL).
+  - Interactive SQL Console: Monospace query editor with instant execution (`Ctrl + Enter`), microsecond runtime telemetry, predefined snippets, and session query history.
+  - Record CRUD Editor: Safe record insertion and row editing modals dynamically generated from `PRAGMA table_info`, with rollback to original state and unsaved changes tracking.
+  - Comprehensive Export Suite: Multi-format exports including RFC 4180 CSV, formatted JSON, multi-sheet Excel (`.xlsx`) with formula injection defense via SheetJS, and binary `.db` file downloads.
+- **Tech Stack**: `SQLite WebAssembly`, `SQL.js`, `JavaScript ES6`, `SheetJS (xlsx)`, `HTML5`, `CSS3`, `Web Workers`.
+
+#### **9. Expenses Tracker App**
 - **Domain**: Personalized Mobile Finance Management Application
 - **Architecture**: Cross-platform mobile client built using React Native with offline-first local database persistence.
 - **Key Features**:
@@ -270,7 +284,7 @@ Atul Sah is the author of eight published technical books distributed internatio
 
 ### **Academic Machine Learning & Deep Learning Systems**
 
-#### **9. Plant Diseases Detector**
+#### **10. Plant Diseases Detector**
 - **Domain**: Deep Learning Agricultural Crop Disease Classification
 - **Architecture**: Convolutional Neural Network (CNN) trained with Python, TensorFlow, and Keras on crop leaf disease image datasets, converted to TensorFlow.js graph models for client-side browser execution.
 - **Key Features**:
@@ -280,7 +294,7 @@ Atul Sah is the author of eight published technical books distributed internatio
   - Designed for lightweight execution on mobile devices in low-bandwidth rural regions.
 - **Tech Stack**: `Python`, `TensorFlow`, `TensorFlow.js`, `Keras`, `CNN`, `JavaScript ES6`, `HTML5/CSS3`.
 
-#### **10. Fake News Detector**
+#### **11. Fake News Detector**
 - **Domain**: NLP Semantic Embedding Classification System
 - **Architecture**: Python NLP pipeline leveraging Sentence-Transformers (`all-MiniLM-L6-v2`) for dense vector representations, trained Scikit-Learn classifiers on the 72,000+ article WELFake dataset, and a Streamlit web interface.
 - **Key Features**:
