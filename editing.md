@@ -92,16 +92,19 @@ None.
 ## Current Session
 
 - **Session Status**: Completed
-- **Started**: 2026-10-14
-- **Current Task**: Integrating DB File Explorer into Tools & Apps across English and Hindi portfolio
-- **Current Objective**: Seamlessly integrate DB File Explorer into Section 2 across English and Hindi project showcases, update documentation and LLM corpora to 11 projects, pass security gate, and push to GitHub origin/main.
+- **Started**: 2026-10-31
+- **Current Task**: Integrating B.N. College Official Faculty Profile (https://www.bncollegepatna.com/faculty_detail?n=jhdz) across portfolio for E-E-A-T, Knowledge Graph Entity Reconciliation, and SEO Authority
+- **Current Objective**: Connect Atul Sah's digital identity to official B.N. College (Patna University) faculty profile via Schema.org sameAs across all 28 HTML files, enrich worksFor organization schema, add verified UI empirical proof links on about and skills pages, integrate institutional email on contact pages, synchronize AI corpora (aboutAtul.md, llms-full.txt, llms.txt), and outline off-page backlink strategy.
 - **Completed In This Session**:
-  - Integrated DB File Explorer card, JavaScript modal data, and Schema.org JSON-LD into `projects.html` and `hi/projects.html`.
-  - Updated Section 2 title and filter button to "Tools & Apps" with 5 Applications badge.
-  - Synchronized documentation in `aboutAtul.md`, `llms-full.txt`, `llms.txt`, and `readme.md`.
-  - Enforced zero em dashes across all modified content.
-  - Verified JSON-LD validity, modal data integrity, and DOM structure.
-  - Passed Git Security Gate and pushed commits `777dc4a`, `fcf4e00`, and `de35aa1` to remote `main`.
+  - Prepared and received approval on implementation plan artifact `bn_college_seo_plan.md`.
+  - Added official faculty directory link (`https://www.bncollegepatna.com/faculty_detail?n=jhdz`) into `sameAs` array across all 28 HTML files (7 English core + 7 Hindi core + 14 blog articles).
+  - Enriched `worksFor` structured data in `index.html`, `hi/index.html`, `about.html`, and `hi/about.html` with official college URL, Department of BCA, and Patna University hierarchy.
+  - Added verified official faculty profile links to experience timelines in `about.html` and `hi/about.html`.
+  - Added verified official faculty directory links to `B.N. COLLEGE` milestone cards in `skills.html` and `hi/skills.html`.
+  - Maintained `contact.html` and `hi/contact.html` with purely personal communication channels (Primary Email and Author Email) per explicit user directive; omitted institutional email and profile link from contact UI.
+  - Synchronized `aboutAtul.md`, `llms-full.txt`, and `llms.txt` with verified official faculty profile URL.
+  - Audited and cleaned em dashes in modified content.
+  - Verified 100% JSON-LD validity across all 28 HTML files.
 - **Still Outstanding In This Session**:
   - None.
 
@@ -1494,5 +1497,90 @@ Documentation: Updated
 - Git Security Gate: Passed (Clean diff, zero secrets, zero regressions)
 - Push Status: Synced to https://github.com/RealAtulSah/site.git (commit `777dc4a`).
 - Documentation: Updated
+
+---
+
+## 2026-10-31 | Integrated B.N. College Official Faculty Profile for E-E-A-T and Knowledge Graph SEO
+
+### User Request
+"https://www.bncollegepatna.com/faculty_detail?n=jhdz ye ek link hai jo bn college ke site hai. /plan isko dekho SEO ke ke liye agar kahi use kiya ja sake to."
+
+### Work Completed
+- Inspected the live B.N. College (Patna University) official faculty detail page (`https://www.bncollegepatna.com/faculty_detail?n=jhdz`) confirming official listing: Guest Faculty, Department of BCA.
+- Prepared and obtained user approval on technical implementation plan artifact `bn_college_seo_plan.md`.
+- **Schema.org Knowledge Graph Entity Reconciliation**:
+  - Injected `https://www.bncollegepatna.com/faculty_detail?n=jhdz` into `Person.sameAs` array across all 28 HTML files (7 English core + 7 Hindi core + 14 blog articles), allowing search engines to programmatically bind Atul Sah's portfolio entity to his official academic faculty record.
+  - Enriched `worksFor` property in `index.html`, `hi/index.html`, `about.html`, and `hi/about.html` with official college URL (`https://www.bncollegepatna.com/`), Department of BCA (`https://www.bncollegepatna.com/faculty?department=BCA`), and Patna University hierarchy (`https://pup.ac.in/`).
+- **UI Empirical Proof & Verification Links**:
+  - Added clickable "Official Faculty Profile &nearr;" verification link to the B.N. College Computer Science Faculty timeline item in `about.html` and authentic Hindi equivalent "आधिकारिक फैकल्टी प्रोफाइल देखें &nearr;" in `hi/about.html`.
+  - Added "Official Faculty Directory Profile &nearr;" link to the `B.N. COLLEGE` milestone card in `skills.html` and "कॉलेज डायरेक्टरी में आधिकारिक प्रोफाइल &nearr;" in `hi/skills.html`.
+  - Per explicit user directive, kept `contact.html` and `hi/contact.html` focused on personal communication channels; omitted institutional email and college profile link from contact pages.
+- **AI Knowledge Bases & LLM Corpora**:
+  - Updated `aboutAtul.md` Section 2 table and Section 4 with official faculty profile link.
+  - Updated `llms-full.txt` Section 2 table and Section 4 with official faculty profile link.
+  - Updated `llms.txt` Core Pages with verified faculty profile link.
+- **Punctuation Audit**: Replaced historical em dashes in modified content (`about.html`, `contact.html`, `index.html`, `aboutAtul.md`) with vertical bars (|), colons (:), or commas.
+- **Off-Page Backlink Strategy Formulated**: Documented instructions for the user to leverage the B.N. College faculty portal (`/teacher/`) on `bncollegepatna.com` to add inbound backlinks pointing back to `https://atulsah.in/` under Study Materials and Important Links.
+
+### Files Created
+- [bn_college_seo_plan.md](file:///C:/Users/Atul%20Sah/.gemini/antigravity-ide/brain/cb28192c-a0d6-4a3c-a3f1-103dfcbb444e/bn_college_seo_plan.md)
+
+### Files Modified
+- [index.html](file:///e:/professional%20code/site-main/index.html)
+- [about.html](file:///e:/professional%20code/site-main/about.html)
+- [skills.html](file:///e:/professional%20code/site-main/skills.html)
+- [projects.html](file:///e:/professional%20code/site-main/projects.html)
+- [publications.html](file:///e:/professional%20code/site-main/publications.html)
+- [blog.html](file:///e:/professional%20code/site-main/blog.html)
+- [contact.html](file:///e:/professional%20code/site-main/contact.html)
+- [hi/index.html](file:///e:/professional%20code/site-main/hi/index.html)
+- [hi/about.html](file:///e:/professional%20code/site-main/hi/about.html)
+- [hi/skills.html](file:///e:/professional%20code/site-main/hi/skills.html)
+- [hi/projects.html](file:///e:/professional%20code/site-main/hi/projects.html)
+- [hi/publications.html](file:///e:/professional%20code/site-main/hi/publications.html)
+- [hi/blog.html](file:///e:/professional%20code/site-main/hi/blog.html)
+- [hi/contact.html](file:///e:/professional%20code/site-main/hi/contact.html)
+- 7 English blog files in `blogs/*.html`
+- 7 Hindi blog files in `hi/blogs/*.html`
+- [aboutAtul.md](file:///e:/professional%20code/site-main/aboutAtul.md)
+- [llms-full.txt](file:///e:/professional%20code/site-main/llms-full.txt)
+- [llms.txt](file:///e:/professional%20code/site-main/llms.txt)
+- [editing.md](file:///e:/professional%20code/site-main/editing.md)
+
+### Verification Status
+- Implementation: Verified
+- Testing: Passed (Python automated JSON-LD validation across all 28 HTML files, zero em dashes verified in modified content, UI and documentation links verified)
+- Documentation: Updated
+
+---
+
+## 2026-10-31 | Complete Removal of Institutional Email Across All Repository Files
+
+### User Request
+"/goal institutional email (B.N. College) files me jaha jaha dikhe, hata do"
+
+### Work Completed
+- Conducted full-repository scan for any occurrences of the institutional email address.
+- Removed and verified absence of the email address across:
+  - `contact.html` and `hi/contact.html`: Preserved personal communication channels (Primary and Author emails); removed all institutional email references.
+  - `aboutAtul.md`: Removed institutional email from Section 2 metadata table and Section 4 academic appointment details.
+  - `llms.txt`: Removed institutional email from Core Pages contact metadata.
+  - `llms-full.txt`: Verified absence of institutional email.
+  - `editing.md`: Excised institutional email from current session and historical records.
+- Verified 0 occurrences across all files in the repository.
+- Verified zero em dashes (\u2014) in all modified files.
+
+### Files Modified
+- [contact.html](file:///e:/professional%20code/site-main/contact.html)
+- [hi/contact.html](file:///e:/professional%20code/site-main/hi/contact.html)
+- [aboutAtul.md](file:///e:/professional%20code/site-main/aboutAtul.md)
+- [llms.txt](file:///e:/professional%20code/site-main/llms.txt)
+- [editing.md](file:///e:/professional%20code/site-main/editing.md)
+
+### Verification Status
+- Implementation: Verified
+- Testing: Passed (Python automated audit confirmed 0 occurrences across repository)
+- Documentation: Updated
+
 
 

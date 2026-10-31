@@ -23,8 +23,9 @@ As an engineer, Atul designs and builds resilient, accessible, high-performance 
 | Attribute | Details |
 | :--- | :--- |
 | **Full Name** | Atul Sah |
-| **Current Designation** | Faculty – Department of Computer Applications |
+| **Current Designation** | Faculty | Department of Computer Applications |
 | **Institution** | B. N. College, Patna University |
+| **Official Faculty Profile** | [B.N. College Faculty Directory](https://www.bncollegepatna.com/faculty_detail?n=jhdz) |
 | **Location** | Patna, Bihar, India |
 | **Primary Specializations** | Computer Science Pedagogy, Full-Stack Web Architecture, Agentic AI, Database Systems |
 | **Academic Qualifications** | MCA (Patna University), BCA (Patna University) |
@@ -63,9 +64,10 @@ As an engineer, Atul designs and builds resilient, accessible, high-performance 
 
 ## 4. Professional Career & Pedagogy
 
-### **1. Faculty – Computer Science**
+### **1. Faculty - Computer Science**
 - **Organization**: B. N. College (Department of Computer Applications), Patna University
-- **Tenure**: July 2025 – Present
+- **Tenure**: July 2025 - Present
+- **Official Academic Profile**: [B.N. College Faculty Detail](https://www.bncollegepatna.com/faculty_detail?n=jhdz)
 - **Responsibilities & Contributions**:
   - Instructing undergraduate BCA students in core computing, Database Management Systems (DBMS), Structured & Object-Oriented Programming, and Software Engineering.
   - Designing contemporary academic curricula that connect foundational theory with current software development practices.
@@ -95,7 +97,6 @@ As an engineer, Atul designs and builds resilient, accessible, high-performance 
 - **Languages**: HTML5 (Semantic Structure, Accessibility, Schema.org Microdata), CSS3 (Vanilla Custom Properties, Flexbox, Grid, Animations), JavaScript (ES6+, DOM Manipulation, Async/Await, Canvas API).
 - **Frameworks & Libraries**: React.js, Next.js, Tailwind CSS.
 - **PWA & Offline Technologies**: Progressive Web Apps (PWA), Service Workers, Web Push Notifications (VAPID), Cache API, LocalStorage/IndexedDB.
-- **UI Design System**: Cyber-Minimalist aesthetics, high-contrast usability (solid black on yellow accents, dark mode), responsive layouts across mobile, tablet, and ultra-wide displays.
 
 ### **B. Backend & Database Architecture**
 - **Runtime & Servers**: Node.js, Express.js, PHP 8.2, Apache (`.htaccess` URL rewriting, Gzip compression, browser caching).

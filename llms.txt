@@ -8,6 +8,7 @@ Atul Sah is a Computer Science Educator and Full-Stack Developer with a Master o
 
 - [Home](https://atulsah.in/): Professional portfolio overview, featured enterprise projects, and technical biography.
 - [About](https://atulsah.in/about): Detailed academic credentials (MCA, BCA), faculty position at B.N. College, and professional timeline.
+- [Official Faculty Directory Profile](https://www.bncollegepatna.com/faculty_detail?n=jhdz): Verified academic faculty directory entry in the Department of BCA at Bihar National College (Patna University).
 - [Skills](https://atulsah.in/skills): Technical competencies across Web Development (React, Node.js, Express), Databases (PostgreSQL, MongoDB), and AI/ML (TensorFlow.js, Scikit-Learn, Gemini AI).
 - [Projects](https://atulsah.in/projects): Portfolio of 11 software projects including Hyphenet Enterprise Portal, DB File Explorer, CampusPulse LMS, and machine learning models.
 - [Publications](https://atulsah.in/publications): Complete catalogue of 8 self-published technical books available on Amazon India.
